@@ -34,7 +34,7 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
     - Membership type - **Assigned**
 
-    - Owners - Select **No owners selected**. In the **Add owners** pane, enter **Holly** in the **Search** field and select the **Holly@xxxxxZZZZZZ.onmicrosoft.com** user account
+    - Owners - Select **No owners selected**. In the **Add owners** pane, enter **Holly** in the **Search** field and select the **Holly@azurehol1062.onmicrosoft.com** user account
 
     - Members - Select **No members selected**. In the **Add members** pane, select **Alex Wilber**. Enter **Joni** in the Search field, and then select **Joni Sherman**.
 
@@ -52,7 +52,9 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
 12. In the **Adatum Corporation | Roles** window, scroll down through the list of roles and select **Intune Administrator**.
 
-13. In the **Intune Administrator | Assignments** window, select **+Add assignments** on the menu bar. 
+13. In the **Intune Administrator | Assignments** window, select **+ Add assignments** on the menu bar.
+
+    >**Note:** If in **Select role** nothing is mentioned, then select the drop-down, search and select **Intune Administrators**.
 
 14. In the **Add assignments** window, the **Membership** tab is displayed by default. Under **Select member(s)**, select **No member selected**.
 
@@ -124,7 +126,7 @@ At this point in Holly's pilot project, the **PIM-Intune-Administrators** group 
 
 2. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
 
-3. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+3. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **joni.sherman@azurehol1062.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
 4. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
 
@@ -167,7 +169,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 7. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
 
-8. You're now going to log into Azure as Alex Wilber. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+8. You're now going to log into Azure as Alex Wilber. In the **Sign in** window, enter **alex.wilber@azurehol1062.onmicrosoft.com** and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
 9. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
 
@@ -185,7 +187,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 16. You will now open a new InPrivate browser session for Joni to verify she was assigned the Intune Administrator role. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
 
-17. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+17. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **joni.sherman@azurehol1062.onmicrosoft.com** and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
 18. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
 
