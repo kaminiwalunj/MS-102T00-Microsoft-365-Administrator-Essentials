@@ -38,17 +38,17 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 2. On **LON-CL1**, you should still be logged into the machine as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Azure Active Directory**.
+3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, select **show all**, under the **Admin centers** section, select **Mcrosoft Entra**.
 
 4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
-5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Scroll down towards the bottom of the Home page and in the **Feature highlights** section, select **Privileged Identity Management**.
+5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Select **Go to Microsoft Entra ID** under **Microsoft Entra ID (Azure AD)**, it will open the Adatum Corporation page. On the below of the page select **Privileged Identity Management**.
 
 6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Azure AD roles**.
 
 7. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
 
-8. In the **Adatum Corporation | Settings** window, select the **Global Administrator** role. <br/>
+8. In the **Adatum Corporation | Settings** window, select the **Global Administrator** role. 
 
     **Tip:** If the roles are not displayed in alphabetical order, select the **Role** heading to sort them in ascending alphabetical order. This will make it easier to locate the Global administrator role.
 
@@ -56,11 +56,11 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 10. In the **Edit role setting - Global Administrator** window, the **Activation** tab is displayed by default. In this tab, below the activation slider, verify the **Azure MFA** option is selected by default for the **On activation, require** setting (if it's not selected, then select it now). This will require that the person requesting activation of the role will have to sign in using multi-factor authentication to provide additional verification that they are who they say they are.
 
-11. The window then displays a group of three settings, each of which has a corresponding check box. Select the **Require approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
+11. The window then displays a group of three settings, each of which has a corresponding check box. Select the **Require Approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
 
 12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Azure AD in the prior lab exercise, scrolling through the user list will be too time consuming. <br/>
 
-    Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@xxxxxZZZZZZ.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
+    Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@azurehol1062.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
 
 13. In the **Edit role setting - Global Administrator** window, select the **Notification** tab at the top of the page.
 
@@ -72,7 +72,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
     For each of these three activities, an alert can be sent (depending on the activity, it will either be a Role assignment alert or a Role activation alert). The default value for each of these alerts is **Admin**, which refers to the Global Administrators and any Privileged Role Administrators. Besides sending this alert notification email to these admins, Holly wants the alert for each activity sent to the MOD administrator account. <br/>
 
-    In the **Additional recipients** field for each of the three alerts (the **Role assignment alert** for the first two activities and the **Role activation alert** for the final activity), enter the MOD administrator's email ID of **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).
+    In the **Additional recipients** field for each of the three alerts (the **Role assignment alert** for the first two activities and the **Role activation alert** for the final activity), enter the MOD administrator's email ID of **odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**.
 
 15. At the bottom of the **Edit role setting - Global Administrator** window, select **Update**.
 
@@ -107,7 +107,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
     - Membership type - **Assigned**
 
-    - Owners - Select **No owners selected**. In the **Add owners** pane, enter **Holly** in the **Search** field and select the **Holly@xxxxxZZZZZZ.onmicrosoft.com** user account
+    - Owners - Select **No owners selected**. In the **Add owners** pane, enter **Holly** in the **Search** field and select the **Holly@azurehol1062.onmicrosoft.com** user account
 
     - Members - Select **No members selected**. In the **Add members** pane, enter **Patti** in the **Search** field and select Patti Fernandez's user account
 
@@ -123,7 +123,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 10. In the **Adatum Corporation | Roles** window, scroll down through the list of roles and select **Global Administrator**.
 
-11. In the **Global Administrator | Assignments** window, select **+Add assignments** on the menu bar. 
+11. In the **Global Administrator | Assignments** window, select **+ Add assignments** on the menu bar. 
 
 12. In the **Add assignments** window, the **Membership** tab is displayed by default. Under **Select member(s)**, select **No member selected**.
 
@@ -150,7 +150,7 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 2. In your **InPrivate browsing** session, enter the following URL in the address bar: **https://portal.azure.com**
 
-3. You're now going to log into Azure as Patti Fernandez. In the **Sign in** window, enter **PattiF@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+3. You're now going to log into Azure as Patti Fernandez. In the **Sign in** window, enter **patti.fernandez@azurehol1062.onmicrosoft.com** and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
 4. In the **Welcome to Microsoft Azure** dialog box that appears, select **Maybe later** to skip the tour.
 
@@ -172,7 +172,7 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
     Select the hyperlinked message at the bottom of the page that says: **I want to set up a different method**. 
 
-12. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
+12. On the **Choose a method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
 
 13. In the **Phone** window that appears, under **What phone number would you like to use?**, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Text me a code** option is selected and then select **Next**.
 
@@ -182,19 +182,19 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 16. Once verification is complete and you receive a message indicating your phone was registered successfully, select **Next**.
 
-17. On the **Success!** page, select **Done**.
+    >**Note:** It will ask you to do the second method also, i.e. Authenticator App, you don't have to do that we can simply go back and perform our next steps..
 
-18. If you receive a dialog box indicating your sign in has timed out, you will have to enter Patti's password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). You will then be sent another verification code to your phone. On the **Enter code** window, enter this new code and then select **Verify**. <br/>
+17. If you receive a dialog box indicating your sign in has timed out, you will have to enter Patti's password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). You will then be sent another verification code to your phone. On the **Enter code** window, enter this new code and then select **Verify**. <br/>
 
     **WARNING:** If you take too long to complete this process, the **Enter password** window will appear with a message indicating you took too long to complete the sign in process, so you will be timed-out. If this occurs, you must sign in again with Holly's password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Another verification code will be texted to your phone, so enter it in the **Enter code** screen that appears and select **Verify**.
 
-19. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane.
+18. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane, and wait for the Status to get succeeded for all the steps, it will automatically refresh the browser.
 
-20. On the **My roles | Azure AD roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  <br/>
+19. On the **My roles | Azure AD roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  <br/>
 
      **Note:** If you recall, back in Task 1 Holly set up the Global Administrator role so that activation to a user account will require approval. What Patti just did was request that the Global Admin role be activated for her user account. This will send a request to Holly, who can then either approve or deny Patti's request for role activation. Holly will review and then approve this request in the next task.
 
-21. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
+20. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
 
 
 ### Task 4 -  Approve the request for the Global Admin role
@@ -207,7 +207,7 @@ Back in Task 1, Holly set herself up as the approver for the Global Administrato
 
 2.  In your browser, the **Global Administrator | Assignments** window should be displayed in the **Microsoft Entra admin center**. <br/>
 
-    In the navigation thread at the top of the page (**Home > Privileged Identity Management | Azure AD roles > Adatum Corporation | Roles**), select **Privileged Identity Management | Azure AD roles**.
+    In the navigation thread at the top of the page (**Home > Go to Microsoft Entra ID > Privileged Identity Management | Azure AD roles > Adatum Corporation | Roles**), select **Privileged Identity Management | Azure AD roles**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under **Tasks**, select **Approve requests**.
 
@@ -219,9 +219,9 @@ Back in Task 1, Holly set herself up as the approver for the Global Administrato
 
 7. In the **My roles | Azure AD roles** window, the **Active assignments** tab is currently selected from the prior task, prior to approving Patti's request. <br/>
 
-    Select **Refresh** on the menu bar. </br/>
+    Select **Refresh** on the menu bar.
 
-    Note how the Global Administrator role is now activated for Patti. You have just verified that Patti has been assigned the Global Administrator role using Azure AD Privileged Identity Management.
+    >**Note:** How the Global Administrator role is now activated for Patti. You have just verified that Patti has been assigned the Global Administrator role using Azure AD Privileged Identity Management.
 
 8. Close the InPrivate browser session.
 
