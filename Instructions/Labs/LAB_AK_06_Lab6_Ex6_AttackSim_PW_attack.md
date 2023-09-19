@@ -23,9 +23,9 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 6. On the **Name Simulation** page, enter **Custom payload** in the **Simulation name** field and then select **Next**.
 
-7. On the **Select payload and login page**, select **+Create a payload**.
+7. On the **Select payload and login page**, select **+ Create a payload** under **Tenant payloads**.
 
-8. On the **Select type** page of the Payload wizard, the **Email** option should be selected by default (if not, select it now). Select **Next**. 
+8. On the **Select type** page of the Payload wizard, the **Email** option should be selected by default. Select **Next**. 
 
 9. On the **Select Technique** page, the **Drive-by URL** attack type should be selected by default (all other options are disabled since you already selected this option back in step 5). Select **Next**.
 
@@ -41,12 +41,12 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 	- From name: **Klemen Sic**
 	- From email: **klemens@tailspintoys.com**
 	- Email subject: **Free toy giveaway promotion from Tailspin Toys**
-	- Select a URL you want to be your phishing link: select the **Select URL** button and select **https://www.prizegives.com** from the list of fictitious URLs. 
+	- Select a URL you want to be your phishing link: select the **Select URL** button, serach and select **https://www.prizegives.com**, from the list of fictitious URLs, and click on **Confirm** button. 
 	- Theme: **Personalized Offer**
 	- Industry: **Retail**
 	- Current Event: **Yes**
 	- Select the language for payload : **English** 
-	- Email message: Enter the following text that will be displayed in the body of the email message: **Tailspin Toys is offering you a FREE, one-time only giveaway of a toy of your choice as part of our 25th anniversary celebration! Please click on the following link to select the toy of your choice: ** 
+	- Email message: Enter the following text that will be displayed in the body of the email message: **Tailspin Toys is offering you a FREE, one-time only giveaway of a toy of your choice as part of our 25th anniversary celebration! Please click on the following link to select the toy of your choice:** 
 	- After entering the prior message, select the **Phishing link** option at the top of the text form (to the right of **Dynamic tag**). In the **Name Phishing Url** dialog box that appears, enter **Free25thAnniversaryGift@tailspintoys.com** in the **Name** field and then select **Confirm**.
 
 	The message should now appear as: 
@@ -161,7 +161,7 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 	- Once you're signed out, close your Edge browser. Doing so will clear your cache.
 	- Open a new Edge browser session.
 	- Enter the **https://portal.office.com** URL.
-	- In the **Pick an account** window, select Holly's account and enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as the **Password**.
+	- In the **Pick an account** window, select Holly's account and enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) as the **Password**.
 	- From the **Microsoft Office Home** page, select the **Admin** icon to navigate to the **Microsoft 365 admin center**.
 	
 	You are now ready to proceed to the next lab exercise.
