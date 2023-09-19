@@ -14,39 +14,37 @@ To test archiving and retention in your Adatum pilot project, you will create a 
 
 3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Teams & groups** and then select **Active teams & groups** below it.
 
-4. On the **Active teams & groups** window, select the **Add a group** option on the menu bar to create a new group for compliance testing. This initiates the **Add a group** wizard.
+4. On the **Active teams & groups** window, select the **+ Add a Microsoft 365 group** option on the menu bar to create a new group for compliance testing. This initiates the **Add a Microsoft 365 group** wizard.
 
-5. On the **Choose a group type** page, select the **Mail-enabled security** option and then select **Next**.
+5. On the **Set up the basics** page, enter **Compliance Test Users** in the **Name** field. Tab into the **Description** field to enable the **Next** button, and then select it.
 
-6. On the **Set up the basics** page, enter **Compliance Test Users** in the **Name** field. Tab into the **Description** field to enable the **Next** button, and then select it.
+6. On the **Assign owners** page, select **+Assign owners**. 
 
-7. On the **Assign owners** page, select **+Assign owners**. 
+7. In the **Assign owners** pane that appears, select **Holly Dickson** and then select **Add(1)**. 
 
-8. In the **Assign owners** pane that appears, select **Holly Dickson** and then select **Add(1)**. 
+8. On the **Assign owners** page, select **Next**.
 
-9. On the **Assign owners** page, select **Next**.
+9. On the **Assign members** page, select **+Add members**. 
 
-10. On the **Assign members** page, select **+Add members**. 
+10. In the **Add members** pane that appears, select the check boxes for **Joni Sherman** and **Lynne Robbins**, and then select **Add(2)**.
 
-11. In the **Add members** pane that appears, select the check boxes for **Joni Sherman** and **Lynne Robbins**, and then select **Add(2)**.
+11. On the **Add members** page, select **Next**.
 
-12. On the **Add members** page, select **Next**.
-
-13. On the **Edit settings** page, enter **comptestusers** in the **Group email address** field. <br/>
+12. On the **Edit settings** page, enter **comptestusers** in the **Group email address** field. <br/>
 
 	**Note:** The Group email address domain (to the right of the group email address alias) displays the default domain for the company's Microsoft 365 tenant (in this case, **xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In a real-world scenario in which a company has multiple domains, you may need to select into this field to select the correct domain. <br/>
 
 	Select **Next**.
 
-14. On the **Review and finish adding group** window, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Create group**.
+13. On the **Review and finish adding group** window, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Create group**.
 
-15. Once the group is created, the **Compliance Test Users group created** window appears. Note the message at the top of the page that indicates it can take up to an hour for the group to appear in the Active teams & groups list. Lab testing has shown that the group normally appears within a few minutes. Select **Close**.
+14. Once the group is created, the **Compliance Test Users group created** window appears. Note the message at the top of the page that indicates it can take up to an hour for the group to appear in the Active teams & groups list. Lab testing has shown that the group normally appears within a few minutes. Select **Close**.
 
-16. This will return you to the **Active teams & groups** page. Remember, the tabs on this page reflect the four types of groups. By default, the **Microsoft 365** tab is displayed, which displays Microsoft 365 groups. Since you created a mail-enabled security group, select the **Mail-enabled security** tab to display this type of group. If the **Compliance Test Users** group does not appear in the list of mail-enabled security groups, select the **Refresh** icon on the menu bar to refresh the list of groups. <br/>
+15. This will return you to the **Active teams & groups** page. Remember, the tabs on this page reflect the four types of groups. By default, the **Microsoft 365** tab is displayed, which displays Microsoft 365 groups. Since you created a mail-enabled security group, select the **Mail-enabled security** tab to display this type of group. If the **Compliance Test Users** group does not appear in the list of mail-enabled security groups, select the **Refresh** icon on the menu bar to refresh the list of groups. <br/>
 
 	**Important:** You cannot proceed until the Compliance Test Users group appears in the list; therefore, keep refreshing the list every few minutes until it appears.
 
-17. Leave your browser open to the Microsoft 365 admin center and proceed to the next task.
+16. Leave your browser open to the Microsoft 365 admin center and proceed to the next task.
 
 
 ### Task 2 – Configure Mobile Device Management for compliance testing
