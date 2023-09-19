@@ -15,20 +15,20 @@ As Adatum's Microsoft 365 administrator, you have been tasked with deploying Mic
 In your lab environment, your lab hosting provider has already obtained a Microsoft 365 trial tenant for you. Your lab provider has also created two admin accounts that you will use in your VM lab environment: 
 
 - A local administrator account for Adatum's on-premises environment (Adatum\Administrator).
-- A default tenant admin account in Microsoft 365 (the display name for this user account is MOD Administrator). 
+- A default tenant admin account in Microsoft 365 (the display name for this user account is ODL user). 
 
-You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
+You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
 
 
 ### Task 1 - Obtain Your Microsoft 365 Credentials
 
-Once you launch the lab, you'll be able to access the free Microsoft 365 trial tenant provided by your lab hosting provider in the Microsoft Virtual Lab environment. Within this tenant, your lab hosting provider has created a Microsoft 365 user account for a default tenant administrator named MOD Administrator. Your lab hosting provider has assigned this user account a unique username and password, and the account has been assigned the Microsoft 365 Global administrator role. You must retrieve this username and password so that you can sign into Microsoft 365 within the Microsoft Virtual Lab environment. You will also be assigned a tenant name and tenant prefix. You will also use this information in various tasks throughout the labs for this course.
+Once you launch the lab, you'll be able to access the free Microsoft 365 trial tenant provided by your lab hosting provider in the Microsoft Virtual Lab environment. Within this tenant, your lab hosting provider has created a Microsoft 365 user account for a default tenant administrator named ODL user. Your lab hosting provider has assigned this user account a unique username and password, and the account has been assigned the Microsoft 365 Global administrator role. You must retrieve this username and password so that you can sign into Microsoft 365 within the Microsoft Virtual Lab environment. You will also be assigned a tenant name and tenant prefix. You will also use this information in various tasks throughout the labs for this course.
 
 Because this course can be offered by learning partners using any one of several authorized lab hosting providers, the actual steps involved to retrieve the UPN name and tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions on how to retrieve this information for your course. <br/>
 
 You should write down the following information (provided by your instructor) for later use:
 
-- **Tenant prefix.** This tenant prefix is for the Microsoft 365 user accounts that you will use to sign into Microsoft 365 throughout the labs in this course. The domain for each Microsoft 365 user account is in the format of {user alias}@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation) and the tenant ID (ZZZZZZ; usually a 6 digit number). Record this xxxxxZZZZZZ tenant prefix value for later use. When any of the lab steps direct you to sign into Microsoft 365 as one of the user accounts (such as the MOD Administrator), you must enter the xxxxxZZZZZZ value that you obtained here as the tenant prefix portion of your .onmicrosoft.com domain.
+- **Tenant prefix.** This tenant prefix is for the Microsoft 365 user accounts that you will use to sign into Microsoft 365 throughout the labs in this course. The domain for each Microsoft 365 user account is in the format of {user alias}@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation) and the tenant ID (ZZZZZZ; usually a 6 digit number). Record this xxxxxZZZZZZ tenant prefix value for later use. When any of the lab steps direct you to sign into Microsoft 365 as one of the user accounts (such as the ODL user), you must enter the xxxxxZZZZZZ value that you obtained here as the tenant prefix portion of your .onmicrosoft.com domain.
 
 - **Tenant password.** This is the password provided by your lab hosting provider for the tenant admin account. **Note:** You will use this password not only for the tenant admin account, but for each of the predefined user accounts that are used throughout the labs.
 
@@ -37,7 +37,7 @@ You should write down the following information (provided by your instructor) fo
 
 ### Task 2- Set up Adatum's Organization Profile
 
-Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the MOD Administrator account, whose alias is "admin". The username for this account is admin@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider); the display name for this account will be MOD Administrator.
+Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the ODL user account, whose alias is "admin". The username for this account is odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com; the display name for this account will be ODL user.
 
 1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Client 1 VM (LON-CL1). If your VM environment opens with one of the other machines (such as LON-DC1), then switch to **LON-CL1** now.
 
@@ -47,7 +47,9 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 4. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-5. In the **Sign in** dialog box, copy and paste in the **Microsoft 365 Tenant Username** provided by your lab hosting provider (this is the MOD Administrator account). The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**.
+5. In the **Sign in** dialog box, copy and paste in the **Microsoft 365 Tenant Username** provided by your lab hosting provider (this is the ODL user account). The username should be in the form of **odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**, select **Next**.
+
+	>**Note:** if **More information required** page appears, proceed with the steps and provide authentication.
 
 6. In the **Enter password** dialog box, copy and paste in the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
@@ -57,9 +59,11 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 9. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it. 
 
-10. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
+10. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the ODL user's Microsoft 365 home page. <br/>
 
-	Notice the initials **MA** that appear in a circle in the top-right corner of the screen. These are the initials of the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the MOD Administrator has no picture assigned to it, the user's initials are displayed in place of the picture. <br/>
+	>**Note:** if it doesn't open, then in the Edge browser paste this URL **admin.microsoft.com**.
+
+	Notice the initials **MA** that appear in a circle in the top-right corner of the screen. These are the initials of the **ODL user** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the ODL user has no picture assigned to it, the user's initials are displayed in place of the picture. <br/>
 
 	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
@@ -108,7 +112,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 	- **Alex Wilber**
 	- **Joni Sherman**
 	- **Lynne Robbins**
-	- **MOD Administrator** <br/>
+	- **ODL user** <br/>
 
     **Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
     
@@ -124,29 +128,27 @@ In the prior task, you learned that when someone is signed into Microsoft 365, t
 
 Custom themes must be associated with one or more Microsoft 365 groups. Therefore, to implement this change, Holly must first create a Microsoft 365 group for the members of the pilot project team. She can then create a custom theme associated with this group that enables the setting to display the signed-in user's name. In this task, you will create a Microsoft 365 group for the members of Adatum's Microsoft 365 pilot project team. You will then create a custom theme that displays the signed-in user's name, and you will assign the pilot project team to this theme. You will also review other options that can be configured with custom themes, and you can make any color changes that you wish.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **ODL user**. 
 
 2. In the **Microsoft 365 admin center**, select **Teams & groups** in the left-hand navigation pane, and then under it, select **Active teams & groups**. 
 
-3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Microsoft 365** tab is displayed by default; this tab displays the existing Microsoft 365 groups.  <br/>
+3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. this tab displays the existing Microsoft 365 groups.  <br/>
 
-    Select the **Add a group** option that appears on the menu bar above the list of Microsoft 365 groups. This initiates the **Add a group** wizard. 
-
-4. In the **Add a group** wizard, on the **Choose a group type** page, the **Microsoft 365 (recommended)** option should be selected by default. If it isn't, then select this option now. Select **Next**. 
+    Select the **+ Add a Microsoft 365 group** option that appears on the menu bar above the list of Microsoft 365 groups. This initiates the **+ Add a Microsoft 365 group** wizard. 
 
 5. In the **Set up the basics** page, enter **M365 pilot project** in the **Name** field, and then enter **Members of the Microsoft 365 pilot project team** in the **Description** field (Note: even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
 
-6. You will now assign the MOD Administrator as owner of the **M365 pilot project** group. In the **Assign owners** window, select **+Assign owners**.
+6. You will now assign the ODL user as owner of the **M365 pilot project** group. In the **Assign owners** window, select **+ Assign owners**.
 	
-7. In the **Assign owners** pane that appears, select the check box next to **MOD Administrator**, and then select the **Add (1)** button at the bottom of the pane.
+7. In the **Assign owners** pane that appears, select the check box next to **ODL user**, and then select the **Add (1)** button at the bottom of the pane.
 
-8. On the **Assign owners** page, MOD Administrator should appear as owner of the group. Select **Next**.
+8. On the **Assign owners** page, ODL user should appear as owner of the group. Select **Next**.
 
-9. You will now assign members to the M365 pilot project group. In the **Add members** page, select **+Add members**.
+9. You will now assign members to the M365 pilot project group. In the **Add members** page, select **+ Add members**.
 
-10. In the **Add members** pane that appears, select the check boxes next to the following users: **Alex Wilber**, **Allan Deyoung**, **Diego Siciliani**, **Isaiah Langer**, **Joni Sherman**, **Lynne Robbins**, **Megan Bowen**, **MOD Administrator**, **Nestor Wilke**, and **Patti Fernandez**. Then select the **Add (10)** button at the bottom of the pane.
+10. In the **Add members** pane that appears, select the check boxes next to the following users: **Alex Wilber**, **Allan Deyoung**, **Diego Siciliani**, **Isaiah Langer**, **Joni Sherman**, **Lynne Robbins**, **Megan Bowen**, **ODL user**, **Nestor Wilke**, and **Patti Fernandez**. Then select the **Add (10)** button at the bottom of the pane.
 
-11. On the **Add members** page, verify these 10 users are listed as members of the group. If you missed a user, select **+Add members** and then add any users that you missed. When all 10 users appear on this page, select **Next**.
+11. On the **Add members** page, verify these 10 users are listed as members of the group. If you missed a user, select **+ Add members** and then add any users that you missed. When all 10 users appear on this page, select **Next**.
 
 12. In the **Edit settings** page, enter the following information: <br/>
 
@@ -166,7 +168,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 17. In the list of organization profile data, select **Custom themes**.
 
-18. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
+18. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+ Add theme** option.
 
 19. In the **New group theme** pane that appears, the **General** tab is displayed by default. Enter **M365 pilot project theme** in the **Name** field.
 
@@ -186,7 +188,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 23. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved. 
 
-24. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of the circle with the **MA** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
+24. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **ODL user** name appears to the left of the circle with the **MA** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
 
 25. In the list of organization profile data, select **Custom themes**.
 
@@ -201,13 +203,13 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 28. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
-### ‎Task 4 - Enable Information Rights Management for SharePoint Online 
+### Task 4 - Enable Information Rights Management for SharePoint Online 
 
 In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
 
 **Important:** While you will validate IRM for Exchange and SharePoint in Lab 7, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 7, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **ODL user**. 
 
 2. In the **Microsoft 365 admin center**, select **Show all** (if necessary) in the left-hand navigation pane to see all the navigation options. Under the **Admin centers** group, select **SharePoint**. This will open the **SharePoint admin center** in a new tab.
 
@@ -230,7 +232,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 
 In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **ODL user**. 
 
 2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the left-hand navigation pane, select **Security**. This will open the **Microsoft 365 Defender** portal in a new tab in your browser.
 
@@ -269,7 +271,7 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 		Set-ExecutionPolicy unrestricted
 
-	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
+	If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
 6. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
@@ -292,9 +294,9 @@ To address this timing issue, you will run a PowerShell script in this task that
 
     **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
 
-4. It may take up to 1 minute before a **Sign in** window appears. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+4. It may take up to 1 minute before a **Sign in** window appears. Enter the ODL user account provided by your lab hosting provider (**odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**; and then select **Next**. On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
-5. A **Pick an account** window will appear. On this window, select **MOD Administrator** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+5. A **Pick an account** window will appear. On this window, select **ODL user** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
     **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-5.
 
