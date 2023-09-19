@@ -34,25 +34,27 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 3. In the **Data lifecycle management** window, in the list of tabs that appear across the top of the page, select **Retention policies**.
 
-4. On the **Retention policies** tab, select **+New retention policy** on the menu bar. This initiates the **Create retention policy** wizard.
+4. On the **Retention policies** tab, select **+ New retention policy** on the menu bar. This initiates the **Create retention policy** wizard.
 
 5. On the **Name your retention policy** page, enter **Test user email retention** in the **Name** field and then select **Next**.
 
-6. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
+7. On the **Policy Scope** field, select **Static** and then select **Next**.
 
-7. On the **Choose where to apply the policy** page, note the Exchange email location. It's currently set to include **All recipients**. You want to change this to just apply to Joni Sherman and Lynne Robbins' mailboxes. Under **All mailboxes**, select **Edit**.
+8. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
 
-8. In the **Exchange email** pane that appears, hover your mouse over **Joni Sherman** and then select her check box. Do the same for **Lynne Robins**. <br/>
+9. On the **Choose where to apply the policy** page, note the location. It's currently set to include **All recipients**. You want to change this to just apply to Joni Sherman and Lynne Robbins' mailboxes. Under **All mailboxes**, select **Edit**.
+
+10. In the **Exchange mailboxes** pane that appears, hover your mouse over **Joni Sherman** and then select her check box. Do the same for **Lynne Robins**. <br/>
 
 	**Note:** If you select a user's name, the other check boxes that have been selected will be unselected. To select multiple users, you must hover your mouse over each user's name and select their check box that appears. <br/>
 
 	Once both check boxes are selected, select **Done**.
 
-9. On the **Choose where to apply the policy** page, the **Exchange email** location should now indicate that **2 mailboxes** are included. <br/>
+11. On the **Choose where to apply the policy** page, the **Exchange mailboxes** location should now indicate that **2 mailboxes** are included. <br/>
 
-	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint sites**, **OneDrive accounts**, and **Microsoft 365 Groups**). Select **Next**.
+	Since this policy will only apply to Exchange mailboxes for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint sites**, **OneDrive accounts**, and **Microsoft 365 Groups**). Select **Next**.
 
-10. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
+12. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
 	- Retain items for a specific period - select in this field, and in the drop-down menu that appears, select **Custom**. Three fields will appear - years, months, and days. For testing purposes, Holly wants to test email retention for emails in Joni and Lynne's mailboxes by only retaining emails that are less than one year old. As such, set the time periods to the following values: **Years - 1, Months - 0, Days - 0**.
 
@@ -60,13 +62,13 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 	- At the end of the retention period - **Delete items automatically**
 
-11. Select **Next**.
+13. Select **Next**.
 
-12. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Submit**.
+14. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Submit**.
 
-13. On the **You successfully created a retention policy** window, select **Done**.
+15. On the **You successfully created a retention policy** window, select **Done**.
 
-14. Leave the **Data lifecycle management** tab open in your Edge browser as you will create another retention policy in the next task.
+16. Leave the **Data lifecycle management** tab open in your Edge browser as you will create another retention policy in the next task.
 
 
 ### Task 3 – Create an email retention policy for all users
@@ -85,13 +87,15 @@ Holly has concluded her testing of email retention on Joni and Lynne's mailboxes
 
 5. On the **Name your retention policy** page, enter **Adatum email retention** in the **Name** field and then select **Next**.
 
-6. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
+7. On the **Policy Scope** field, select **Static** and then select **Next**.
 
-7. On the **Choose where to apply the policy** page, this policy will only apply to **Exchange email**. Ensure that it's **Status** is set to **On**. Set the **Status** toggle switch to **Off** for all other locations that are turned **On** by default. **Exchange email** should be the only location whose **Status** is set to **On**. 
+7. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
 
-8. For the **Exchange email** location, note that it's currently set to include **All mailboxes**. Do not change this value, since you want this policy to apply to all user mailboxes. Select **Next**.
+8. On the **Choose where to apply the policy** page, this policy will only apply to **Exchange mailboxes**. Ensure that it's **Status** is set to **On**. Set the **Status** toggle switch to **Off** for all other locations that are turned **On** by default. **Exchange mailboxes** should be the only location whose **Status** is set to **On**. 
 
-9. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
+9. For the **Exchange mailboxes** location, note that it's currently set to include **All mailboxes**. Do not change this value, since you want this policy to apply to all user mailboxes. Select **Next**.
+
+10. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
 	- Retain items for a specific period - **5 years**
 
@@ -99,13 +103,13 @@ Holly has concluded her testing of email retention on Joni and Lynne's mailboxes
 
 	- At the end of the retention period - **Delete items automatically**
 
-10. Select **Next**.
+11. Select **Next**.
 
-11. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Submit**.
+12. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Submit**.
 
-12. On the **You successfully created a retention policy** window, select **Done**.
+13. On the **You successfully created a retention policy** window, select **Done**.
 
-13. In your Edge browser, leave all the tabs open as you proceed to the next exercise.
+14. In your Edge browser, leave all the tabs open as you proceed to the next exercise.
 
 You have now created a new retention policy in the Microsoft Purview portal that retains all Exchange emails from all mailboxes for 5 years after the last modification.
 
