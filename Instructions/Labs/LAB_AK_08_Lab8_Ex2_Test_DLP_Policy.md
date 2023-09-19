@@ -44,7 +44,7 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 11. In the Edge browser, enter the following URL: **https://outlook.office365.com**
 
-12. In the **Pick an account** window, select Lynne Robbins' account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. On the **Stay signed in** window, select the **Don't show this again** check box and select **Yes**.
+12. In the **Pick an account** window, select Lynne Robbins' account (**lynne.robbins@azurehol1062.onmicrosoft.com**). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. On the **Stay signed in** window, select the **Don't show this again** check box and select **Yes**.
 
 13. In Lynne's Inbox, verify that she received the email from Holly Dickson that has the subject line: **DLP Policy Test 1**. Select the message to verify the content containing the IP address was not removed. 
 
@@ -69,7 +69,7 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 	**Note:** When drafting this email with sensitive data (in this case, multiple IP addresses), it will trigger the IP address policy that you previously created, and specifically, the multiple IP address rule. As such, a **Policy tip** should be displayed indicating the email message violates an organizational policy. You'll ignore this policy tip and send the email anyway in order to test the remainder of the DLP policy, which will block the email. Once you test the email block, you'll override the blockage by entering a business justification for sending this sensitive data, and then you'll try and send the email again.
 
-3. Once the policy tip is displayed, select **Send**. You should immediately receive a **Send blocked** dialog box that indicates the message includes one or more recipients who aren't authorized to receive sensitive information. Select **OK**. <br/>
+3. Once the policy tip is displayed, select **Send**. You should immediately receive a **Send blocked** dialog box that indicates the message includes one or more recipients who aren't authorized to receive sensitive information. <br/>
 
 	**Hint:** Normally you would override the block before sending it, but in this case we wanted you to experience the block to see how it works. In the next steps, you'll override the block and attempt to re-send the email.
 
