@@ -18,7 +18,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 4. In the **Threat policies** window, under the **Policies** section, select **Safe Links**. 
 
-5. On the **Safe links** page, select **+Create** on the menu bar. This initiates the **Create safe links policy** wizard.
+5. On the **Safe links** page, select **+ Create** on the menu bar. This initiates the **Create safe links policy** wizard.
 
 6. On the **Name your policy** page, enter **LinkPolicy1** in the **Name** field and then select **Next**.
 
@@ -42,7 +42,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 14. On the **Tenant Allow/Block Lists** page, the **Domains & addresses** tab is displayed by default. Select the **URLs** tab.
 
-15. On the **URLs** tab, select **+Block** on the menu bar. In the **Block URLs** pane that appears, enter **http://tailspintoys.com** in the field and then select **Add**.
+15. On the **URLs** tab, select **+ Block** on the menu bar. In the **Block URLs** pane that appears, enter **http://tailspintoys.com** in the **Add URLs with wildcards (20 max)** field and then select **Add**.
 
 **STOP!!** As mentioned at the start of this lab exercise, now that you have created a Safe Links policy, you must wait at least 30 minutes for the policy to propagate through the system before you can perform the next task in this exercise. 
 
@@ -62,7 +62,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 5. In the email form that appears in the right-hand pane, enter the following information:
 
-    - To: You will be sending an email to the MOD Administrator, so enter **mod** in the **To** field and then select the **MOD Administrator** email address from the user list.
+    - To: You will be sending an email to the ODL user, so enter **mod** in the **To** field and then select the **ODL user** email address from the user list.
 
     - Add a subject: **Free stuff for Adatum users**
 
@@ -78,7 +78,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 10. Select the **Send** button. Select Holly's **Sent Items** folder to verify the message was sent.
 
-11. You now want to go the MOD Administrator's Inbox in Outlook and validate whether the Safe Links policy you created in the prior task worked on the email that you just sent from Holly to the MOD Administrator.<br/>
+11. You now want to go the ODL user's Inbox in Outlook and validate whether the Safe Links policy you created in the prior task worked on the email that you just sent from Holly to the ODL user.<br/>
 
     To do this, you must first switch to the Client 2 VM (**LON-CL2**). 
 
@@ -88,17 +88,17 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 13. On **LON-CL2**, select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-14. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username and password for the MOD Administrator account (**admin@xxxxxZZZZZZ.onmicrosoft.com**).
+14. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username and password for the ODL user account (**odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**).
 
 15. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
 
-16. In the MOD Administrator's **Inbox**, select the email that was sent by Holly regarding free stuff for Adatum users.
+16. In the ODL user's **Inbox**, select the email that was sent by Holly regarding free stuff for Adatum users.
 
 17. Select the hyperlink in the body of the message to navigate to the site. 
 
 18. A new tab should open in your **Edge** browser that takes you to the URL you just saw in the prior step. This site should display the following warning message: **This website is classified as malicious.** This not only indicates that opening this website may not be safe, but it also verifies that the Safe Links policy you just created is working properly.
 
-19. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, in the Outlook tab, select the circle with the **MA** initials in the upper right-hand corner. In the **MOD Administrator** profile window that appears, select **Sign out**.
+19. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, in the Outlook tab, select the circle with the **MA** initials in the upper right-hand corner. In the **ODL user** profile window that appears, select **Sign out**.
 
 20. Once you are signed out of Outlook, close the Edge Browser. LON-CL2 is now ready for use in Lab 6.
 
