@@ -30,7 +30,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 9. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 
-10. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**.
+10. In the **Pick an account** window, select **Holly@azurehol1062.onmicrosoft.com** and then select **Next**. In the **Enter password** window, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) and select **Sign in**.
 
 11. Because MFA is enabled for Holly, a **More information required** window appears. Select **Next**.
 
@@ -44,7 +44,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 16. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
 
-17. On the **Success!** page, select **Done**.
+	>**Note:** It will ask you for the second method, i.e. via Authenticator App, if you want to proceed with that, if not, enter this **https://portal.office.com/** again, in the Edge browser, and proceed with the next steps.
 
 18. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 
@@ -71,7 +71,7 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 4. On the **Attack simulation training** page, Holly has decided to conduct a simulated account breach in which she will use a URL to try and obtain usernames and passwords. This is referred to in the Attack Simulator as a **Credentials Harvest** attack. <br/>
 
-	You can launch this attack either from **Simulations** tab or selecting the **Launch a simulation** link on the **Overview** page. Since the **Overview** tab has additional information and is the default page when selecting the **Attack simulation training** service, it is recommended that you launch it from there so that you can learn about the specifics of this type of attack. <br/>
+	You can launch this attack either from **Simulations** tab by selecting the **+ Launch a simulation**. Since the **Overview** tab has additional information and is the default page when selecting the **Attack simulation training** service, it is recommended that you launch it from there so that you can learn about the specifics of this type of attack. <br/>
 	
 	On the **Overview** tab, scroll down to the **Recommendations** section. Under the **Launch a phishing simulation using other social engineering techniques** recommendation, select **Create another simulation with new technique**. This initiates the **Create Simulation** wizard.
 
@@ -125,7 +125,7 @@ In this task, you will verify whether Adatum has received the email that you con
  
 3. In the **Pick an account** window, select **Use another account**. 
 
-4. In the **Sign in** window, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix ID provided by your lab hosting provider), and then in the **Enter password** window, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**. 
+4. In the **Sign in** window, enter **lynne.robbins@azurehol1062.onmicrosoft.com**, and then in the **Enter password** window, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) and select **Sign in**. 
 
 5. In Lynne's Outlook Inbox, you should see the spear phishing email that was sent by the Attack Simulator. The subject of the message should be **2 Failed messages to you**. Select the email to open it and review the details in the body of the message. 
 
@@ -133,7 +133,7 @@ In this task, you will verify whether Adatum has received the email that you con
 
 6. Select the **View Returned Messages** button in the email. Even though you know this is a spear phishing attack, this will enable you to see the effect of doing so in the Attack Simulator report that tracks the results of the spear phishing campaign.
 
-7. In the **Sign in** dialog box that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix ID provided by your lab hosting provider), and then enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) in the **Enter password** window. Select **Sign in**. 
+7. In the **Sign in** dialog box that appears, enter **lynne.robbins@azurehol1062.onmicrosoft.com**, and then enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) in the **Enter password** window. Select **Sign in**. 
 
 8. This displays a web page that explains how you have been redirected to it as part of a Phishing awareness test being run by your organization. Read through the contents of this site, which uses the landing page template that you selected in the prior task when setting up the attack simulation.
 
