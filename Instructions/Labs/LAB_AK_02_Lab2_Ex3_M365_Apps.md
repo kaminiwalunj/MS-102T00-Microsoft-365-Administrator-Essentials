@@ -35,10 +35,10 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 	**IMPORTANT:** To the right of the Username field is the domain field. You want this value to be Adatum's **xxxxxZZZZZZ.onmicrosoft.com** domain (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). However, if the custom domain that you added in a prior lab is set as the default domain, then this field will be prefilled with the custom **xxxUPNxxx.xxxCustomDomainxxx.xxx** on-premises domain (where xxxUPNxxx is your UPN number and xxxCustomDomainxxx.xxx is the custom domain). If the custom domain is displayed in this field, you must select the drop-down arrow and select the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain instead.  <br/>
 
-	After configuring this field, Laura’s **Username** should appear as: **Laura@xxxxxZZZZZZ.onmicrosoft.com**
+	After configuring this field, Laura’s **Username** should appear as: **Laura@azurehol1062.onmicrosoft.com**
 
 	- Password settings: Clear (uncheck) the **Automatic create a password** option
-	- Password: Enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) 
+	- Password: Enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 	
 5. Select **Next**.
@@ -68,9 +68,9 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	- On the third screen, unselect (clear) the **Make your Microsoft experience more useful to you** check box and then select the **Confirm and start browsing** button.  
 	- In the Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/**
 
-15. In the **Sign in** window, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+15. In the **Sign in** window, enter **Laura@azurehol1062.onmicrosoft.com** and then select **Next**.
 
-16. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.**
+16. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) and then select **Sign in.**
 
 17. In the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. In the **Save password** window, select **Never**.
 
@@ -196,7 +196,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 10. In the **Start** menu, select **Word**.
 
-11. On the **Sign in to get started with Office** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+11. On the **Sign in to get started with Office** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@azurehol1062.onmicrosoft.com**. In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account).
 
 12. On the **Stay signed in to all your apps** window, select **OK**.
 
