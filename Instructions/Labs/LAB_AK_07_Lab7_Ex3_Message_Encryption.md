@@ -62,7 +62,7 @@ In the prior task, you configured a mail flow encryption rule using the Exchange
 
 5. You must then connect to the module by running the following command at the command prompt (Note: in the command, you must copy and paste in the Tenant Name provided by your lab hosting provider (xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider):
 
-	‎**Connect-ExchangeOnline -UserPrincipalName holly@xxxxxZZZZZZ.onmicrosoft.com**
+	‎**Connect-ExchangeOnline -UserPrincipalName Holly@azurehol1062.onmicrosoft.com**
 	
 6. In the **Enter password** dialog box that appears, enter the Microsoft 365 tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
