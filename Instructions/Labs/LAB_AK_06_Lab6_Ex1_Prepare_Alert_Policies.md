@@ -39,17 +39,17 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 
 6. In the list of roles that appears, select the **Name** column heading to sort the roles in ascending alphabetical name order. Select the **Compliance Data Administrator** role group. 
 
-7. In the **Compliance Data Administrator** pane that appears, note the list of roles that have been assigned to this role group. Scroll to the bottom of the pane, and in the **Members** section, select **Edit**. 
+7. In the **Compliance Data Administrator** pane that appears, note the list of roles that have been assigned to this role group. select **Edit**. 
 
-8. In the **Editing Choose members** window, note the message indicating the list of members is currently empty. Below this message, select **Choose members**. 
+8. In the **Edit members of the role group** window, select **Choose users** under the Members pane. 
 
-9. In the **Choose members** window, select **+Add**. Because a partial, unsorted list of users appears, enter **Lynne** in the **Search** field. In the list of users that appears whose name includes Lynne, select the check box next to **Lynne Robbins** and then select **Add.**
+9. In the **Choose users** window, in the search filed type **Lynne** press enter, select the check box next to **Lynne Robbins** and then click on **Select** button.
 
-10. In the **Choose members** window, select **Done.**
+10. In the **Edit members of the role group** window, select **Next**.
 
-11. In the **Editing Choose members** window, select **Save.**
+11. In the **Review the role group and finish** window, select **Save**.
 
-12. In the **Compliance Data Administrator** pane, select **Close.**
+12. The message will show that **You successfully updated the role group**, select **Done**.
 
 13. Leave all tabs in your Edge browser open for the next lab exercise.
 
