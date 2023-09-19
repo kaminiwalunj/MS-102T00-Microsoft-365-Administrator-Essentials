@@ -40,7 +40,7 @@ In this task, you will turn on Microsoft Defender for Office 365, which provides
 
 12. Under the **Redirect messages with detected attachments** section, select the **Enable redirect** check box. 
 
-13. In the **Send messages that contain monitored attachments to the specified email address** field, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then select **Next**.
+13. In the **Send messages that contain monitored attachments to the specified email address** field, enter **joni.sherman@azurehol1062.onmicrosoft.com**, and then select **Next**.
 
 14. On the **Review** page, review the options that you configured. If any need to be corrected, select the appropriate **Edit** option and make the necessary corrections. Once all the settings are correct, select **Submit**.
 
