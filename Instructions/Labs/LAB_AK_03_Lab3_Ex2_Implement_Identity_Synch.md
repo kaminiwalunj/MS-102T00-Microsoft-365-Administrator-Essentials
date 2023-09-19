@@ -16,13 +16,13 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Azure AD** wizard.
 
-5. In the **Add or sync users to Azure AD** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
+5. In the **Add or sync users to Microsoft Entra ID** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
 
 6. On the **Select a migration option** page, read the explanation of each option so that you understand the migration options that are available. Select the **Continuous sync** option and then select **Next**.
 
 7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
 
-8. On the **Review synchronization tools** page, Holly had originally planned to select the **Azure AD Connect** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Azure AD Connect is the correct choice for Adatum. <br/>
+8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra ID Connect** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra ID Connect is the correct choice for Adatum. <br/>
 
 	Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
 
@@ -30,45 +30,55 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
-		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Azure AD cloud sync**. <br/>
+		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Microsoft Entra cloud sync**. <br/>
 	
 	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-		**Note:** After selecting this second check box, the recommendation has changed to **Azure AD Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
+		**Note:** After selecting this second check box, the recommendation has changed to **Microsoft Entra ID Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
 
-10. Select **Next**. The system will initiate synchronization using the recommended solution, **Azure AD Connect**. 
+10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra ID Connect**. 
 
-11. On the **Sync your users** page, select the **Download Azure AD Connect** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
+11. On the **Sync your users** page, select the **Download the Microsoft Entra Cloud Sync provisioning agent** box. This will download a file. <br/>
 
-12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Azure Active Directory Connect** should appear. <br/>
+	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AADConnectProvisioningAgentSetup.exe** file once it's finished downloading. <br/>
 
-	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
+	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AADConnectProvisioningAgentSetup.exe** file, then select the **Open file** link that appears below it. However, if **AADConnectProvisioningAgentSetup.exe**  does not appear in the **Downloads** window.
 
-	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
+13. Opening the **AADConnectProvisioningAgentSetup.exe** file, select the checkbox of **I agree to the license terms and conditions**, after this select **Install** button to initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect Provisioing Agent** wizard.
 
-13. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect** wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar. 
+14. On the **Welcome to Azure AD Connect provisioing agent configuration wizard**, select the **Next**.
 
-14. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+15. On **Select Extension** page, select the **On-premises application provisioing (Azure AD to application)**, and click on **Next**.
 
-15. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
+16. On **Connect Azure AD** page, select **Enter credentials**, and pick the Holly's account.
 
-16. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
+17. On the **Agent configuration** page, after confirming the configurations, select **Confirm**.
 
-	In the **PASSWORD** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account), and then select **Next**. <br/>
+	>**Note:** This will take a minutes to complete, after completion, below on the agent configuration page, it will be mentioned as **Your agent installation and configuration is complete. Please complete all your provisioning configurations using Azure AD Portal.**
+
+18. Select **Azure AD Portal** which is written on the below of the page of Agent configuration, it will re-direct to the Azure Portal, on the AAD Connect | Get Started page. From the left-hand navigation select **Connect Sync**. On the AAD Connect | Connect Sync page, Select **Download the Azure AD Connect**.
+
+19. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+
+20. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
+
+21. On the **Connect to Azure AD** window, enter **Holly@azurehol1062.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
+
+	In the **PASSWORD** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account), and then select **Next**. <br/>
 
 	**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
-17. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
+22. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-18. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
+23. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
-19. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
+24. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
 
 	**IMPORTANT:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
-20. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
+25. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
 
-21. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
+26. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
 
 	**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 22). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. <br/>
 
@@ -80,17 +90,17 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	Minimize **Server Manager** after it opens, and then open the **Edge** browser and navigate to **htps://portal.office.com**. <br/>
 
-	Log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com**.  In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
+	Log in as **Holly@azurehol1062.onmicrosoft.com**.  In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account). <br/>
 
 	On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. <br/>
 
 	Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
 
-22. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
+27. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
 
-23. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
+28. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
 
-24. In the bottom portion of the screen, a detail pane appears showing the detailed information for this selected operation. 
+29. In the bottom portion of the screen, a detail pane appears showing the detailed information for this selected operation. 
 
 	- In the **Export Statistics** pane on the left, note the number of on-premises users that were added to Azure Active Directory and the number that were updated. 
 	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
@@ -101,11 +111,11 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	‎**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
-25. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+30. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
-26. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
+31. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
 
-27. Leave LON-DC1 open as it will be used in the next exercise.
+32. Leave LON-DC1 open as it will be used in the next exercise.
 
 
 ### Task 2 - Create Group Accounts to Test Synchronization  
@@ -128,7 +138,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 6. In the **Print Operators Properties** window, select the **Members** tab and then select the **Add** button.
 
-7. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type the following names (type all three at once with a semi-colon separating them):  
+7. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type the following names. Type one by one and select **Check names**, click on **OK**, then again select **Add** to check for the another names:  
 
 	- **Ashlee Pickett** 
 
@@ -136,7 +146,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 	- **Morgan Brooks**  
 
-8. Select **Check Names**. Once they are all validated, select **OK** to return to the **Print Operators Properties** window.
+8. Once they are all validated, select **OK** to return to the **Print Operators Properties** window.
 
 9. In the **Print Operators Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
 
@@ -231,13 +241,13 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Home | Microsoft 365** page and the **Active users - Microsoft 365 admin center**, then proceed to the next step. <br/>
 
-	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account), and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
+	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **Holly@azurehol1062.onmicrosoft.com**. In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account), and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
-4. In the **Active teams and groups** window, the **Microsoft 365** tab is displayed by default. Select the **Security** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task.
+4. In the **Active teams and groups** window, the **Teams & Microsoft 365 gropus** tab is displayed by default. Select the **Security groups** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task.
 
-5. Select the **Mail-enabled security** tab. Verify the **Manufacturing** group appears. This group appears as a mail-enabled security group rather than a standard security group because you added an email address (**manufacturing@adatum.com**) to the on-premises group in the prior task.  <br/>
+5. Verify the **Manufacturing** group appears. This group appears as a mail-enabled security group rather than a standard security group because you added an email address (**manufacturing@adatum.com**) to the on-premises group in the prior task.  <br/>
 
 	**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
@@ -273,7 +283,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 		
 		Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 
-12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. 
+12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account) and then select **Sign in**. 
 
 13. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
