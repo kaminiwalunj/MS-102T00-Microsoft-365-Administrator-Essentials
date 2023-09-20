@@ -69,17 +69,17 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 9. On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**, this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-	![](../images/MS-102-image-1.png)
+	![](../Images/MS-102-image-1.png)
 
 10. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
-	![](../images/MS-102-image-2.png)
+	![](../Images/MS-102-image-2.png)
 
 11. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
 12. In the **Organization profile** tab, select **Organization information** from the list of profile data.
 
-	![](../images/MS-102-image-3.png)
+	![](../Images/MS-102-image-3.png)
 
 12. In the **Organization information** pane that appears, enter the following information:
 
@@ -111,7 +111,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	>**Note:** the **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is a more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group.
 
-	![](../images/MS-102-image-4.png)
+	![](../Images/MS-102-image-4.png)
 
 17. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
 
@@ -144,17 +144,17 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. this tab displays the existing Microsoft 365 groups. Select the **+ Add a Microsoft 365 group** option that appears on the menu bar above the list of Microsoft 365 groups. This initiates the **+ Add a Microsoft 365 group** wizard. 
 
-	![](../images/MS-102-image-5.png)
+	![](../Images/MS-102-image-5.png)
 
 5. In the **Set up the basics** page, enter **M365 pilot project** in the **Name** field, and then enter **Members of the Microsoft 365 pilot project team** in the **Description** field (Note: even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
 
-	![](../images/MS-102-image-6.png)
+	![](../Images/MS-102-image-6.png)
 
 6. You will now assign the ODL user as owner of the **M365 pilot project** group. In the **Assign owners** window, select **+ Assign owners**.
 	
 7. In the **Assign owners** pane that appears, select the check box next to **odl_user <inject key="DeploymentID" enableCopy="false"/>**, and then select the **Add (1)** button at the bottom of the pane.
 
-	![](../images/MS-102-image-7.png)
+	![](../Images/MS-102-image-7.png)
 
 8. On the **Assign owners** page, ODL user should appear as owner of the group. Select **Next**.
 
@@ -182,7 +182,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 17. In the list of organization profile data, select **Custom themes**.
 
-	![](../images/MS-102-image-8.png)
+	![](../Images/MS-102-image-8.png)
 
 18. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+ Add theme** option.
 
