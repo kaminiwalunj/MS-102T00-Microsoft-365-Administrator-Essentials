@@ -1,11 +1,3 @@
-## WWL Tenants - Terms of Use
-
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training. 
-
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension. 
-
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time. 
-
 # Learning Path 1 - Lab 1 - Exercise 1 - Initialize your Microsoft 365 Tenant 
 
 Adatum Corporation is a subsidiary of Contoso Electronics. Adatum runs its legacy applications (such as Microsoft Exchange Server 2019) in an on-premises deployment. However, it recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which it must synchronize its on-premises and cloud deployments. 
@@ -19,61 +11,77 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 
 You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
 
-
 ### Task 1 - Obtain Your Microsoft 365 Credentials
 
-Once you launch the lab, you'll be able to access the free Microsoft 365 trial tenant provided by your lab hosting provider in the Microsoft Virtual Lab environment. Within this tenant, your lab hosting provider has created a Microsoft 365 user account for a default tenant administrator named ODL user. Your lab hosting provider has assigned this user account a unique username and password, and the account has been assigned the Microsoft 365 Global administrator role. You must retrieve this username and password so that you can sign into Microsoft 365 within the Microsoft Virtual Lab environment. You will also be assigned a tenant name and tenant prefix. You will also use this information in various tasks throughout the labs for this course.
+1. In the search bar type and search for **Hyper-V Manager**.
 
-Because this course can be offered by learning partners using any one of several authorized lab hosting providers, the actual steps involved to retrieve the UPN name and tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions on how to retrieve this information for your course. <br/>
+2. On the Virtual Machines section, it will show the all the virtual machines that are in running state, right click on **LON-CL1** VM, select **Connect**, on the **Connect to LON-CL1** select **Connect**.
 
-You should write down the following information (provided by your instructor) for later use:
+3. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
 
-- **Tenant prefix.** This tenant prefix is for the Microsoft 365 user accounts that you will use to sign into Microsoft 365 throughout the labs in this course. The domain for each Microsoft 365 user account is in the format of {user alias}@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation) and the tenant ID (ZZZZZZ; usually a 6 digit number). Record this xxxxxZZZZZZ tenant prefix value for later use. When any of the lab steps direct you to sign into Microsoft 365 as one of the user accounts (such as the ODL user), you must enter the xxxxxZZZZZZ value that you obtained here as the tenant prefix portion of your .onmicrosoft.com domain.
+4. On the Azure portal, in **search resources, services, and docs** type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
 
-- **Tenant password.** This is the password provided by your lab hosting provider for the tenant admin account. **Note:** You will use this password not only for the tenant admin account, but for each of the predefined user accounts that are used throughout the labs.
+5. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of Microsoft 365 Business Premium, and select **Save**.
 
-- **Custom Domain name.** Your lab hosting provider has created a custom domain name for Adatum. You will use this domain when adding a custom domain into Microsoft 365 in a later lab exercise. The domain name is in the format **xxxUPNxxx.xxxCustomDomainxxx.xxx.** You must replace **xxxUPNxxx** with the UPN number provided by your lab hosting provider, and you must replace **xxxCustomDomainxxx.xxx** with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new custom domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
+6. Close the **Licenses** tab.
+
+7. Open **Windows Powershell ISE**, and run the following commands to assign the usage location to all the users:
+
+	```powershell
+    Connect-AzureAD
+    ```
+	>**Note:** Provide the ODL credentials, on the Sign-in page, in the username, enter **odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**, and in the passowrd enter **<inject key="AzureAdUserPassword"></inject>**
+
+	```powershell
+    Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
+	```
+
+8. Close the **Windows Powershell ISE**.
+
+9. Repeat the step-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
 
 
 ### Task 2- Set up Adatum's Organization Profile
 
 Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the ODL user account, whose alias is "admin". The username for this account is odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com; the display name for this account will be ODL user.
 
-1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Client 1 VM (LON-CL1). If your VM environment opens with one of the other machines (such as LON-DC1), then switch to **LON-CL1** now.
+1. On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon. If necessary, maximize your browser window when it opens.
 
-2. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
+2. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-3. On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon. If necessary, maximize your browser window when it opens.
+3. In the **Sign in** dialog box, copy and paste the ODL username from the **Enviornment details** page in the **Microsoft 365 Tenant Username**, select **Next**.
 
-4. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
-
-5. In the **Sign in** dialog box, copy and paste in the **Microsoft 365 Tenant Username** provided by your lab hosting provider (this is the ODL user account). The username should be in the form of **odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**, select **Next**.
+4. In the **Enter password** dialog box, copy and paste the ODL password from **Enviornment details** page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
 	>**Note:** if **More information required** page appears, proceed with the steps and provide authentication.
 
-6. In the **Enter password** dialog box, copy and paste in the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+5. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
-7. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
+6. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-8. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
+7. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it. 
 
-9. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it. 
-
-10. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the ODL user's Microsoft 365 home page. <br/>
+8. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the ODL user's Microsoft 365 home page.
 
 	>**Note:** if it doesn't open, then in the Edge browser paste this URL **admin.microsoft.com**.
 
-	Notice the initials **MA** that appear in a circle in the top-right corner of the screen. These are the initials of the **ODL user** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the ODL user has no picture assigned to it, the user's initials are displayed in place of the picture. <br/>
+	>**Note:** Notice the initials **O1** that appear in a circle in the top-right corner of the screen. These are the initials of the **ODL user** account, which is the tenant admin account that you just signed in as. However, when a user such as the ODL user has no picture assigned to it, the user's initials are displayed in place of the picture.
 
-	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
+9. On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**, this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-11. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
+	![](../images/MS-102-image-1.png)
 
-12. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
+10. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
-13. In the **Organization profile** tab, select **Organization information** from the list of profile data.
+	![](../images/MS-102-image-2.png)
 
-14. In the **Organization information** pane that appears, enter the following information: <br/>
+11. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
+
+12. In the **Organization profile** tab, select **Organization information** from the list of profile data.
+
+	![](../images/MS-102-image-3.png)
+
+12. In the **Organization information** pane that appears, enter the following information:
 
     - Name: **Adatum Corporation** (Note: Adatum Corporation is a subsidiary of Contoso Inc. The Microsoft trial tenant that your lab hosting provider obtained for this lab may have been originally assigned to Contoso. If **Contoso** (or any other value) appears as the organization name, then change it to **Adatum Corporation**.)
 
@@ -91,36 +99,38 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
     - Preferred language: **English**
 
-15. Select **Save**.
+13. Select **Save**.
 
-16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
+14. At the top of the **Organization information** pane, note the message indicating the **Saved**. Select the **X** in the upper right-hand corner to close the pane.
 
-17. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
+15. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.
 
-    **Note:** One of the benefits of Microsoft 365 is its ability to have the latest features and updates automatically applied to your environment. This process can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your **Release preferences**, you can control how and when your Microsoft 365 tenant receives these updates. <br/>
+    >**Note:** One of the benefits of Microsoft 365 is its ability to have the latest features and updates automatically applied to your environment. This process can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your **Release preferences**, you can control how and when your Microsoft 365 tenant receives these updates.
 
-18. In the **Release preferences** pane that appears, the **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is a more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group. <br/>
+16. In the **Release preferences** pane that appears, select the **Targeted release for select users** option and then select **Save**.
 
-	Select the **Targeted release for select users** option and then select **Save**.
+	>**Note:** the **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is a more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group.
 
-19. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
+	![](../images/MS-102-image-4.png)
 
-20. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your trial tenant by your lab hosting provider). In this list, select each of the following users. <br/>
+17. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
 
-    **Note:** You must select each user, one at a time. After selecting a user, you must select inside the **Who should receive targeted releases?** field again to re-display the list so that you can select the next user. 
+18. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. In this list, select each of the following users.
+
+    >**Note:** You must select each user, one at a time. After selecting a user, you must select inside the **Who should receive targeted releases?** field again to re-display the list so that you can select the next user. 
 
 	- **Alex Wilber**
 	- **Joni Sherman**
 	- **Lynne Robbins**
-	- **ODL user** <br/>
+	- **ODL_User <inject key="DeploymentID" enableCopy="false"/>**
 
-    **Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
+    >**Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
     
-21. Select **Save**.
+19. Select **Save**.
 
-22. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
+20. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
 
-23. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+21. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 ### Task 3- Create a custom theme for Adatum's pilot project team
 
@@ -132,15 +142,19 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 2. In the **Microsoft 365 admin center**, select **Teams & groups** in the left-hand navigation pane, and then under it, select **Active teams & groups**. 
 
-3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. this tab displays the existing Microsoft 365 groups.  <br/>
+3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. this tab displays the existing Microsoft 365 groups. Select the **+ Add a Microsoft 365 group** option that appears on the menu bar above the list of Microsoft 365 groups. This initiates the **+ Add a Microsoft 365 group** wizard. 
 
-    Select the **+ Add a Microsoft 365 group** option that appears on the menu bar above the list of Microsoft 365 groups. This initiates the **+ Add a Microsoft 365 group** wizard. 
+	![](../images/MS-102-image-5.png)
 
 5. In the **Set up the basics** page, enter **M365 pilot project** in the **Name** field, and then enter **Members of the Microsoft 365 pilot project team** in the **Description** field (Note: even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
 
+	![](../images/MS-102-image-6.png)
+
 6. You will now assign the ODL user as owner of the **M365 pilot project** group. In the **Assign owners** window, select **+ Assign owners**.
 	
-7. In the **Assign owners** pane that appears, select the check box next to **ODL user**, and then select the **Add (1)** button at the bottom of the pane.
+7. In the **Assign owners** pane that appears, select the check box next to **odl_user <inject key="DeploymentID" enableCopy="false"/>**, and then select the **Add (1)** button at the bottom of the pane.
+
+	![](../images/MS-102-image-7.png)
 
 8. On the **Assign owners** page, ODL user should appear as owner of the group. Select **Next**.
 
@@ -150,7 +164,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 11. On the **Add members** page, verify these 10 users are listed as members of the group. If you missed a user, select **+ Add members** and then add any users that you missed. When all 10 users appear on this page, select **Next**.
 
-12. In the **Edit settings** page, enter the following information: <br/>
+12. In the **Edit settings** page, enter the following information:
 
 	- Enter **m365pilotproject** in the **Group email address** field.
 	- In the **Privacy** field, select **Private**.
@@ -160,7 +174,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 14. Once the **M365 pilot project group created** window appears, note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active groups.  </br>
 
-	Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Microsoft 365** group tab. Since the M365 pilot project group was a Microsoft 365 group, it should eventually display on this tab. If necessary, select the **Refresh** option on the menu bar until you see the M365 pilot project group in the list of Microsoft 365 groups.
+15. Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Teams & Microsoft 365 groups** group tab. Since the M365 pilot project group was a Microsoft 365 group, it should eventually display on this tab. If necessary, select the **Refresh** option on the menu bar until you see the M365 pilot project group in the list of Teams & Microsoft 365 groups.
 
 15. In the **Microsoft 365 admin center**, under the **Settings** group in the navigation pane, select **Org settings**. 
 
@@ -168,35 +182,39 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 17. In the list of organization profile data, select **Custom themes**.
 
+	![](../images/MS-102-image-8.png)
+
 18. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+ Add theme** option.
+
+26. In the **Customize Microsoft 365 for your organization** pane that appears, notice how it displays the **Default theme**. Select the **Default theme**. 
+
+27. On the **Default theme** pane, notice how the **Show the user's display name** option is not selected. Select that check box, and **Save it**. Select the back arrow at the top of the pane to return to  the **Customize Microsoft 365 for your organization** pane.
+
+	>**Note:** Holly decides to make the **Show the user's display name** option a permanent feature, she selected this option in the **Default theme** pane so that it applies to all Adatum users.
+
+20. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+ Add theme** option.
 
 19. In the **New group theme** pane that appears, the **General** tab is displayed by default. Enter **M365 pilot project theme** in the **Name** field.
 
-20. Select inside the **Groups** field. In the list of groups that appears, select **M365 pilot project** if it appears in the list of groups. <br/>
+20. Select inside the **Groups** field. In the list of groups that appears, select **M365 pilot project** if it appears in the list of groups.
 
-	**Note:** If **M365 pilot project** doesn't appear in the list of groups, then enter **M365** in the **Groups** field. A search results box should appear that displays the **M365 pilot project** group. Select **M365 pilot project**. 
+	>**Note:** If **M365 pilot project** doesn't appear in the list of groups, then enter **M365** in the **Groups** field. A search results box should appear that displays the **M365 pilot project** group. Select **M365 pilot project**. 
 
 21. Select the **Show the user's display name** check box. This is the setting that Holly wants to customize for the M365 pilot project team members.
  
-22. Select the **Logos** tab and take some time to review its options. Do the same for the **Colors** tab. Note the various theme and branding options that are available for you to update. <br/>
+22. Select the **Logos** tab and take some time to review its options. Do the same for the **Colors** tab. Note the various theme and branding options that are available for you to update.
 
-	For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. <br/>
+	>**Note:** For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. <br/>
 
 	**Go ahead and explore the different options for this theme that will be used by the Microsoft 365 pilot project team members. Make any changes that you wish.** <br/>
 
-	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
+	>**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
 23. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved. 
 
 24. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **ODL user** name appears to the left of the circle with the **MA** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
 
 25. In the list of organization profile data, select **Custom themes**.
-
-26. In the **Customize Microsoft 365 for your organization** pane that appears, notice how it displays the **Default theme** and the **M365 pilot project theme**. Select the **Default theme**. 
-
-27. On the **Default theme** pane, notice how the **Show the user's display name** option is not selected. Select the back arrow at the top of the pane to return to  the **Customize Microsoft 365 for your organization** pane. <br/>
-
-	If Holly later decides to make the **Show the user's display name** option a permanent feature, she will select this option in the **Default theme** pane so that it applies to all Adatum users, and she will delete the **M365 Pilot project theme**. <br/>
 
 	Close the **Customize Microsoft 365 for your organization** pane.
 
