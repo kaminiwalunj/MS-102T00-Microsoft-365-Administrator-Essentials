@@ -2,7 +2,7 @@
 
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Azure Information Protection (AIP) at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
-**IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and label policy that you create and publish in this lab.
+>**IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and label policy that you create and publish in this lab.
 
 To address this timing issue, you ran that PowerShell script back on day 1 to create and publish a sensitivity label and label policy. Now that you've reached this lab, that label policy will have propagated through the system, and you'll be able to test it.
 
@@ -13,13 +13,9 @@ Because we want you to gain experience creating and publishing a label and label
 
 To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the AIP client from the Microsoft Download Center.
 
-1. At the end of the prior lab, you were on LON-CL2. Switch to **LON-CL1**.  <br/>
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-	You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
-
-2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
-
-	This will start the download for the AIP Unified label client.
+2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018**. This will start the download for the AIP Unified label client.
 
 3. In the Microsoft download center tab, on the notification bar at the bottom of the page, you will see the **AzInfoProtection_UI.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.
 
@@ -46,15 +42,17 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 3.  On the **Microsoft 365 admin center**, if necessary, select **... Show all**. Select **Compliance** under the **Admin centers** group.
 
-4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection** and then select **Labels**. 
+4. On the **Microsoft Purview** portal, in the left-hand navigation pane, under **Solutions**, select **Information protection** and then select **Labels**. 
 
-5. On the **Labels** page, a warning message is displayed in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+5. On the **Labels** page, a warning message is displayed in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** 
 
-    Select the **Turn on now** button that appears on the right side of this message. This will enable Adatum to apply the Sensitivity labels inside its Microsoft 365 environment. <br/>
+6. Select the **Turn on now** button that appears on the right side of this message. This will enable Adatum to apply the Sensitivity labels inside its Microsoft 365 environment. 
 
-    Note how the message has now changed to indicate: **You can now create sensitivity labels with privacy and access control settings for Teams, SharePoint sites, and Microsoft 365 Groups.**	
+	![](../Images/MS-102-image-19.png)
 
-6. On the **Labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
+    >**Note:** how the message has now changed to indicate: **You can now create sensitivity labels with privacy and access control settings for Teams, SharePoint sites, and Microsoft 365 Groups.**	
+
+6. On the **Labels** page, select the **+ Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
 
 7. In the **New sensitivity label** wizard, on the **Name and tooltip** page, enter the following information:
 
@@ -76,9 +74,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 11. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email is encrypted** option and then select **Next**.
 
-12. On the **Content Marking** page, set the **Content Marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
+12. On the **Content Marking** page, set the **Content Marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. 
 
-	Select all three check boxes. Under each setting, select **Customize text**. This opens a pane to customize that particular setting. Enter the following information in the **Customize** pane for each option (select **Save** after entering the settings for each option): <br/>
+13. Select all three check boxes. Under each setting, select **Customize text**. This opens a pane to customize that particular setting. Enter the following information in the **Customize** pane for each option (select **Save** after entering the settings for each option): 
 
 	- **Add a watermark** 
 		- Watermark text: **Sensitive - Do Not Share** (Hint: after entering this value, copy it so that you can paste it in the other two text settings)
@@ -102,7 +100,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 14. On the **Auto-labeling for files and emails** page, set the **Auto-labeling for files and emails** toggle switch to **On**. This enables a series of options that you will update in the next steps.
 
-15. Under **Detect content that matches these conditions**, select **+Add condition** and then select **Content contains**.
+15. Under **Detect content that matches these conditions**, select **+ Add a condition** and then select **Content contains**.
 
 16. In the **Content contains** window, select the **Add** drop-down arrow and then select **Sensitive info types**.
 
@@ -120,19 +118,21 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 21. On the **Review your settings and finish** page, review the information you entered. If any settings need to be corrected, select the corresponding **Edit** option and make any necessary changes. When all information appears correct, select **Create label**.
 
-22. An **Error** dialog box should appear that states the generated rule blob for the label you are attempting to create is too long. The maximum size of sensitive information type selections you can make at one time per rule is **49152**. By selecting all the sensitive information types like you did in the **Sensitive info types** window a few steps back, you have exceeded this limit. <br/>
+22. An **Error** dialog box should appear that states the generated rule blob for the label you are attempting to create is too long. The maximum size of sensitive information type selections you can make at one time per rule is **49152**. By selecting all the sensitive information types like you did in the **Sensitive info types** window a few steps back, you have exceeded this limit. 
 
-	**NOTE: We purposely had you select all the sensitive information types so that you would receive this error.** We wanted you to experience this error so that if it happens in your production environments, you will know why you received the error and how you can correct it.  <br/>
+	>**NOTE: We purposely had you select all the sensitive information types so that you would receive this error.** We wanted you to experience this error so that if it happens in your production environments, you will know why you received the error and how you can correct it.  
 
 	To correct this issue, select **OK** in the **Error** dialog box, and then on the **Review your settings and finish** page, scroll down to the **Auto-labeling for files and emails** section and select **Edit**.
 	
 23. This will return you to the **Choose protection settings for labeled items** page in the wizard. Select **Next** on this page, select **Next** on the **Encryption** page, and then select **Next** on the **Content Marking** page. This will take you to the **Auto-labeling for files and emails** page. 
 
-24. On the **Auto-labeling for files and emails** page, to the right of the **Content contains** condition, select the **trash can icon**. This will remove the existing **Content contains** condition for the **PII** label that you created. <br/>
+24. On the **Auto-labeling for files and emails** page, to the right of the **Content contains** condition, select the **trash can icon**. This will remove the existing **Content contains** condition for the **PII** label that you created. 
 
-	In the remaining steps, you will add a new condition that only contains two sensitivity information types rather than all the sensitivity information types like you did originally.
+	![](../Images/MS-102-image-20.png)
 
-25. On the **Auto-labeling for files and emails** page, under **Detect content that matches these conditions**, select **+Add condition** and then select **Content contains**.
+	>**Note:** In the remaining steps, you will add a new condition that only contains two sensitivity information types rather than all the sensitivity information types like you did originally.
+
+25. On the **Auto-labeling for files and emails** page, under **Detect content that matches these conditions**, select **+ Add a condition** and then select **Content contains**.
 
 26. In the **Content contains** window, select the **Add** drop-down arrow and then select **Sensitive info types**.
 
@@ -140,7 +140,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 28. On the **Define protection settings for groups and sites** page, leave the two check boxes blank and select **Next**.
 
-29. On the **Auto-labeling for schematized data assets (preview)** page, do not enable Auto-labeling for database columns. Select **Next**.
+29. On the **Review your settings and finish** page, select **Create label**.
 
 30. On the **Your sensitivity label was created** page, choose **Don't create a policy yet** and then select **Done**.
 
@@ -148,11 +148,11 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 32. Select the **Publish label** option that appears in the menu bar above the list of labels. This initiates a **Create policy** wizard.
 
-33. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish**,  select the **PII** label, click on **Add**, select **Next**, and select **Next** for **Assign admin units**.
+33. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, under **Sensitivity labels to publish**, **PII** label is already selected, select **Next** for **Assign admin units**. On **Assign admin units** select **Next**.
 
 35. On the **Publish to users and groups** page, you can either select **All users and groups, or you can select specific users and groups.** Select **Edit**.
 
-36. A **Users and groups** pane appears, sepecific users and groups will be selected, select **+ Include user or group** that displays all the Adatum users and groups. Hover your mouse to the left of the **Name** column heading and select the check box that appears. This will automatically select all the check boxes. Select **Done**.
+36. A **Users and groups** pane appears, sepecific users and groups will be selected, select **+ Include user or group** that displays all the Adatum users and groups. Hover your mouse to the left of the **Name** column heading and select the check box that appears. This will automatically select all the check boxes. Select **Done**, again select **Done**.
 
 37. On the **Publish to users and groups** page, select **Next**.
 
@@ -177,9 +177,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 As the instructions at the start of this lab indicated, you can't test the sensivity label and label policy that you just created in the prior task. It will take up to 24 hours for that label policy to propagate through Microsoft 365 before its label appears in Microsft Word, Outlook, and so on. 
 
-**Important:** The label and label policy that you will test in these next two tasks will be the label and label policy that were created when you ran the PowerShell script in Lab 1 on the first day of class. 
+>**Important:** The label and label policy that you will test in these next two tasks will be the label and label policy that were created when you ran the PowerShell script in Lab 1 on the first day of class. 
 
-**Note:** The label and label policy that you created in the prior task  have the same exact settings as the label and label policy that were created when you ran the PowerShell script in Lab 1. The only difference between the two labels and the two label policies should be their names. The names of these labels and label policies are:
+>**Note:** The label and label policy that you created in the prior task  have the same exact settings as the label and label policy that were created when you ran the PowerShell script in Lab 1. The only difference between the two labels and the two label policies should be their names. The names of these labels and label policies are:
 
 - The label that you created in the prior task was titled **PII**. 
 - The label that was created by the script that you ran in Lab 1 was titled **PII - V1**. 
@@ -190,7 +190,7 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. To validate the sensitivity label that you created and published when you ran the PowerShell script in Lab 1 on the first day of class, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. <br/>
+2. To validate the sensitivity label that you created and published when you ran the PowerShell script in Lab 1 on the first day of class, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. 
 
 	In your Edge browser, select the **Microsoft 365 admin center** tab, and then select the circle with Holly Dickson's HD initials in the upper right corner of the screen. In the **Holly Dickson** window, select **Sign out**.
 
@@ -200,15 +200,15 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 5. In the **Pick an account** window, select **Use another account**.
 
-6. In the **Sign in** window, enter **alex.wilber@azurehol1062.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+6. In the **Sign in** window, enter **alex**'s account and then select **Next**.
 
-7. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+7. On the **Enter password** window, enter the password and then select **Sign in**.
 
 8. If a **Get your work done with Office 365** window appears, select the X to close it.
 
-9. On the **Microsoft Office Home** tab, select the **Word** icon in the column of app icons on the left-side of the screen. This will override the **Microsoft Office Home** tab by opening Microsoft Word Online in this same tab. <br/>
+9. On the **Microsoft Office Home** tab, select the **Word** icon in the column of app icons on the left-side of the screen. This will override the **Microsoft Office Home** tab by opening Microsoft Word Online in this same tab. 
 
-	**Note:** In the next task, you will return back to the **Microsoft Office Home** tab by selecting the **Back** arrow at the top of this **Word** tab.
+	>**Note:** In the next task, you will return back to the **Microsoft Office Home** tab by selecting the **Back** arrow at the top of this **Word** tab.
 
 10. In the **Word** tab, under the **Create new** section at the top of the page, select **Blank document**.
 
@@ -220,13 +220,11 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 13. In the **Word** document, type **Testing personally identifiable information (PII).**
 
-14. Because you enabled Sensitivity labels at the start of this exercise, and since the label you created by running the script on day 1 of the course has fully propagated through Microsoft 365, Word should display a **Sensitivity** group on the ribbon at the top of the page. 
+14. Because you enabled Sensitivity labels at the start of this exercise, and since the label you created by running the script on day 1 of the course has fully propagated through Microsoft 365, Word should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **PII - V1** label the script created and published. Since the **PII - V1** label is enabled for this document, a check mark is displayed next to **PII - V1**. 
 
-	Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **PII - V1** label the script created and published. Since the **PII - V1** label is enabled for this document, a check mark is displayed next to **PII - V1**. <br/>
+15. In this first validation test, you're going to attempt to remove this sensitivity label from being applied to this document. When you created the **PII Policy - V1** policy and **PII** label in the prior task, the same options you selected were applied to the **PII Policy - V1** policy and **PII - V1** label by the Lab 1 script. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. 
 	
-	In this first validation test, you're going to attempt to remove this sensitivity label from being applied to this document. When you created the **PII Policy - V1** policy and **PII** label in the prior task, the same options you selected were applied to the **PII Policy - V1** policy and **PII - V1** label by the Lab 1 script. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
-	
-	To remove the label from this document, select the **PII - V1** label that appears in this drop-down menu.
+16. To remove the label from this document, select the **PII - V1** label that appears in this drop-down menu.
 	
 15. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed** and then select **Change**.
 
@@ -236,23 +234,21 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 18. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
 
-	**Note**: In Word for the Web, the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default.
+	>**Note**: In Word for the Web, the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. To exit reading view, select the **Edit Document** drop-down menu and then select **Edit**.
 
-	To exit reading view, select the **Edit Document** drop-down menu and then select **Edit**.
+19. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber > Documents**. 
 
-19. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber > Documents**. <br/>
-
-	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
+20. In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
 
 20. On the right-side of the menu bar, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
-21. In the **Send link** window that appears, select **Anyone with the link can edit**. <br/>
+21. In the **Send link** window that appears, select **Anyone with the link can edit**. 
 
-	On the **Sharing settings** page that appears, select **People you choose**. Under **More settings**, select **Can edit**. In the menu that appears, select **Can view**, and then select **Apply**. <br/>
+22. On the **Sharing settings** page that appears, select **People you choose**. Under **More settings**, select **Can edit**. In the menu that appears, select **Can view**, and then select **Apply**. 
 
-	On the **Send link** window, enter **Joni** in the **To: Name, group or email** field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**. <br/>
+23. On the **Send link** window, enter **Joni** in the **To: Name, group or email** field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**. 
 
-	Under the **Copy link** section, select the **Copy link** button. 
+24. Under the **Copy link** section, select the **Copy link** button. 
 
 You have just successfully created an AIP protected Word document that is read-only protected. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 
@@ -263,7 +259,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 
-	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **Word** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Manage Access**. Under **Links giving access** you can copy the link created in the previous task.
+	>**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **Word** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Manage Access**. Under **Links giving access** you can copy the link created in the previous task.
 
 2. Close the **Share "ProtectedDocument1"**.
 
@@ -307,9 +303,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	>**Note:** if **More information required** appears, procceed with it, by selecting the Phone option.
 
-18. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. <br/>
-
-	Once you have finished reviewing the document, close the document window. 
+18. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. Once you have finished reviewing the document, close the document window. 
 
 19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
 
@@ -319,28 +313,40 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 21. **Microsoft Word** should open along with a **Sign in** window (it may open behind the Outlook window, in which case select the **Word** icon on the taskbar to bring it forward). 
 
-22. If a **Microsoft Office Activation Wizard** window appears, select **Close** and proceed to the next step. <br/>
+22. If a **Microsoft Office Activation Wizard** window appears, select **Close** and proceed to the next step. 
 
-	However, if a **Sign in** window appears, it's because the file is RMS protected and no AIP unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
+24. However, if a **Sign in** window appears, it's because the file is RMS protected and no AIP unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. 
 
-	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** <br/>
+23. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** 
 
-		>**Note:** On Stay signed in to all your apps, select **No, sign in to this app only.**
+	>**Note:** On Stay signed in to all your apps, select **No, sign in to this app only.**
 
 
 23. The file should open in Word, since you assigned Joni with Read-only permission. Review the three notification bars that appear above the document. 
 
-	‎**Note:** You have just verified that the permissions assigned to the file are working properly. Joni can read the file (since she was assigned Read-only permission), but she is unable to change it (no one was assigned Edit permission).
+	>**Note:** You have just verified that the permissions assigned to the file are working properly. Joni can read the file (since she was assigned Read-only permission), but she is unable to change it (no one was assigned Edit permission).
 
 25. Close Word.
 
 26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Holly) just sent to your personal email address, and then attempt to open the attached file. 
 
-27. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **alex.wilber@azurehol1062.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
+27. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **alex**'s account account, or Cancel out of the operation. Select **Cancel**. Since only Joni was assigned permission to read the document, you just verified that Azure Information Protection protected the document based on the PII policy parameters that you configured.
 
-	‎Since only Joni was assigned permission to read the document, you just verified that Azure Information Protection protected the document based on the PII policy parameters that you configured.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Congratulations! You have just completed the final lab in this course.
+## Congratulations! You have successfully completed Lab 09.
 
+## Review
+
+In this lab, you have:
+
+- Installed the Azure Information Protection Unified Labeling client.
+- Created a Sensitivity Label.
+- Assigned a Sensitivity Label to a document.
+- Verified your Sensitivity Label policy.
 
 # End of Lab 9
