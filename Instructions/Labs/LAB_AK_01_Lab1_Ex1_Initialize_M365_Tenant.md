@@ -124,7 +124,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 	- **Lynne Robbins**
 	- **ODL_User <inject key="DeploymentID" enableCopy="false"/>**
 
-    >**Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
+	>**Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
     
 19. Select **Save**.
 
