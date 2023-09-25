@@ -25,9 +25,7 @@ The three alerts that you will create in this lab are assigned to two Alert cate
 
 Perform the following steps to assign Lynne Robbins the Compliance Data Administrator role group, which includes the Compliance Administrator role.
 
-1. At the end of the prior lab, you were logged into LON-CL2. This lab will use LON-CL1.  <br/>
-
-    Switch to **LON-CL1**. 
+1. At the end of the prior lab, you were logged into LON-CL2. This lab will use LON-CL1. Switch to **LON-CL1**. 
 
 2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
@@ -55,5 +53,10 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 
 You have now added Lynne Robbins to the Compliance Data Administrator role group.
 
+## Review
+
+In this lab, you have:
+
+- Assigned RBAC Permissions for Alert Notification Testing.
 
 # Proceed to Lab 6 - Exercise 2

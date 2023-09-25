@@ -9,9 +9,9 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 - A local administrator account for Adatum's on-premises environment (Adatum\Administrator).
 - A default tenant admin account in Microsoft 365 (the display name for this user account is ODL user). 
 
-You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
+You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Entra ID and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
 
-### Task 1 - Obtain Your Microsoft 365 Credentials
+## Pre-requisite
 
 1. In the search bar type and search for **Hyper-V Manager**.
 
@@ -30,7 +30,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 	```powershell
     Connect-AzureAD
     ```
-	>**Note:** Provide the ODL credentials, on the Sign-in page, in the username, enter **odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**, and in the passowrd enter **<inject key="AzureAdUserPassword"></inject>**
+	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username, and in the passowrd enter **<inject key="AzureAdUserPassword"></inject>**
 
 	```powershell
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
@@ -41,9 +41,9 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 9. Repeat the step-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
 
 
-### Task 2- Set up Adatum's Organization Profile
+### Task 1- Set up Adatum's Organization Profile
 
-Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the ODL user account, whose alias is "admin". The username for this account is odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com; the display name for this account will be ODL user.
+Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the ODL user account, whose alias is "admin". The display name for this account will be ODL user.
 
 1. On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon. If necessary, maximize your browser window when it opens.
 
@@ -132,7 +132,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 21. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
-### Task 3- Create a custom theme for Adatum's pilot project team
+### Task 2- Create a custom theme for Adatum's pilot project team
 
 In the prior task, you learned that when someone is signed into Microsoft 365, the system will either display their photograph (if one is supplied), or their initials if no photograph is provided. Holly Dickson, Adatum's Microsoft 365 Administrator, is not satisfied with just seeing a picture or initials of the signed-in user. She wants to create a custom theme for the members of her pilot project team so that it also displays the signed-in user's name. At the end of the pilot project, if the pilot project team members prefer this design, she will configure this same option in the default theme so that it applies to all users. 
 
@@ -220,12 +220,11 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 28. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
-
-### Task 4 - Enable Information Rights Management for SharePoint Online 
+### Task 3 - Enable Information Rights Management for SharePoint Online 
 
 In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
 
-**Important:** While you will validate IRM for Exchange and SharePoint in Lab 7, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 7, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
+>**Important:** While you will validate IRM for Exchange and SharePoint in Lab 7, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 7, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
 
 1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **ODL user**. 
 
@@ -241,12 +240,12 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 
 7. Scroll to the bottom of the page and select the **OK** button. 
 
-8. Once the changes have been saved, you will be returned to the top of the **Settings** page. In your browser, close the current tab that you're on (the **https://xxxxxZZZZZZ-admin.sharepoint.com** tab). This will return you to the **Settings** page in the **SharePoint admin center**.
+8. Once the changes have been saved, you will be returned to the top of the **Settings** page. In your browser, close the current tab that you're on. This will return you to the **Settings** page in the **SharePoint admin center**.
 
 9. Close this **SharePoint admin center** tab in your Edge browser. Leave the other tabs open in your browser for the next task.
 
 
-### Task 5 – Turn on Audit Logging to enable Alert Policies
+### Task 4 – Turn on Audit Logging to enable Alert Policies
 
 In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
 
@@ -256,72 +255,90 @@ In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal
 
 3. In the **Microsoft 365 Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Audit**.
 
-4. In the **Audit** window, wait a minute or so to see if a banner appears towards the top of the page that says: **Start recording user and admin activity**. If this banner appears, then auditing is NOT turned on for your organization. This banner is your prompt to turn on audit logging. <br/>
+4. In the **Audit** window, wait a minute or so to see if a banner appears towards the top of the page that says: **Start recording user and admin activity**. If this banner appears, then auditing is NOT turned on for your organization. This banner is your prompt to turn on audit logging.
 
-	Select this banner now to turn on audit logging. 
+	>**Note:** Select this banner now to turn on audit logging, and on the **Security** pop-up select **Yes**, and if it says **We're updating your organization to support customization. Please allow 24 to 48 hours before you retry this operation.**, select **OK**.
 
 5. In the **Audit** window, the banner will disappear once audit logging is turned on. In a later lab, you will return to this page to view audited activities that you completed during your lab work.  
  
 6. Close the **Microsoft 365 Defender** tab in your Edge browser. Leave your browser open and proceed to the next task. 
 
 
-### Task 6 – Install Microsoft Graph PowerShell 
+### Task 5 – Install Microsoft Graph PowerShell 
 
 Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
 1. On LON-CL1, you must open an elevated instance of **Windows PowerShell**. Type **power** in the Search box that appears in the bottom left corner of the taskbar. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu that appears. 
 
-2. Maximize your PowerShell window. In **Windows PowerShell**, type the following command at the command prompt to install the Microsoft Graph PowerShell module from the PowerShell Gallery and then press Enter: <br/>
+2. Maximize your PowerShell window. In **Windows PowerShell**, type the following command at the command prompt to install the Microsoft Graph PowerShell module from the PowerShell Gallery and then press Enter:
+	```powershell
+    Install-Module Microsoft.Graph -Scope CurrentUser
+    ```
 
-		Install-Module Microsoft.Graph -Scope CurrentUser
+3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All** and then press Enter.  
 
-3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All** and then press Enter.  <br/>
-
-    **Note:** Your response will initiate the installation of all the Microsoft Graph sub-modules. Once all the installation messages (for each sub-module) have finished displaying, it will still take approximately 5 to 10 minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. This may be a good time to take a short break.
+    >**Note:** Your response will initiate the installation of all the Microsoft Graph sub-modules. Once all the installation messages (for each sub-module) have finished displaying, it will still take approximately 5 to 10 minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. This may be a good time to take a short break.
 
 4. A command prompt will appear once Microsoft Graph PowerShell has been installed. Run the following command to see the complete list of sub-modules that were installed under the Microsoft.Graph primary module:  <br/>
+	
+	```powershell
+    Get-InstalledModule Microsoft.Graph.* 
+    ```
 
-		Get-InstalledModule Microsoft.Graph.* 
+	>**Note:** The labs that use Microsoft Graph PowerShell in this course will use the following sub-modules: Microsoft.Graph.Identity.DirectoryManagement, Microsoft.Graph.Users, and Microsoft.Graph.Groups. To access the cmdlets for a sub-module, you must first import the sub-module. You can either import all 30+ sub-modules at one time using the "Import-Module Microsoft.Graph" command, or you can import each module that's needed to perform whatever function you're doing (for example, "Import-Module Microsoft.Graph.Users" to perform user maintenance) at a particular point in time. For the purpose of this training, since the later lab exercises will only use three sub-modules, you will NOT import all 40+ sub-modules now. Instead, you will wait to import these three sub-modules when they're needed in later labs. Proceed to the next step. 
 
-	**Note:** The labs that use Microsoft Graph PowerShell in this course will use the following sub-modules: Microsoft.Graph.Identity.DirectoryManagement, Microsoft.Graph.Users, and Microsoft.Graph.Groups. To access the cmdlets for a sub-module, you must first import the sub-module. You can either import all 30+ sub-modules at one time using the "Import-Module Microsoft.Graph" command, or you can import each module that's needed to perform whatever function you're doing (for example, "Import-Module Microsoft.Graph.Users" to perform user maintenance) at a particular point in time. For the purpose of this training, since the later lab exercises will only use three sub-modules, you will NOT import all 40+ sub-modules now. Instead, you will wait to import these three sub-modules when they're needed in later labs. Proceed to the next step. 
-
-5. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
-
-		Set-ExecutionPolicy unrestricted
-
-	If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
+5. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:
+	
+	```powershell
+	Set-ExecutionPolicy unrestricted
+	```
+6. If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
 6. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
-### Task 7 - Run a PowerShell script to create and publish a sensitivity label
+### Task 6 - Run a PowerShell script to create and publish a sensitivity label
 
 In this task, you will run a lab setup script that creates a sensitivity label and sensitivity label policy for future use in this lab series. Running this script is necessary to support the lab that you will perform on the last day of class to create a sensitivity label and label policy. The sensitivity label lab basically consists of two parts: 1) Creating a label and publishing a label policy, and 2) Testing the published label policy. The problem with the sensitivity label lab is that once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and policy that you create and publish on the last day of class. 
 
 To address this timing issue, you will run a PowerShell script in this task that creates a sensitivity label and publishes it to a label policy. By the time you get to the last day of class, this label policy will have propagated through the system, and you'll be able to test it. 
 
-**Note:** In the sensitivity label lab that you perform on the last day of class, you will create another label and label policy - just ones with different names. Their settings will be exactly the same as the ones created by this script. The sensitivity label lab will give you the experience of creating a label and publishing a label policy using the Microsoft 365 UI. However, when you perform the tasks to test the sensitivity label and label policy, you won't test the ones that you created and published in the UI, since they won't be available for testing until the next day. Instead, you will test the label and label policy that were created and published using the script that you run in this task. 
+>**Note:** In the sensitivity label lab that you perform on the last day of class, you will create another label and label policy - just ones with different names. Their settings will be exactly the same as the ones created by this script. The sensitivity label lab will give you the experience of creating a label and publishing a label policy using the Microsoft 365 UI. However, when you perform the tasks to test the sensitivity label and label policy, you won't test the ones that you created and published in the UI, since they won't be available for testing until the next day. Instead, you will test the label and label policy that were created and published using the script that you run in this task. 
 
 1. On **LON-CL1**, select the **File Explorer** icon from the Windows taskbar. Maximize the File Explorer window.
 
 2. In **File Explorer**, navigate to the following folder location: **C:\Users\Administrator.ADATUM\Documents\Lab Setup**.
 
-3. In the **Lab Setup** subfolder a .bat file named **LabSetup.bat** should exist.
+3. In the **Lab Setup** subfolder a .bat file named **LabSetup.bat** should exist. Right-click on the **LabSetup.bat** file and then select **Run as administrator**. Doing so will start the lab setup process.
 
-    Right-click on the **LabSetup.bat** file and then select **Run as administrator**. Doing so will start the lab setup process.
+    >**Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
 
-    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
-
-4. It may take up to 1 minute before a **Sign in** window appears. Enter the ODL user account provided by your lab hosting provider (**odl_user_<inject key="DeploymentID" enableCopy="false"/>@azurehol1062.onmicrosoft.com**; and then select **Next**. On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+4. It may take up to 1 minute before a **Sign in** window appears. Enter the ODL username from the Enviornment details page, and then select **Next**. On the **Enter password** window, enter the ODL password from the Enviornment details page and then select **Sign in**.
 
 5. A **Pick an account** window will appear. On this window, select **ODL user** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
-    **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-5.
+    >**Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-5.
 
 6. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
 
-    **IMPORTANT:** It may take up to 5 minutes for the lab setup process to complete.
+    >**IMPORTANT:** It may take up to 5 minutes for the lab setup process to complete.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+## Review
+
+In this lab, you have:
+
+- Learnt how to set up Adatum's Organization Profile.
+- Created a custom theme for Adatum's pilot project team.
+- Learnt how to enable Information Rights Management for SharePoint Online.
+- Explored how to turn on Audit Logging to enable Alert Policies.
+- Installed Microsoft Graph PowerShell.
+- How to run a PowerShell script to create and publish a sensitivity label.
 
 
 # Proceed to Lab 1 - Exercise 2 
