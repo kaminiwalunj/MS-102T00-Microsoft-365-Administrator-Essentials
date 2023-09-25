@@ -13,6 +13,10 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 
 You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Entra ID and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
 
+>**Important:** You can find all the users usernames which is required in this lab, inside the Azure Portal. You can log into the portal using ODL credentials, in the **Search resources, services and docs** search for **Users**, select it. All the users are listed. 
+
+	>**Note:** Open this page for further use.
+ 
 ## Pre-requisite
 
 1. In the search bar type and search for **Hyper-V Manager**.
