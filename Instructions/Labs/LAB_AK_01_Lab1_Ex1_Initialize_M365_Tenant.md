@@ -32,7 +32,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 	```powershell
     Connect-AzureAD
     ```
-	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username, and in the passowrd enter **<inject key="AzureAdUserPassword"></inject>**
+	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username, and in enter the password **<inject key="AzureAdUserPassword"></inject>**
 
 	```powershell
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
