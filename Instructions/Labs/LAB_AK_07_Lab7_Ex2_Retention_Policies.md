@@ -1,13 +1,10 @@
 # Learning Path 7 - Lab 7 - Exercise 2 - Configure In-place Archiving and Retention Policies  
 
+## Lab scenario
+
 In this exercise, you will use the the Microsoft Exchange admin center to enable In-place archiving for Holly Dickson's mailbox. You will then configure two retention policies through the Microsoft Purview portal. 
 
 ### Task 1 – Activate In-Place Archiving for a new user's mailbox
-
-In this next phase of your Adatum pilot project, you will access the Microsoft Exchange admin center to activate Holly Dickson’s archive mailbox. After Holly's archive mailbox is enabled, the default retention policy that's assigned to her mailbox does the following: 
-
-- Moves items that are two years or older from Holly's primary mailbox to her archive mailbox.
-- Moves items that are 14-days or older from the Recoverable Items folder in Holly's primary mailbox to the Recoverable Items folder in her archive mailbox.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -25,8 +22,6 @@ In this next phase of your Adatum pilot project, you will access the Microsoft E
  
 
 ### Task 2 – Create an email retention policy for test users
-
-As part of your pilot project for Adatum, you will configure email retention through the Microsoft Purview portal by creating a new retention policy. You will then assign this retention policy to Joni Sherman and Lynne Robbins’ mailboxes. Joni and Lynne are Holly's two test users for compliance testing. Holly wants to use this policy to test email retention for these two test users before creating a second retention policy in the next task that will be applied organization wide.
 
 1. On LON-CL1, your Microsoft Edge browser should still have the **Microsoft 365 admin center** open. Select the tab for the **Microsoft 365 admin center**. In the left-hand navigation pane, under the **Admin centers** section, select **Compliance**. Doing so will open the **Microsoft Purview** portal.
 
@@ -70,8 +65,6 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 
 ### Task 3 – Create an email retention policy for all users
-
-Holly has concluded her testing of email retention on Joni and Lynne's mailboxes using the **Test user email retention** policy that you created in the prior task. Holly now wants to create a retention policy that preserves the content of all Exchange Online mailboxes from deletion for 5 years after the last modification. Since Holly has completed her email retention testing, she wants to first disable the **Test user email retention** policy. By doing so, Joni and Lynne's mailboxes will be governed by the retention policy that you create in this task that applies to all Adatum mailboxes. 
 
 1. On LON-CL1, your Edge browser should still have the **Microsoft Purview** portal open from the prior task, and it should be displaying the **Data lifecycle management** window.
 

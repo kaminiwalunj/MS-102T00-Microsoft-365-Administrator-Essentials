@@ -1,5 +1,6 @@
 # Learning Path 6 - Lab 6 - Exercise 3 - Implement SharePoint Permission Alert
 
+## Lab scenario
 
 In this exercise you will configure and test an alert that notifies Lynne Robbins when a user is added as a site collection administrator for a SharePoint site collection.
 
@@ -53,11 +54,9 @@ You have now configured an additional alert policy that monitors when a user is 
 
 ### Task 2 – Validate the  SharePoint Permissions Alert
 
-In the prior task, you configured an alert that will notify Lynne Robbins when a user is added as a site collection administrator for a site collection. To test this alert, Holly Dickson will add Alex Wilber as a site collection admin to the global SharePoint Communication site. This activity should trigger the alert policy that you just created, which should send an alert notification email to Lynne Robbins’ mailbox. You will then switch to the LON-CL2 VM to see if Lynne received this email. 
-
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar: **https://xxxxxZZZZZZ.sharepoint.com/_layouts/15/settings.aspx** (replace xxxxxZZZZZZ with the tenant prefix provided by your lab hosting provider). This opens the **Site Settings** for the global SharePoint Communication site.
+2. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar: **https://yourtenant.sharepoint.com/_layouts/15/settings.aspx** (replace yourtenant with the tenant prefix provided by your lab hosting provider). This opens the **Site Settings** for the global SharePoint Communication site.
 
 3. On the **Site Settings** window, under the **Users and Permissions** section, select **Site permissions**. 
 

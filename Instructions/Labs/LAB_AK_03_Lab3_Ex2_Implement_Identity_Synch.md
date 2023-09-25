@@ -1,12 +1,12 @@
 # Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization 
 
+## Lab scenario
+
 In this exercise, you will use Azure AD Connect to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Azure AD Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
 
 >**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
 
 ### Task 1: Install Azure AD Connect and Initiate Synchronization
-
-In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
 
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
@@ -114,11 +114,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 32. Leave LON-DC1 open as it will be used in the next exercise.
 
 
-### Task 2 - Create Group Accounts to Test Synchronization  
-
-To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment. 
-
-Each group will be assigned several members. After the forced synchronization, you will validate that you can see each security group in Microsoft 365 and that its members were synced up from the on-premises group to the cloud group. You will also validate the built-in security group was not created in Microsoft 365, even though you added members to it in Adatum's on-premises environment. 
+### Task 2 - Create Group Accounts to Test Synchronization   
 
 >**Important:** Built-in groups are predefined, on-premises security groups that are located under the **Builtin** container in **Active Directory Users and Computers**. They are created automatically when you create an Active Directory domain. You can use these groups to control access to shared resources and delegate specific domain-wide administrative roles. **However, they are NOT synchronized to Microsoft 365, even after adding members to them.** You will validate this functionality in this task.
 
@@ -177,8 +173,6 @@ Each group will be assigned several members. After the forced synchronization, y
  
 ### Task 3 - Change Group Membership to Test Synchronization  
 
-This task sets up another scenario for testing whether the sync process is working in Azure AD Connect. In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
-
 1. This task continues from where the previous task left off in LON-DC1. In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. In the detail pane on the right, double-click the **Research** security group.
 
 2. In the **Research Properties** window, select the **Members** tab to view the members of this group.  
@@ -201,8 +195,6 @@ This task sets up another scenario for testing whether the sync process is worki
 
 
 ### Task 4 - Force a manual synchronization   
-
-In this task, you will force a sync between Adatum’s on-premises AD and Azure AD instead of waiting 30 minutes for Azure AD Connect to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
 >**IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
 
@@ -228,8 +220,6 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
   
 
 ### Task 5 - Validate the Results of Directory Synchronization   
-
-In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Azure Active Directory. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
 
 >**IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
 

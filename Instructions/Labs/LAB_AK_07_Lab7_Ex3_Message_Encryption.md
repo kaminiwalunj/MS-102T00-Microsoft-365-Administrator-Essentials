@@ -1,12 +1,12 @@
 # Learning Path 7 - Lab 7 - Exercise 3 - Create message encryption rules
 
+## Lab scenario
+
 In this lab, you will take on the persona of Holly Dickson, Adatum’s new Microsoft 365 Administrator. You have been tasked with piloting the use of Microsoft 365 message encryption in Adatum’s Microsoft 365 deployment. Since message encryption rules can be created using both Exchange Online and Windows PowerShell, you have decided to test each method to determine which you prefer to use once you go live.
 
 In this exercise you will learn how to create a mail flow encryption rule using both the Exchange admin center and Windows PowerShell.
 
-### Task 1 – Create a Mail Flow Encryption Rule using the Exchange admin center
-
-In this task, you will create an encryption rule for messages inside your Exchange Online environment by using the Exchange admin center. In the next task, you will do the same thing but using PowerShell instead. 
+### Task 1 – Create a Mail Flow Encryption Rule using the Exchange admin center 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
@@ -44,8 +44,6 @@ In this task, you will create an encryption rule for messages inside your Exchan
  
 
 ### Task 2 – Create a Mail Flow Encryption Rule using Windows PowerShell
-
-In the prior task, you configured a mail flow encryption rule using the Exchange admin center. In this task, you will create a mail flow encryption rule using Windows PowerShell, or more specifically, Microsoft Graph PowerShell. You must begin by cconnecting to the Exchange Online PowerShell module (ExchangeOnlineManagement). This is required because the **New-TransportRule** cmdlet used in this task is an Exchange Online cmdlet. As such, you must connect to the Exchange Online session through PowerShell to access this cmdlet.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 

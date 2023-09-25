@@ -1,5 +1,7 @@
 # Learning Path 2 - Lab 2 - Exercise 3 - Manage a Microsoft 365 Apps for enterprise installation
 
+## Lab scenario
+
 You have taken on the persona of Holly Dickson, Adatum's new Microsoft 365 Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft 365 Apps for enterprise installation is a two-step process: 
 
 - Configuring the user account so the user is eligible to download and install the Office 365 deployment tool.
@@ -14,10 +16,6 @@ In the final task in this exercise, you will install the Microsoft 365 Apps for 
 
 
 ### Task 1 – Verify how licensing affects installing Microsoft 365 Apps for enterprise
-
-In this task, Holly will test whether a user who has not been assigned an appropriate Microsoft 365 license can download Microsoft 365 Apps for enterprise. For this test, you can't use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. All the users only have Microsoft 365 accounts; they do not have corresponding on-premises accounts in the adatum domain. Without an on-premises account, you can't log into the Client 2 (LON-CL2) VM as any of these users to install Microsoft 365 Apps for enterprise on the client machine. 
-
-Therefore, you must use one of Adatum's on-premises user accounts that has been loaded in its on-premises domain (adatum.com) by your lab hosting provider. For this test, you will use **Laura Atkins**. You will use a Microsoft 365 account for Laura, but initially, Microsoft 365 licenses have not been assigned to her. This will enable you to see how not having a license affects a user's ability to install Microsoft 365 Apps for enterprise. 
 
 1. On LON-CL1, you should be logged into Microsoft 365 as Holly Dickson in your Edge browser. 
 

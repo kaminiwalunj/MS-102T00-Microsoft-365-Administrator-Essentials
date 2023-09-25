@@ -1,12 +1,12 @@
 # Learning Path 5- Lab 5 - Exercise 1 - Implement a Safe Attachments policy 
 
+## Lab scenario
+
 In this phase of Adatum's Microsoft 365 pilot project, Holly Dickson wants to create a Safe Attachments policy and turn on Microsoft Defender for Office 365. Doing so will provide advanced threat protection for SharePoint, OneDrive, and Microsoft Teams.
 
 >**Note:** You will not be able to validate the Safe Attachments policy that you create. To do so would require that you attach a virus or malware-infected file to an email, which is something that Microsoft does not recommend.
 
 ### Task 1 – Create a Safe Attachment policy and turn on Microsoft Defender for Office 365
-
-In this task, you will turn on Microsoft Defender for Office 365, which provides advanced threat protection for SharePoint, OneDrive, and Microsoft Teams. You will also create a Safe Attachments policy that will test email attachments for malware that are sent to recipients within the xxxxxZZZZZZ.onmicrosoft.com domain created for this lab by your lab hosting provider. You will configure the policy so that if an attachment is blocked, it will be removed from the email that is sent to the recipient, and a copy of the email will be redirected to Joni Sherman for additional review.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
