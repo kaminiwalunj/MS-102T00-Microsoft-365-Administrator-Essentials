@@ -285,7 +285,7 @@ You have just successfully created an AIP protected Word document that is read-o
 
 12. In the **Pick an account** window, select **Use another account**.
 
-13. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+13. In the **Sign in** window, enter **JoniS@yourtenant.onmicrosoft** (where yourtenant is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
 14. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
@@ -311,7 +311,7 @@ You have just successfully created an AIP protected Word document that is read-o
 
 24. However, if a **Sign in** window appears, it's because the file is RMS protected and no AIP unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. 
 
-23. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** 
+23. In the **Sign in** window, enter **JoniS@yourtenant.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** 
 
 	>**Note:** On Stay signed in to all your apps, select **No, sign in to this app only.**
 

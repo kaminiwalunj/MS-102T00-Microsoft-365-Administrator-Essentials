@@ -53,7 +53,7 @@ In this exercise you will configure and test an alert that will notify Lynne Rob
 You have now created an activity alert in Microsoft 365 Defender that is triggered when FullAccess permissions are granted to any mailboxes.
 
 
-<!-- ### Task 2 – Validate the Mailbox Permission Alert
+### Task 2 – Validate the Mailbox Permission Alert
 
 In the prior task, you configured an alert that will notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. To test this alert, Holly Dickson will change the FullAccess permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should trigger the alert policy that you just created, which should send an alert notification email to Lynne Robbins’ mailbox. You will then log into LON-CL2 as Lynne Robbins and see if she received this email. 
 
@@ -84,7 +84,7 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 10. In the **Pick an account** window, if Lynne Robbins account **lynne**'s account appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **lynne**'s enter the username. Then enter the Password.
 
-<!-- 11. Lynne Robbins’ **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change.
+11. Lynne Robbins **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change.
 
 	>**WARNING:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. You may need to refresh Outlook one or more times until you receive the email.
 
@@ -97,7 +97,7 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 14. In your Edge browser, close the **View Alerts - Microsoft 365 security** tab. Leave Lynne's **Outlook** tab open, as you will use that in the next lab exercise.
 
 
-You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox. --> 
+You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox. 
 
 ## Review
 
