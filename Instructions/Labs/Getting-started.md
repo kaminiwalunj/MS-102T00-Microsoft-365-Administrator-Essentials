@@ -4,16 +4,16 @@
 
 1. To get the lab environment details, you can select the **Environment Details** tab.
 
-    ![](../media/Instr1.png)
+    ![](../Images/MS-102-image-21.png)
 
 1. You can also open the Lab Guide on a separate full window by selecting the **Split Window** button from the bottom right corner.
 
-    ![](../media/Instr2.png)    
+    ![](../Images/MS-102-image-22.png)   
 
-1. Also, you can **start, stop and restart** the virtual machines from the **Resources** tab.
+1. Also, you can **Start, Restart and Deallocate** the virtual machines from the **Resources** tab.
 
-    ![](../media/Inst3.png)
+    ![](../Images/MS-102-image-24.png)
 
 1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
 
-    ![](../media/Instr4.png)   
+    ![](../Images/MS-102-image-23.png)   
