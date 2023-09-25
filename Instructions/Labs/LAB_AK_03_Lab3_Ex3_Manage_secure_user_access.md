@@ -1,12 +1,10 @@
 # Learning Path 3 - Lab 3 - Exercise 3 - Manage secure user access 
 
+## Lab scenario
+
 As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Pass-through Authentication (PTA) and Azure AD Smart Lockout as a means of strengthening password management throughout the organization. 
 
 ### Task 1: Deploy Azure AD Pass-Through Authentication 
-
-Pass-through Authentication allows users to sign-in to cloud-based services using their on-premises passwords. All user passwords are only stored locally in the on-premises domains and NEVER synchronized to the cloud. When a user signs-in, the PTA agent takes the credentials to the user's on-premises environment to verify whether the password is correct. It then sends the result back to Azure AD.   
-
-Adatum's CTO wants to provide the company's users with a better sign-in experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its Microsoft 365 pilot project.
 
 1.  You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
 
@@ -46,10 +44,6 @@ Adatum's CTO wants to provide the company's users with a better sign-in experien
    
 
 ### Task 2: Deploy Azure AD Smart Lockout
-
-Adatum’s CTO has asked you to deploy Azure AD Smart Lockout, which assists in locking out bad actors who are trying to guess your users’ passwords or use brute-force methods to get admitted into your network. Smart Lockout can recognize sign-ins coming from valid users and treat them differently than sign-ins from attackers and other unknown sources. 
-
-The CTO is anxious to implement Smart Lockout because it will lock out the attackers while letting Adatum’s users continue to access their accounts and be productive. The CTO has asked Holly to configure Smart Lockout so that users can’t use the same password more than once, and they can’t use passwords that are considered too simplistic or common. 
 
 1. On LON-DC1, select the **Server Manager** icon on the taskbar if it’s already open; otherwise, open it now.
 

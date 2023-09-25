@@ -1,5 +1,7 @@
 # Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Azure Information Protection Unified Labels client
 
+## Lab scenario
+
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Azure Information Protection (AIP) at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
 >**IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and label policy that you create and publish in this lab.
@@ -10,8 +12,6 @@ Because we want you to gain experience creating and publishing a label and label
 
 
 ### Task 1 – Install the Azure Information Protection Unified Labeling client
-
-To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the AIP client from the Microsoft Download Center.
 
 1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
@@ -33,8 +33,6 @@ You have successfully installed the AIP Unified Label client on the Client 1 VM.
 
 
 ### Task 2 – Create a Sensitivity Label
-
-In this exercise you will create a Sensitivity Label and add it to the default policy so that it’s valid for all users of the Adatum tenant.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -175,8 +173,6 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 ### Task 3 – Assign a Sensitivity Label to a document
 
-As the instructions at the start of this lab indicated, you can't test the sensivity label and label policy that you just created in the prior task. It will take up to 24 hours for that label policy to propagate through Microsoft 365 before its label appears in Microsft Word, Outlook, and so on. 
-
 >**Important:** The label and label policy that you will test in these next two tasks will be the label and label policy that were created when you ran the PowerShell script in Lab 1 on the first day of class. 
 
 >**Note:** The label and label policy that you created in the prior task  have the same exact settings as the label and label policy that were created when you ran the PowerShell script in Lab 1. The only difference between the two labels and the two label policies should be their names. The names of these labels and label policies are:
@@ -254,8 +250,6 @@ You have just successfully created an AIP protected Word document that is read-o
 
 
 ### Task 4 – Verify your Sensitivity Label policy
-
-In the prior task, you created a Word document and protected it with a sensitivity label. The **PII - V1** label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 

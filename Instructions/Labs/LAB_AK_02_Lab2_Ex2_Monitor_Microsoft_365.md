@@ -1,10 +1,10 @@
 # Learning Path 2 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Microsoft 365  
 
+## Lab scenario
+
 In this exercise you will be introduced to some troubleshooting tools in Microsoft 365 that enable you to troubleshoot mail flow issues. You will then analyze Adatum’s Microsoft 365 service health by reviewing several of the key service health queries and reports that are available. You will conclude this exercise by reviewing how to submit a service request with the Microsoft Support team should you ever need assistance with a problem.
 
 ### Task 1 - Troubleshoot Mail Flow in Microsoft 365  
-
-Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none). Another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
@@ -104,8 +104,6 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 ### Task 2 - Monitor Service Health and Analyze Reports 
 
-Adatum's CTO is concerned with the service health issues that have recently come to light throughout the organization. He has asked Holly to review several of the key service health queries and reports so that she becomes aware of the information that's available to help Adatum monitor its service health.
-
 1. On the LON-CL1 VM, select the **User Details Panel - Microsoft 365 admin center** tab within your Edge browser. This tab contains the Microsoft 365 admin center. 
 
 2. In the **Microsoft 365 admin center** navigation pane, select **Show all**,  select **Health** and then select **Service health**. 
@@ -148,8 +146,6 @@ Adatum's CTO is concerned with the service health issues that have recently come
  
 
 ### Task 3 – Submit a Help Request to Microsoft Support
-
-If an organization runs into a situation in Microsoft 365 where it needs assistance with a problem, it must submit a service request to the Microsoft Support team. As part of Adatum's pilot project, Holly Dickson and Patti Fernandez (Adatum's Service Support Administrator) have decided to submit a test request that does not require a call back. They are performing this task to become familiar with the service request process.
 
 1. On LON-CL1, in the **Microsoft 365 admin center** tab of your Edge browser, select **Support** in the navigation pane, and then select **View service requests**. 
 

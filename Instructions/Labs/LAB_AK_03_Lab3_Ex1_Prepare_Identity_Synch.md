@@ -1,12 +1,12 @@
 # Learning Path 3 - Lab 3 - Exercise 1 - Prepare for Identity Synchronization  
 
+## Lab scenario
+
 As in the previous lab exercises, you will take on the role of Holly Dickson, Adatum Corporation’s new Microsoft 365 Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
 
 During this exercise you will set up and manage Azure AD Connect. You will create on-premises users and validate the sync process so that their identity is moved to the cloud. Some of the user and group maintenance steps may feel familiar from previous exercises; however, in this case they are needed to validate the synchronization process.
 
-### Task 1: Prepare problem user accounts  
-
-In this task, you will run a script that breaks an on-premises user account. As part of your Adatum pilot project, you are purposely breaking an identity object so that you can run the IdFix tool in the next task to see how you can fix the broken account. 
+### Task 1: Prepare problem user accounts   
 
 1. Now you'll be working on **LON-DC1** VM. To do this, you must first switch back to **Hyper-V Manager**, right click on the **LON-DC1** VM and select **Connect**, on the **Connect to LON-DC1** select **Connect**. On the desktop window **Administrator** name will display, enter the **Pa55w.rd**, and select forward arrow.
 
@@ -30,8 +30,6 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 
 ### Task 2: Run the IdFix tool and fix identified issues 
-
-In this task you will download and use the IdFix Directory Synchronization Error Remediation Tool to fix Klemen Sic's on-premises user account that you purposely broke in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
 
 1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
 
@@ -79,10 +77,6 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 
 ### Task 3: Prepare for Directory Synchronization    
-
-The Azure Active Directory Connect synchronization service is a main component of Azure AD Connect. It's responsible for processing all operations related to synchronizing identity data between your on-premises environment and Azure AD. The sync service consists of an on-premises component (Azure AD Connect sync) and a cloud service component (Azure AD Connect Cloud Sync service). Deployments such as Adatum that implement Microsoft Exchange Online must use the Azure AD Connect sync service.
-
-Before you can run Azure AD Connect, you must first configure several settings that control the synchronization process, which you will do in this task. Once you have completed the preparation process, you will then run the Azure AD Connect tool in the next exercise. 
 
 1. You should still be logged into **LON-DC1**. 
 

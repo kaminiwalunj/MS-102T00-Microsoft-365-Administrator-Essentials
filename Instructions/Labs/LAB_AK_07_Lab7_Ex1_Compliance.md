@@ -1,10 +1,10 @@
 # Learning Path 7 - Lab 7 - Exercise 1 - Initialize Compliance 
 
+## Lab scenario
+
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement archiving and retention at Adatum. You will begin by initializing compliance through the MDM auto-enrollment of new devices in your tenant. You will then configure retention tags and policies, and you will implement archiving with retention policies. 
 
 ### Task 1 - Create a security group for Compliance Testing
-
-To test archiving and retention in your Adatum pilot project, you will create a new mail-enabled security group and assign two users to the group – Joni Sherman and Lynne Robbins. This group will then be used in the next task when you configure MDM auto-enrollment for new devices in your tenant. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
@@ -44,8 +44,6 @@ To test archiving and retention in your Adatum pilot project, you will create a 
 
 
 ### Task 2 – Configure Mobile Device Management for compliance testing
-
-In this task you will activate MDM auto-enrollment for new devices in your Adatum Corporation tenant. The devices will belong to members of the Compliance Test Users group that you created in the prior task. You will also verify that Intune is set by default as your mobile device management (MDM) authority. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 

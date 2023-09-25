@@ -1,14 +1,13 @@
 # Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy
 
+## Lab scenario
+
 Holly Dickson is now at the point in her pilot project where she wants to test the DLP policy related to emails that contain sensitive information that you created in the previous lab exercise. 
 
 >**NOTE:** We have intermittently experienced issues in the past where DLP policies and policy tips do not work as expected in this lab exercise. This is due to throttling issues that sometimes occur between our VM lab environment and the Microsoft 365 trial tenant. This is not indicative of the normal experience within Microsoft 365 production environments. It is also not indicative of the normal training experience. We apologize if you run into this issue during this lab exercise.
 
 ### Task 1 – Test the first DLP Policy rule
 
-In the previous exercise, you created a custom DLP policy that searches emails for sensitive information related to IP addresses in your Adatum tenant. This policy included two rules - one that checked for emails containing a single IP address, and another that checked for emails containing two or more IP addresses. 
-
-In this task, you will send an email from Holly Dickson to Lynne Robbins that tests the first rule (single IP address). When this rule is triggered, an email policy tip is displayed in the sender's Outlook mailbox that informs the sender the email contains sensitive data. The sender will also receive an email notification, but the email will still be sent to the recipient.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
@@ -44,18 +43,14 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 13. In Lynne's Inbox, verify that she received the email from Holly Dickson that has the subject line: **DLP Policy Test 1**. Select the message to verify the content containing the IP address was not removed. 
 
-	>**Note:** if you haven't recieved the email on Lynne's account, you have wait atleast 
+	>**Note:** if you haven't recieved the email on Lynne's account, you have wait atleast -->
 
-14. Leave the Outlook tab open in the Edge browser for the next task. -->
+14. Leave the Outlook tab open in the Edge browser for the next task.
 
-<!-- 15. Switch back to **LON-CL1**. -->
+15. Switch back to **LON-CL1**. 
 
 	
-### Task 2 – Test the second DLP Policy rule
-
-In the previous exercise, you created a custom DLP policy that searches emails for sensitive information related to IP addresses in your Adatum tenant. This policy included two rules - one that checked for emails containing a single IP address, and another that checked for emails containing two or more IP addresses. 
-	
-In this task, you will send an email from Holly Dickson to Lynne Robbins that tests the second rule (multiple IP addresses). When this rule is triggered, an email policy tip is displayed in the sender's Outlook mailbox that informs the sender the email contains sensitive data. The email will be blocked, but the sender can override the blocked email and allow it to be sent.  
+### Task 2 – Test the second DLP Policy rule  
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 	
@@ -85,11 +80,11 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 12. You should still be logged into **Outlook on the Web** in the LON-CL2 VM as **Lynne Robbins**. In your **Edge** browser, Lynne’s mailbox should still be open in **Outlook on the web** from when you last used it in the previous task.
 
-13. In Lynne's Inbox, verify that she received the email from Holly Dickson that has the subject line: **DLP Policy Test 2**. Select the message to verify the content containing the IP addresses was not removed. 
+13. In Lynne's Inbox, verify that she received the email from Holly Dickson that has the subject line: **DLP Policy Test 2**. Select the message to verify the content containing the IP addresses was not removed. -->
 
 14. Leave the Outlook tab open in the Edge browser for the next task.
 
-15. Switch back to **LON-CL1**. -->
+15. Switch back to **LON-CL1**.
 
 ## Review
 

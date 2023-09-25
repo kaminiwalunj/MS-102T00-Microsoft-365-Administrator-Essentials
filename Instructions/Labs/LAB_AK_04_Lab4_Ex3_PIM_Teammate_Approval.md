@@ -1,5 +1,7 @@
 # Learning Path 4 - Lab 4 - Exercise 3 - PIM Teammate Approval Request
 
+## Lab scenario
+
 Up to this point, you have conducted two forms of PIM approval:
 
 - one by an administrator (Holly), who approved the activation and assignment of the Global Administrator role to Patti Fernandez.
@@ -11,8 +13,6 @@ In an attempt to decrease overhead but still maintain a secure way of managing a
 
 
 ### Task 1 - Create an eligible group for the Intune Admin role
-
-For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wilber and Joni Sherman to be eligible for the Intune admin role. To simplify future role assignments, Holly wants to create a security group, assign Alex and Joni to the group, and then assign the group to the Intune admin role - just as she previously did in the prior lab exercise for the Helpdesk administrator role. 
 
 1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
@@ -73,10 +73,6 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
 ### Task 2 - Configure the Intune Administrator role to require approval
 
-In this exercise, Holly will enable the PIM-Intune-Administrators group to be eligible for the Intune admin role. However, not only will Holly make the group eligible for the role, but she will also make its members approvers of the role requests. Holly will then configure the role so that PIM notifies her of all approvals for this role.
-
-As in the prior PIM exercise involving the Helpdesk admin role, Holly is trusting that Alex and Joni won't activate the Intune admin role unless they're required to do so. Therefore, Holly will only require that Alex and Joni provide a justification whenever they must activate the role. In addition, Holly wants to configure the role so that Alex and Joni can approve each other's request for role activation. Holly simply wants to be notified whenever either user approves a request from the other.
-
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the left-hand navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
@@ -121,8 +117,6 @@ As in the prior PIM exercise involving the Helpdesk admin role, Holly is trustin
 
 ### Task 3 - Submit a request for the Intune Admin role
 
-At this point in Holly's pilot project, the **PIM-Intune-Administrators** group has been made eligible for the Intune administrator role. Each member of the group (in this case, Alex Wilber and Joni Sherman) can now be assigned the Intune Administrator role by requesting approval from a member of this group, which in this case will be the other person. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Joni Sherman, who will submit a request to approve assigning the Intune Administrator role to her account. 
-
 1.  In LON-CL1, right-click on the **Edge** icon on the taskbar and in the menu that appears, select **New InPrivate window**. 
 
 2. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
@@ -149,10 +143,6 @@ At this point in Holly's pilot project, the **PIM-Intune-Administrators** group 
 
 
 ### Task 4 - Approve the request for the Intune Admin role
-
-Back in Task 2, Holly assigned the PIM-Intune-Administrators group as approver for the Intune Administrator role. This means that both Joni and Alex, as members of the group, can approve requests for role assignment. Since Joni submitted a role assignment request in the prior task, Alex must review the request and determine whether to accept or deny it. 
-
-As a member of the PIM-Intune-Administrators group, Joni can approve requests for the Intune Admin role. But since Joni also requested assignment of this role, she should not be able to self-approve her own request. Only another member of the group (in this case, Alex) should be able to approve her request. In this task, you first want to verify that Joni can't self-approve her own request. 
 
 1. You should still be logged into the InPrivate browser session as Joni Sherman. If you closed the session at the end of the prior task, then repeat the steps from the prior task to open the InPrivate browsing session, sign in as Joni, and navigate to the **My roles** window. 
 
@@ -203,9 +193,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 23. Leave your Edge browser and all tabs open. 
 
 
-### Task 5 - Verify a PIM notification was issued
-
-When you earlier configured the Intune Administrator role, you set up the notification feature so that Holly would be notified any time an eligible user activated the role. Since Alex Wilber just activated the role for Joni Sherman, Holly should receive a notification of this activity. This task will verify that Holly received this notification. 
+### Task 5 - Verify a PIM notification was issued 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 

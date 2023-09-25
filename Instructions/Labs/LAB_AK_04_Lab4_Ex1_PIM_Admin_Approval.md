@@ -1,5 +1,7 @@
 # Learning Path 4 - Lab 4 - Exercise 1 - PIM Administrator approval
 
+## Lab scenario
+
 As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Azure Active Directory. PIM is an Azure AD service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
 
 One of Adatum's pain points in its existing system is that it has far too many users who have been assigned administrator roles. This has caused concern among management, who recognize this situation as an existential threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, these users have access to secure information and resources that could potentially compromise the organization. 
@@ -24,13 +26,6 @@ Because the username and password for this first Global admin account are typica
 
 ### Task 1 - Configure the Global Administrator role to require approval
 
-Since the Microsoft 365 Global Administrator role provides a user with basically unlimited access to all Microsoft 365 resources, the number of users assigned to this role should obviously be kept to a minimum for security purposes. 
-
-In the Microsoft 365 tenant used by this training course, the lab hosting provider assigned the Global admin role to seven of the predefined user accounts. After you added Holly as a Global admin, eight of the 20 licensed user accounts in your tenant are now global admins, which is not something you would see in a real-world deployment. The best practice guideline that you should follow is to have from two to four Global admins in your real-world Microsoft 365 deployments. The reason this tenant exceeds that number is that it's used by multiple training courses, each of which have their own VM requirements. Some of these other courses require specific users to be Global admins, which explains why there are so many in the tenant.
-
-Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to use Privileged Identity Management to limit access to the Global admin role. To do so, she must first configure the role to require approval before it can be assigned as an eligible role for a user, and then she wants to assign herself as the approver whenever an eligible user requests activating the role.
-
-Holly also wants to update the notification settings for the Global admin role. Privileged Identity Management (PIM) lets you know when important events occur in your Azure Active Directory (Azure AD) organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails can also include links to relevant tasks, such as activating or renewing a role. In this task, Holly wants to update the notifications to ensure that approvals are tracked in real-time in a proactive manner.
 
 1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  
 Switch back to **LON-CL1** (by navigating back to the hyper-v manager). 
@@ -79,12 +74,6 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 
 ### Task 2 - Assign an eligible group to the Global Admin role
-
-For Adatum's PIM pilot project, Holly has selected Patti Fernandez as the sole user who will be eligible to be assigned the Global admin role. However, to simplify future role assignments, Holly wants to create a security group, assign Patti to the group, and then assign the group to the Global admin role. 
-
-Assigning roles to groups can simplify the management of role assignments in Azure AD. Instead of requiring a Global admin (such as Holly) or a Privileged Role Administrator to assign a role to multiple people individually, they can create a security group and then enable the group to be eligible for that specific role. When people are assigned as members of the group, they indirectly become eligible to be assigned the role. The company's existing governance workflow can then take care of the approval process and auditing of the group's membership to ensure that only legitimate users are members of the group and are thus assigned the particular role. 
-
-In this task, Holly will create a new, role-assignable security group for users who are eligible for the Global admin role. She will then assign Patti to the group, and then enable the group to be eligible for the Global Administrator role.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
@@ -139,8 +128,6 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 ### Task 3 - Submit a request for the Global Admin role
 
-Now that the **PIM-Global-Administrators** group has been made eligible for the Global administrator role, the members of the group (in this case, Patti Fernandez) can be assigned the Global Administrator role using Azure AD Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Patti, who will submit a request to be assigned Global administrator role privileges. In the next task, Holly will review her request and approve it.
-
 >**NOTE:** The activation request process is set up to require multifactor authentication (MFA). If you do not have a phone to complete this process, notify your instructor. You may be able to partner with another student to watch them complete the remaining two tasks.
 
 1.  In LON-CL1, right-click on the **Edge** icon on the taskbar and in the menu that appears, select **New InPrivate window**. 
@@ -184,8 +171,6 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 
 ### Task 4 -  Approve the request for the Global Admin role
-
-Back in Task 1, Holly set herself up as the approver for the Global Administrator role. Since Patti has submitted a request to be assigned this role, Holly must review the request and determine whether to accept or deny it. 
 
 1.  In LON-CL1, hover your mouse over the Edge icon on your taskbar to see the two Edge sessions that you have open - the window on the left is the original Edge browser session in which you are signed into **Microsoft 365** as **Holly Dickson**, and the window on the right is the InPrivate Browser session in which you are signed into **Azure AD** as **Patti Fernandez**. Select the window on the left to go back to the original Edge browser session in which you are signed in as **Holly Dickson**. 
 
