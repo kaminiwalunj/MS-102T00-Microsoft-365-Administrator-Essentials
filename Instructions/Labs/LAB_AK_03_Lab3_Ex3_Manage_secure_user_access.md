@@ -1,12 +1,10 @@
 # Learning Path 3 - Lab 3 - Exercise 3 - Manage secure user access 
 
+## Lab scenario
+
 As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Pass-through Authentication (PTA) and Azure AD Smart Lockout as a means of strengthening password management throughout the organization. 
 
 ### Task 1: Deploy Azure AD Pass-Through Authentication 
-
-Pass-through Authentication allows users to sign-in to cloud-based services using their on-premises passwords. All user passwords are only stored locally in the on-premises domains and NEVER synchronized to the cloud. When a user signs-in, the PTA agent takes the credentials to the user's on-premises environment to verify whether the password is correct. It then sends the result back to Azure AD.   
-
-‎Adatum's CTO wants to provide the company's users with a better sign-in experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its Microsoft 365 pilot project.
 
 1.  You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
 
@@ -16,7 +14,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 4. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-5. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account), and then select **Next**.
+5. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the password, and then select **Next**.
 
 6. On the **User sign-in** page, under **Select the Sign On method**, select **Pass-through authentication** and then select **Next**. 
 
@@ -32,7 +30,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 12. To verify that Pass-Through Authentication is successfully enabled, select a new tab in your Edge browser and enter the following URL in the address bar: **https://entra.microsoft.com**
 
-13. This opens the **Microsoft Entra admin center**. In the left-hand navigation pane, click on **Show more** in order to select **Azure AD Connect** under **Hybrid Management**. 
+13. This opens the **Microsoft Entra admin center**. In the left-hand navigation pane, under **Identity**, click on **Show more** in order to select **Microsoft Entra Connect** under **Hybrid Management**. 
 
 17. On the **AAD Connect | Get started** page, in the middle navigation pane, select **Connect Sync**.
 
@@ -47,19 +45,13 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 ### Task 2: Deploy Azure AD Smart Lockout
 
-Adatum’s CTO has asked you to deploy Azure AD Smart Lockout, which assists in locking out bad actors who are trying to guess your users’ passwords or use brute-force methods to get admitted into your network. Smart Lockout can recognize sign-ins coming from valid users and treat them differently than sign-ins from attackers and other unknown sources. 
-
-The CTO is anxious to implement Smart Lockout because it will lock out the attackers while letting Adatum’s users continue to access their accounts and be productive. The CTO has asked Holly to configure Smart Lockout so that users can’t use the same password more than once, and they can’t use passwords that are considered too simplistic or common. 
-
 1. On LON-DC1, select the **Server Manager** icon on the taskbar if it’s already open; otherwise, open it now.
 
 2. In **Server Manager**, select **Tools** in the upper-right menu bar, and in the drop-down menu, select **Group Policy Management.**
 
 3. Maximize the **Group Policy Management** window.
 
-4. You want to edit the group policy that includes your organization's account lockout policy. If necessary, in the root console tree in the left-hand pane, expand **Forest:Adatum.com**, then expand **Domains**, and then expand **Adatum.com**.  <br/>
-
-	‎Under **Adatum.com**, right-click on **Default Domain Policy** and then select **Edit** in the menu.
+4. You want to edit the group policy that includes your organization's account lockout policy. If necessary, in the root console tree in the left-hand pane, expand **Forest:Adatum.com**, then expand **Domains**, and then expand **Adatum.com**.  Under **Adatum.com**, right-click on **Default Domain Policy** and then select **Edit** in the menu.
 
 5. Maximize the **Group Policy Management Editor** window that appears.
 
@@ -69,7 +61,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You are going to use the **Microsoft Entra admin center** to assign corresponding values in the Entra ID context.  
 
-9. ‎Select the Edge browser icon on the taskbar, which should be displaying the **Microsoft Entra admin center**. 
+9. Select the Edge browser icon on the taskbar, which should be displaying the **Microsoft Entra admin center**. 
 
 9. In the **Microsoft Entra admin center**, in the left-hand navigation pane, select **Authentication methods** under the **Protection** submenu.
 
@@ -101,37 +93,34 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 14. Select **Save** on the menu bar at the top of the page.
 
-15. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Change password**.
+15. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, click on **View account**, select **Password** from the left-hand navigation pane and in the menu that appears select **Change password**.
 
-16. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
-
-	Enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
+16. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password. Enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
 
 17. In your browser, close the **Change password** tab. 
 
 18. You should now test the lockout threshold functionality. In the **Authentication methods - Azure Active Directory admin center** tab, select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**.  
 
-19. Once you are signed out as Holly, the **Pick an account** window will appear in the **Sign in to Microsoft Azure** tab. As a best practice when signing out from a Microsoft online service as one user and signing back in as another, close all your browser tabs except for the **Sign out** or **Sign in** tab. In this case, close the other tabs now and leave the **Sign in** tab open.  <br/>
+19. Once you are signed out as Holly, the **Pick an account** window will appear in the **Sign in to Microsoft Azure** tab. As a best practice when signing out from a Microsoft online service as one user and signing back in as another, close all your browser tabs except for the **Sign out** or **Sign in** tab. In this case, close the other tabs now and leave the **Sign in** tab open. In the **Pick an account** window, select **Use another account**. 
 
-	In the **Pick an account** window, select **Use another account**. 
+20. In the **Sign in** window, enter **Laura**'s username, and then select **Next**. 
 
-20. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
+21. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. Repeat this step 2 more times. Since you set the **Lockout threshold** to **3**, your account is temporarily locked to prevent unauthorized use. Try again later, and if you still have trouble, contact your admin.
 
-21. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. 
+	>**Note:** If you do not receive this lockout message after the third attempt, then the system has not yet finished propagating this lockout threshold change throughout the service. It may take several minutes for the change to take effect. Wait a few minutes and then sign-in again with a bogus password. Testing of this lab has seen varying results. The change sometimes propagates almost immediately so that you get locked out after the third sign-in attempt. Other times it has taken anywhere from 5 to 10 minutes before the lockout message is displayed. Continue this process until you receive the lockout message, at which point Laura's account will be temporarily locked to prevent unauthorized access.
 
-	Repeat this step 2 more times. 
-	
-	Since you set the **Lockout threshold** to **3**, you should receive an error message indicating that your account is locked after your third failed sign-in attempt. <br/>
-
-	**User:** If you do not receive this lockout message after the third attempt, then the system has not yet finished propagating this lockout threshold change throughout the service. It may take several minutes for the change to take effect. Wait a few minutes and then sign-in again with a bogus password. Testing of this lab has seen varying results. The change sometimes propagates almost immediately so that you get locked out after the third sign-in attempt. Other times it has taken anywhere from 5 to 10 minutes before the lockout message is displayed. Continue this process until you receive the lockout message, at which point Laura's account will be temporarily locked to prevent unauthorized access.
-
-22. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. <br/>
-
-	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Verify that you are able to successfully sign-in as Laura.
+22. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. Once you've been locked out, wait 90 seconds and then sign back in as **Laura**'s account. Verify that you are able to successfully sign-in as Laura.
 
 23. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
- 
 
-# End of Lab 3
+
+## Review
+
+In this lab, you have:
+
+- Deployed Azure AD Pass-Through Authentication.
+- Deployed Azure AD Smart Lockout.
+
+# You have successfully completed Lab 03, proceed with the next labs.
 
 
