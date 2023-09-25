@@ -332,8 +332,6 @@ You have just successfully created an AIP protected Word document that is read-o
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Congratulations! You have successfully completed Lab 09.
-
 ## Review
 
 In this lab, you have:
@@ -343,4 +341,4 @@ In this lab, you have:
 - Assigned a Sensitivity Label to a document.
 - Verified your Sensitivity Label policy.
 
-# End of Lab 9
+# Congratulations! You have successfully completed Lab 09.
