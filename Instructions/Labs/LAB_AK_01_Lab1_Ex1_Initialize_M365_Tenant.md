@@ -15,7 +15,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 >**Important:** You can find all the users usernames which is required in this lab, inside the Azure Portal. You can log into the portal using ODL credentials, in the **Search resources, services and docs** search for **Users**, select it. All the users are listed. 
 
-	>**Note:** Open this page for further use.
+>**Note:** Open this page for further use.
  
 ## Pre-requisite
 
