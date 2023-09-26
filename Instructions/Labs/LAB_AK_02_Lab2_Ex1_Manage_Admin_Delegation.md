@@ -6,7 +6,7 @@ In this exercise, you will continue in your role as Holly Dickson, Adatum's new 
 
 ### Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
 
-1. You should now switch to **LON-CL1** , by going to **Hyper-v** manager, right click on the **LON-CL1** and select **Connect**, to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather than the company's domain controller.  
+1. You should now switch to **LON-CL1** , by going to **Hyper-v manager**, right click on the **LON-CL1** and select **Connect**, to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather than the company's domain controller.  
 
 2. On **LON-CL1**, in the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson from a prior lab exercise. In the left-hand navigation pane, select **Users** and then select **Active Users**. 
 
