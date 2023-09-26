@@ -54,7 +54,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Azure AD in the prior lab exercise, scrolling through the user list will be too time consuming. 
 
-    Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@ZZZZZxxxxxxx.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
+    Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@yourtenant.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
 
 13. In the **Edit role setting - Global Administrator** window, select the **Notification** tab at the top of the page.
 
@@ -66,7 +66,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
     For each of these three activities, an alert can be sent (depending on the activity, it will either be a Role assignment alert or a Role activation alert). The default value for each of these alerts is **Admin**, which refers to the Global Administrators and any Privileged Role Administrators. Besides sending this alert notification email to these admins, Holly wants the alert for each activity sent to the ODL user account. 
 
-    In the **Additional recipients** field for each of the three alerts (the **Role assignment alert** for the first two activities and the **Role activation alert** for the final activity), enter the ODL user's email ID of **odl_user_<inject key="DeploymentID" enableCopy="false"/>@ZZZZZxxxxxxx.onmicrosoft.com**.
+    In the **Additional recipients** field for each of the three alerts (the **Role assignment alert** for the first two activities and the **Role activation alert** for the final activity), enter the ODL user's email ID of **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**.
 
 15. At the bottom of the **Edit role setting - Global Administrator** window, select **Update**.
 
