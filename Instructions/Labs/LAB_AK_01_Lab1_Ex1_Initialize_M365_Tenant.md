@@ -55,8 +55,6 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@otuwamoc100222.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
 
-   >**Note:** In place of **yourtenant**, you have to give the tenant name.
-
 5. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
 	>**Note:** if **More information required** page appears, proceed with the steps and provide authentication.
@@ -214,7 +212,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 23. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved. 
 
-24. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **ODL user** name appears to the left of the circle with the **MA** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
+24. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **ODL user** name appears to the left of the circle with the **O1** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
 
 25. In the list of organization profile data, select **Custom themes**.
 
@@ -305,7 +303,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
     >**Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
 
-4. It may take up to 1 minute before a **Sign in** window appears. Enter the ODL username from the Enviornment details page, and then select **Next**. On the **Enter password** window, enter the ODL password from the Enviornment details page and then select **Sign in**.
+4. It may take up to 1 minute before a **Sign in** window appears. Enter the **odl_user_<inject key="DeploymentID" enableCopy="false"/>@otuwamoc100222.onmicrosoft.com** on the **Enter username**, and then select **Next**. On the **Enter password** enter **<inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
 
 5. A **Pick an account** window will appear. On this window, select **ODL user** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
