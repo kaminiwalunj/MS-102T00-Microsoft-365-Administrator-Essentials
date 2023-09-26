@@ -150,9 +150,9 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	![](../Images/MS-102-image-16.png)
 	
-	>**Important:** You have just verified that a user with a Microsoft 365 license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On. Do **NOT** select the **Install Office** button at this time. You will do that in the next task.
+	>**Important:** You have just verified that a user with a Microsoft 365 license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On. Do **NOT** select the **Install Office** button at this time.
 
-24. Remain on LON-CL2 and continue to the next task to perform the user-driven installation for Laura Atkins.
+24. Remain on LON-CL2.
 
 
 ### Task 3 – Perform a User-Driven Installation of Microsoft 365 Apps for enterprise 
@@ -163,7 +163,7 @@ In the prior task, you logged into Laura Atkins client PC, and you verified that
 
 2. You should still be in Laura’s **My account** window since this is where you left off at the end of the prior task. Under the **Office apps & devices** section, the **Install Office** button now appears since Laura is assigned a Microsoft 365 Business Premium license and the global Office download setting is turned On.
 
-	>**Important:** Selecting this **Install Office** button will install the 64-bit, English version of Microsoft 365 Apps for enterprise. However, if you want to install a different language or version, then select **View apps & devices**, which opens the **Apps & devices** page; this enables you to select a different language and version of Microsoft 365 Apps for enterprise to install.  Since Laura wants to install the 64-bit English version of Microsoft 365 Apps for enterprise, select the **Install Office** button now.
+	>**Important:** Selecting this **Install Office** button will install the 64-bit, English version of Microsoft 365 Apps for enterprise. However, if you want to install a different language or version, then select **View apps & devices**, which opens the **Apps & devices** page; this enables you to select a different language and version of Microsoft 365 Apps for enterprise to install.
 		
 	>**Note:** If a **Just a few more steps** window appears, select **Close**.
 
