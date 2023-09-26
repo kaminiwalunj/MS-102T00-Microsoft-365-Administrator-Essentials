@@ -53,9 +53,9 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 2. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-3. In the **Sign in** dialog box, copy and paste the ODL username from the **Enviornment details** page in the **Microsoft 365 Tenant Username**, select **Next**.
+3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste the ODL password from **Enviornment details** page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
+4. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
 	>**Note:** if **More information required** page appears, proceed with the steps and provide authentication.
 
@@ -204,9 +204,9 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
  
 22. Select the **Logos** tab and take some time to review its options. Do the same for the **Colors** tab. Note the various theme and branding options that are available for you to update.
 
-	>**Note:** For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. <br/>
+	>**Note:** For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. 
 
-	**Go ahead and explore the different options for this theme that will be used by the Microsoft 365 pilot project team members. Make any changes that you wish.** <br/>
+	**Go ahead and explore the different options for this theme that will be used by the Microsoft 365 pilot project team members. Make any changes that you wish.** 
 
 	>**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
@@ -273,7 +273,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
     >**Note:** Your response will initiate the installation of all the Microsoft Graph sub-modules. Once all the installation messages (for each sub-module) have finished displaying, it will still take approximately 5 to 10 minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. This may be a good time to take a short break.
 
-4. A command prompt will appear once Microsoft Graph PowerShell has been installed. Run the following command to see the complete list of sub-modules that were installed under the Microsoft.Graph primary module:  <br/>
+4. A command prompt will appear once Microsoft Graph PowerShell has been installed. Run the following command to see the complete list of sub-modules that were installed under the Microsoft.Graph primary module:  
 	
 	```powershell
     Get-InstalledModule Microsoft.Graph.* 
