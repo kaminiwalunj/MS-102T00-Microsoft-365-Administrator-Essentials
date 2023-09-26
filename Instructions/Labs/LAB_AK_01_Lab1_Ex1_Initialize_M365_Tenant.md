@@ -55,33 +55,35 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
 
-4. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
+   >**Note:** In place of **yourtenant**, you have to give the tenant name.
+
+5. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
 	>**Note:** if **More information required** page appears, proceed with the steps and provide authentication.
 
-5. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
+6. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
-6. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
+7. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-7. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it. 
+8. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it. 
 
-8. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the ODL user's Microsoft 365 home page.
+9. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the ODL user's Microsoft 365 home page.
 
 	>**Note:** if it doesn't open, then in the Edge browser paste this URL **admin.microsoft.com**.
 
 	>**Note:** Notice the initials **O1** that appear in a circle in the top-right corner of the screen. These are the initials of the **ODL user** account, which is the tenant admin account that you just signed in as. However, when a user such as the ODL user has no picture assigned to it, the user's initials are displayed in place of the picture.
 
-9. On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**, this opens the **Microsoft 365 admin center** in a new browser tab. 
+10. On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**, this opens the **Microsoft 365 admin center** in a new browser tab. 
 
 	![](../Images/MS-102-image-1.png)
 
-10. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
+11. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
 	![](../Images/MS-102-image-2.png)
 
-11. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
+12. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
-12. In the **Organization profile** tab, select **Organization information** from the list of profile data.
+13. In the **Organization profile** tab, select **Organization information** from the list of profile data.
 
 	![](../Images/MS-102-image-3.png)
 
