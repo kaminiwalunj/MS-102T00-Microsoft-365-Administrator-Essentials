@@ -202,7 +202,7 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 8. If a **Get your work done with Office 365** window appears, select the X to close it.
 
-9. On the **Microsoft Office Home** tab, select the **Word** icon in the column of app icons on the left-side of the screen. This will override the **Microsoft Office Home** tab by opening Microsoft Word Online in this same tab. 
+9. On the **Microsoft Office Home** tab, select **App Launcher**, select the **Word** icon. This will navigate you to the Microsoft Word Online. 
 
 	>**Note:** In the next task, you will return back to the **Microsoft Office Home** tab by selecting the **Back** arrow at the top of this **Word** tab.
 
