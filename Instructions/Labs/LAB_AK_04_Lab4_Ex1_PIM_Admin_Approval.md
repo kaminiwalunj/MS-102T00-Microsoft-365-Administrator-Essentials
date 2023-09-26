@@ -32,7 +32,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 2. On **LON-CL1**, you should still be logged into the machine as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, select **show all**, select **All Admin centers**, and select **Mcrosoft Entra**.
+3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, select **show all**, select **All Admin centers**, and select **Microsoft Entra**.
 
     >**Note:** If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the password. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
