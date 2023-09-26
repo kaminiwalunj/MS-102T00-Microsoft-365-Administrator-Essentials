@@ -177,7 +177,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **Joni**'s username. In the **Enter password** window, enter the password and sign-in with the credentials.
+12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **joni.sherman@mochol200035.onmicrosoft.com** in the **Enter username**. In the **Enter password** window, enter the password and sign-in with the credentials.
 
 13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
 
