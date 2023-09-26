@@ -14,7 +14,7 @@ As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by
 
 4. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-5. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the password, and then select **Next**.
+5. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@yourtenant.onmicrosoft.com**. In the **PASSWORD** field, enter the password, and then select **Next**.
 
 6. On the **User sign-in** page, under **Select the Sign On method**, select **Pass-through authentication** and then select **Next**. 
 
