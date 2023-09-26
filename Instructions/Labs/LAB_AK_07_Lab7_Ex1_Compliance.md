@@ -30,7 +30,7 @@ In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you h
 
 12. On the **Edit settings** page, enter **comptestusers** in the **Group email address** field. Select **Next**.
 
-	>**Note:** The Group email address domain (to the right of the group email address alias) displays the default domain for the company's Microsoft 365 tenant (in this case, **xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In a real-world scenario in which a company has multiple domains, you may need to select into this field to select the correct domain. 
+	>**Note:** The Group email address domain (to the right of the group email address alias) displays the default domain for the company's Microsoft 365 tenant (in this case, **yourtenant.onmicrosoft.com**, where yourtenant is the tenant prefix provided by your lab hosting provider). In a real-world scenario in which a company has multiple domains, you may need to select into this field to select the correct domain. 
 
 13. On the **Review and finish adding group** window, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Create group**.
 
