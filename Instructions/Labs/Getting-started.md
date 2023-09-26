@@ -17,3 +17,11 @@
 1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
 
     ![](../Images/MS-102-image-23.png)   
+
+1. In the pop-up for *Help us protect your account*, select **Skip for now (14 days until this is required)**.
+
+1. If you see the pop-up **Stay Signed in?**, click Yes
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
