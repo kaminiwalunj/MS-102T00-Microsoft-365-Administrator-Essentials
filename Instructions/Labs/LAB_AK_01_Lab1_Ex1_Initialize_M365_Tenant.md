@@ -19,7 +19,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
  
 ## Pre-requisite
 
-1. In the Windows search bar type and search for **Hyper-V Manager**.
+1. In **Type here to search** type and search for **Hyper-V Manager**.
 
 2. On the Virtual Machines section, it will show the all the virtual machines that are in running state, right click on **LON-CL1** VM, select **Connect**, on the **Connect to LON-CL1** select **Connect**.
 
