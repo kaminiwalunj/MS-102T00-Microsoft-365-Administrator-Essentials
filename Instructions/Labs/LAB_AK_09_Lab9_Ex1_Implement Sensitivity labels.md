@@ -196,7 +196,7 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 5. In the **Pick an account** window, select **Use another account**.
 
-6. In the **Sign in** window, enter **alex**'s account and then select **Next**.
+6. In the **Sign in** window, enter **alex.wilber@yourtenant.onmicrosoft.com**'s account and then select **Next**.
 
 7. On the **Enter password** window, enter the password and then select **Sign in**.
 
@@ -285,7 +285,7 @@ You have just successfully created an AIP protected Word document that is read-o
 
 12. In the **Pick an account** window, select **Use another account**.
 
-13. In the **Sign in** window, enter **JoniS@yourtenant.onmicrosoft** (where yourtenant is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+13. In the **Sign in** window, enter **JoniS@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
 14. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
