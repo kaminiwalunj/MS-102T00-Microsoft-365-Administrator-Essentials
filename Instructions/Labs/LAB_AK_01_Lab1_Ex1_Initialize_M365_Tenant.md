@@ -36,7 +36,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 	```powershell
     Connect-AzureAD
     ```
-	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username, and in enter the password **<inject key="AzureAdUserPassword"></inject>**
+	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@otuwamoc100222.onmicrosoft.com**, and in enter the password **<inject key="AzureAdUserPassword"></inject>**
 
 	```powershell
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
@@ -53,7 +53,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 2. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
+3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@otuwamoc100222.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
 
    >**Note:** In place of **yourtenant**, you have to give the tenant name.
 
