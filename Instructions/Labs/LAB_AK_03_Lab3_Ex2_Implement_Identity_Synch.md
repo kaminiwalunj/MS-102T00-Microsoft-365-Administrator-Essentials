@@ -94,7 +94,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 27. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
 
-28. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select any of the these **xxxxxZZZZZZ.onmicrosoft.com - AAD** row.  
+28. Wait for the **Export** profile to complete for **yourtenant.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select any of the these **yourtenant.onmicrosoft.com - AAD** row.  
 
 29. In the bottom portion of the screen, a detail pane appears showing the detailed information for this selected operation. 
 
@@ -237,7 +237,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 	>**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
-6. For the **Manufacturing** group, check the value displayed in the **Email** column. Verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@xxxxxZZZZZZ.onmicrosoft.com**, which is the group's mailbox in Exchange Online.  Hover your mouse over the icon in the **Sync status** column and verify that it indicates **Synced from on-premises**. 
+6. For the **Manufacturing** group, check the value displayed in the **Email** column. Verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@yourtenant.onmicrosoft.com**, which is the group's mailbox in Exchange Online.  Hover your mouse over the icon in the **Sync status** column and verify that it indicates **Synced from on-premises**. 
 
 7. To the right of the **Manufacturing** group is a vertical ellipsis icon (three periods vertically aligned). Hold your mouse over this icon. Note the message that appears which indicates you can only manage this group in your on-premises environment. 
 
