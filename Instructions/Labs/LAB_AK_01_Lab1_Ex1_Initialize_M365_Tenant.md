@@ -25,27 +25,34 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 3. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
 
-4. On the Azure portal, in **search resources, services, and docs** type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
+4. Select **Azure Portal**, on the Azure portal, in **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
 
-5. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of Microsoft 365 Business Premium, and select **Save**.
+5. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium**, and select **Save**.
 
-6. Close the **Licenses** tab.
+6. Repeat the steps 4-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
 
-7. Open **Windows Powershell ISE**, and run the following commands to assign the usage location to all the users:
+7. Close the **Licenses** tab.
+
+8. Open **Windows Powershell ISE**, and run the following commands to assign the usage location to all the users:
 
 	```powershell
     Connect-AzureAD
     ```
-	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), and in enter the password **<inject key="AzureAdUserPassword"></inject>**
+	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), and enter the password **<inject key="AzureAdUserPassword"></inject>**
 
 	```powershell
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
 	```
 
-8. Close the **Windows Powershell ISE**.
+9. Close the **Windows Powershell ISE**.
 
-9. Repeat the step-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
+10.  Now, Open the Edge browser, and navigate to this link **admin.microsoft.com**. On the Sign in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), and enter the password **<inject key="AzureAdUserPassword"></inject>**. It will open the Microsoft 365 admin center page.
 
+11.  On the **the Microsoft 365 admin center** page, select **Users** from the left-hand navigation pane, and select **Active users**. Hover the mouse on the Alex wilber, as you can see the reset a password icon, select it. On the **Reset Password** page, if the **Automatically create a password** and **Require this user to change their password when they first sign in** checkboxes are checked, then uncheck both boxes, and inside **Password** enter any password of your choice (write down the password somewhere for further use). After entering the password, select **Reset Password**. On the password has been reset page, select **Close**.
+
+12.  Repeat step-11 for the **Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
+
+13.  You have successfully reset the password for all these users **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**. Close the tab and you can start with the task-1.
 
 ### Task 1- Set up Adatum's Organization Profile
 
