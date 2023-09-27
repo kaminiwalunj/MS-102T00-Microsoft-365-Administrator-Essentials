@@ -53,7 +53,9 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 2. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
+3. In the **Sign in** dialog box, in the **Enter username** dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
+
+   	>**Note:** Replace **yourtenant** with the tenant name, which you can copy from the environment details page.
 
 5. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
@@ -172,7 +174,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 13. In the **Review and finish adding group** page, review the content that you entered. If anything needs to be fixed, select **Edit** under the specific area that needs adjustment, make any necessary corrections, and then select **Next** to continue back to this page. Once everything is correct, select **Create group**.
 
-14. Once the **M365 pilot project group created** window appears, note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active groups.  </br>
+14. Once the **M365 pilot project group created** window appears, note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active groups.  
 
 15. Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Teams & Microsoft 365 groups** group tab. Since the M365 pilot project group was a Microsoft 365 group, it should eventually display on this tab. If necessary, select the **Refresh** option on the menu bar until you see the M365 pilot project group in the list of Teams & Microsoft 365 groups.
 
