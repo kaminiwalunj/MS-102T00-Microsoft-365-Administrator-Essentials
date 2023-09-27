@@ -10,7 +10,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
-2. After finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. If not then enter the URL**https://admin.microsoft.com/** and sign-in with the Holly's account.
+2. After finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. If not then enter the URL **https://admin.microsoft.com/** and sign-in with the Holly's account.
 
 3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**.
 
