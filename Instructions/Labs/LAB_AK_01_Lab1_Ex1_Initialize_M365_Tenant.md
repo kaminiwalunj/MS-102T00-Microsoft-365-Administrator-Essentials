@@ -36,7 +36,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 	```powershell
     Connect-AzureAD
     ```
-	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@otuwamoc100222.onmicrosoft.com**, and in enter the password **<inject key="AzureAdUserPassword"></inject>**
+	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**, and in enter the password **<inject key="AzureAdUserPassword"></inject>**
 
 	```powershell
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
@@ -53,7 +53,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 2. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@otuwamoc100222.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
+3. In the **Sign in** dialog box, in the **Enter username**dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**, in the **Microsoft 365 Tenant Username**, select **Next**.
 
 5. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
@@ -303,7 +303,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
     >**Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
 
-4. It may take up to 1 minute before a **Sign in** window appears. Enter the **odl_user_<inject key="DeploymentID" enableCopy="false"/>@otuwamoc100222.onmicrosoft.com** on the **Enter username**, and then select **Next**. On the **Enter password** enter **<inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
+4. It may take up to 1 minute before a **Sign in** window appears. Enter the **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** on the **Enter username**, and then select **Next**. On the **Enter password** enter **<inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
 
 5. A **Pick an account** window will appear. On this window, select **ODL user** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
