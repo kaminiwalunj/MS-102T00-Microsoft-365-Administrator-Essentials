@@ -41,7 +41,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 	
 		After configuring this field, Holly’s username should appear as:
 
-		**Holly@otuwamoc100222.onmicrosoft.com**  
+		**Holly@yourtenant.onmicrosoft.com**  (where yourtenant is the tenant prefix provided by your lab hosting provider).
 	
 	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator defined password.
 
