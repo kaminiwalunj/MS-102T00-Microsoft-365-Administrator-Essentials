@@ -47,18 +47,18 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 9. Close the **Licenses** tab.
 
-10. In **Type here to search**, type **Windows Powershell ISE**. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
+10. In **Type here to search**, type **Windows Powershell**. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
 
 	```powershell
     Connect-AzureAD
     ```
-	>**Note:** Provide the ODL credentials, on the Sign-in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), and enter the password **<inject key="AzureAdUserPassword"></inject>**
+	>**Note:** Provide the ODL credentials, on the Sign in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), and enter the password **<inject key="AzureAdUserPassword"></inject>**
 
 	```powershell
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
 	```
 
-11. Close the **Windows Powershell ISE**. Now, you can start with the Task 1.
+11. Close the **Windows Powershell**. Now, you can start with the Task 1.
 
 ### Task 1- Set up Adatum's Organization Profile
 
@@ -66,7 +66,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 2. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-3. In the **Sign in** dialog box, copy and paste in the **Microsoft 365 Tenant Username** provided by your lab hosting provider **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), select **Next**.
+3. In the **Sign in** dialog box, enter the **Microsoft 365 Tenant Username**, i.e. **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), select **Next**.
 
 5. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
