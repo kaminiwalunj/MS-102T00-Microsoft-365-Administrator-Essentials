@@ -21,9 +21,9 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 5. On the **Active users** page, in the list of users, select **Christie Cline** (select Christie's name and not the check box next to her name).
 
-6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses**, select the check boxes next to **Microsoft 365 Business Premium** to clear them, and then select **Save Changes**. Once the changes are saved, close the **Christie Cline** pane. 
+6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses**, select the check boxes next to **Microsoft 365 Business Premium** and **Enterprise Mobility + Security E5** to clear them, and then select **Save Changes**. Once the changes are saved, close the **Christie Cline** pane. 
 
-7. You're now ready to create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 Global Administrator role, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses that you just unassigned from Christie Cline. 
+7. You're now ready to create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 Global Administrator role, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses **Microsoft 365 E5** and **Enterprise Mobility + Security E5**. 
 
 8. In the **Active Users** window, select the **Add a user** option that appears on the menu bar above the list of active users. This starts the **Add a user** wizard.
 
@@ -55,7 +55,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 	- Select location: **United States**
 
-	- Licenses: Under the **Assign user a product license** option, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes
+	- Licenses: Under the **Assign user a product license** option, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes.
 
 11. Select **Next**.
 
@@ -67,7 +67,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 14. Select the **Global Administrator** check box. 
 
-	>**Note:** A warning message will be displayed indicating that Adatum already has 7 Global admins. In a normal environment, this would be excessive and not recommended. For the purposes of this lab, the lab hosting provider assigned the Global admin role to the ODL user and six other user accounts, which is not something you would normally see in a real-world deployment. However, for the purpose of this lab in your fictitious Adatum lab environment, ignore this message. **That being said, the best practice guideline that you should follow is to have from two to four Global Administrators your real-world Microsoft 365 deployments.** 
+	>**Note:** Ignore this message. **That being said, the best practice guideline that you should follow is to have from two to four Global Administrators your real-world Microsoft 365 deployments.** 
 
 15. Select **Next**.
 
@@ -97,7 +97,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 3. In the **Pick an account** window, select **Use another account**. 
 
-4. In the **Sign in** window, enter Holly@mochol200035.onmicrosoft.com. Select **Next**.
+4. In the **Sign in** window, enter Holly@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
 5. In the **Enter password** window, enter the same provided by your lab hosting provider for the tenant admin account and then select **Sign in**.
 
@@ -149,7 +149,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 2. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
-3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default, this tab displays the existing Microsoft 365 teams & groups.  
+3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default, this tab displays the existing Teams & Microsoft 365 groups.  
 
 4. Select the **+ Add a Microsoft 365 group** option that appears on the menu bar above the list of groups. This initiates the **Add a group** wizard. 
 
@@ -275,7 +275,8 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 	```powershell
 	Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
 	```
-4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account. For the password, sign-in with the same password.
+4. A **Sign in** window will appear requesting your credentials. Sign in using Holly@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+	- Password:- <inject key="AzureAdUserPassword"></inject>
 
 5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 

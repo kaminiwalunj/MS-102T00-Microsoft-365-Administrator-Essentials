@@ -19,13 +19,13 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
  
 ## Pre-requisite
 
-1. In **Type here to search** type and search for **Hyper-V Manager**.
+1. In **Type here to search**, type **Hyper-V Manager**, and select it.
 
-2. On the Virtual Machines section, it will show the all the virtual machines that are in running state, right click on **LON-CL1** VM, select **Connect**, on the **Connect to LON-CL1** select **Connect**.
+2. On the Virtual Machines section, it will show all the virtual machines that are in running state, right click on **LON-CL1** VM, select **Connect**, on the **Connect to LON-CL1**, select **Connect**.
 
 3. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
 
-4. Double-click on **Microsoft Edge**, in the search bar copy and paste the URL to open [Azure Portal](https://portal.azure.com/#home), in **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
+4. Double-click on **Microsoft Edge**, in the search bar use this URL to open [Azure Portal](https://portal.azure.com/#home), in **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
 
 5. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium**, and select **Save**.
 
@@ -33,7 +33,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 7. Close the **Licenses** tab.
 
-8. In **Type here to search**, type and select **Windows Powershell ISE**, and run the following commands to assign the usage location to all the users:
+8. In **Type here to search**, type **Windows Powershell ISE**, that appears in the bottom left corner of the taskbar. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
 
 	```powershell
     Connect-AzureAD
@@ -44,15 +44,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
 	```
 
-9. Close the **Windows Powershell ISE**.
-
-10.  Now, open the Edge browser and use this URL **https://admin.microsoft.com/Adminportal/Home** to open the Microsoft 365 admin center. On the Sign in page, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), and enter the password **<inject key="AzureAdUserPassword"></inject>**. It will open the Microsoft 365 admin center page.
-
-11.  On the **the Microsoft 365 admin center** page, select **Users** from the left-hand navigation pane, and select **Active users**. Hover the mouse on the Alex wilber, as you can see the reset a password icon, select it. On the **Reset Password** page, if the **Automatically create a password** and **Require this user to change their password when they first sign in** checkboxes are checked, then uncheck both boxes, and inside **Password** enter any password of your choice (write down the password somewhere for further use). After entering the password, select **Reset Password**. On the password has been reset page, select **Close**.
-
-12.  Repeat step-11 for the **Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
-
-13.  You have successfully reset the password for all these users **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**. Close the tab and you can start with the task-1.
+9. Close the **Windows Powershell ISE**. Now, you can start with the Task 1.
 
 ### Task 1- Set up Adatum's Organization Profile
 
@@ -60,11 +52,11 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 2. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-3. In the **Sign in** dialog box, in the **Enter username** dialog box, enter the username **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), in the **Microsoft 365 Tenant Username**, select **Next**.
+3. In the **Sign in** dialog box, copy and paste in the **Microsoft 365 Tenant Username** provided by your lab hosting provider **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), select **Next**.
 
 5. In the **Enter password** dialog box, enter the password <inject key="AzureAdUserPassword"></inject> page in the **Microsoft 365 Tenant Password** and then select **Sign in**.
 
-	>**Note:** if **More information required** page appears, proceed with the steps and provide authentication.
+	>**Note:** If a **Action Required** popup window appears, click **Ask Later**.
 
 6. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
@@ -74,7 +66,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 9. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the ODL user's Microsoft 365 home page.
 
-	>**Note:** if it doesn't open, then in the Edge browser paste this URL **admin.microsoft.com**.
+	>**Note:** if it doesn't open, then in the Edge browser paste this URL **https://portal.office.com**.
 
 	>**Note:** Notice the initials **O1** that appear in a circle in the top-right corner of the screen. These are the initials of the **ODL user** account, which is the tenant admin account that you just signed in as. However, when a user such as the ODL user has no picture assigned to it, the user's initials are displayed in place of the picture.
 
@@ -149,7 +141,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 2. In the **Microsoft 365 admin center**, select **Teams & groups** in the left-hand navigation pane, and then under it, select **Active teams & groups**. 
 
-3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. this tab displays the existing Microsoft 365 groups. Select the **+ Add a Microsoft 365 group** option that appears on the menu bar above the list of Microsoft 365 groups. This initiates the **+ Add a Microsoft 365 group** wizard. 
+3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. this tab displays the existing Teams & Microsoft 365 groups. Select the **+ Add a Microsoft 365 group** option that appears on the menu bar. This initiates the **+ Add a Microsoft 365 group** wizard. 
 
 	![](../Images/MS-102-image-5.png)
 

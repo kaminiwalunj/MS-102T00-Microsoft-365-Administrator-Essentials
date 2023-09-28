@@ -31,7 +31,7 @@ In the final task in this exercise, you will install the Microsoft 365 Apps for 
 	- Display name: When you tab into this field, **Laura Atkins** will appear
 	- Username: **Laura**
 	- Password settings: Clear (uncheck) the **Automatic create a password** option
-	- Password: Enter the password.
+	- Password: Enter the enter Password:- <inject key="AzureAdUserPassword"></inject>.
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 	
 5. Select **Next**.
@@ -61,9 +61,10 @@ In the final task in this exercise, you will install the Microsoft 365 Apps for 
 	- On the third screen, unselect (clear) the **Make your Microsoft experience more useful to you** check box and then select the **Confirm and start browsing** button.  
 	- In the Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/**
 
-15. In the **Sign in** window, enter **Laura**'s username and then select **Next**.
+15. In the **Sign in** window, enter **Laura@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), and then select **Next**.
 
-16. In the **Enter password** window, enter the **Password** and then select **Sign in.**
+16. In the **Enter password** window, For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+	- Password:- <inject key="AzureAdUserPassword"></inject> and then select **Sign in.**
 
 	>**Note**: if it asks you to change the password, then change the password for the laura's account.
 
