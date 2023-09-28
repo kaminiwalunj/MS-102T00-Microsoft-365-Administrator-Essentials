@@ -39,11 +39,11 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
    >**Note:** If a Action Required popup window appears, click Ask Later. If you see the pop-up Stay Signed in?, click Yes. If a Welcome to Microsoft Azure popup window appears, click **Maybe Later** to skip the tour.
 
-6. In **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
+6. In **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **Alex Wilber**, select the user.
 
-7. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium**, and select **Save**.
+7. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium** and **Enterprise Mobility + Security E5**, and select **Save**.
 
-8. Repeat the steps 4-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
+8. Repeat the steps 4-5 for the **Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
 
 9. Close the **Licenses** tab.
 
