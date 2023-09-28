@@ -82,7 +82,6 @@ Holly Dickson is now at the point in her pilot project where she wants to test t
 
 14. Leave the Outlook tab open in the Edge browser for the next task.
 
-15. Switch back to **LON-CL1**.
 
 ## Review
 
