@@ -11,7 +11,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab exercise. You should be signed into Microsoft 365 as the **ODL user**. 
 
-2. Since you are adding a new user, you should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** and then select **Licenses**. 
+2. You should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** and then select **Licenses**. 
 
 3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 Business Premium** subscriptions have available licenses. 
 
