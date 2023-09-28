@@ -49,6 +49,19 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 10. In **Type here to search**, type **Windows Powershell**. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
 
+    ```powershell
+    Install-PackageProvider -Name NuGet -RequiredVersion 2.8.5.201 -Force
+    ```
+    ```powershell
+    Import-PackageProvider -Name NuGet -RequiredVersion 2.8.5.201
+    ```
+    ```powershell
+    Import-Module AzureAD
+    ```
+    ```powershell
+    Install-Module AzureAD -Force
+    ```
+
 	```powershell
     Connect-AzureAD
     ```
@@ -58,7 +71,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
 	```
 
-11. Close the **Windows Powershell**. Now, you can start with the Task 1.
+12. Close the **Windows Powershell**. Now, you can start with the Task 1.
 
 ### Task 1- Set up Adatum's Organization Profile
 
