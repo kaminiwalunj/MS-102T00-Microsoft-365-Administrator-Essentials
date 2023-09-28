@@ -8,13 +8,16 @@ In this exercise you will be introduced to some troubleshooting tools in Microso
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. (If not, navigate to **https://portal.office.com** and log in as **Holly**'s username with the assigned password on Holly's account.)
+2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If not, navigate to **https://portal.office.com** and log in as **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+	- Password:- <inject key="AzureAdUserPassword"></inject>
 
 3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left. 
 
-4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account, if an **Enter password** window appears, enter Holly's password and select **Sign in**.
+4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account, if an **Enter password** window appears, enter Password:- <inject key="AzureAdUserPassword"></inject> and select **Sign in**.
 
 	>**Note:** If a **Stay signed in?** window appears, select the **Don't show this again** check box and select **Yes**.
+
+	>**Note:** If a **Action Required** popup window appears, click **Ask Later**.
 
 5. Holly's **Inbox** will be displayed in Outlook. If a **Welcome** window appears, select the **X** in the upper-right corner of the window to close it. In Holly’s mailbox, at the top of the navigation pane, select the **New Mail** button to create a new email.
 

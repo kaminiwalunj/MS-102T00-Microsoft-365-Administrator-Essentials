@@ -64,7 +64,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 20. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
 
-21. On the **Connect to Azure AD** window, enter **Holly**'s username in the **USERNAME** field. In the **PASSWORD** field, enter the password, and then select **Next**. 
+21. On the **Connect to Azure AD** window, enter **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. In the **PASSWORD** field, enter <inject key="AzureAdUserPassword"></inject>, and then select **Next**. 
 
 	>**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
@@ -88,7 +88,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 27. If you restarted LON-DC1, then after it restarts, follow the instructions from your lab hosting provider to navigate back to hyper-v manager and connect to **LON-DC1** VM. Once connected this will display the log on screen for LON-DC1. Log in as **Adatum\Administrator** with a password of **Pa55w.rd**. 
 
-28. Minimize **Server Manager** after it opens, and then open the **Edge** browser and navigate to **htps://portal.office.com**. Log in as **Holly**'s account.  In the **Password** field, enter the password. 
+28. Minimize **Server Manager** after it opens, and then open the **Edge** browser and navigate to **htps://portal.office.com**. Log in as **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter <inject key="AzureAdUserPassword"></inject>. 
 
 29. On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
 
@@ -227,7 +227,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Home | Microsoft 365** page and the **Active users - Microsoft 365 admin center**, then proceed to the next step. 
 
-3. Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **Holly**'s account. In the **Password** field, enter the Password, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
+3. Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter <inject key="AzureAdUserPassword"></inject>, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
@@ -237,7 +237,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 	>**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
-6. For the **Manufacturing** group, check the value displayed in the **Email** column. Verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@yourtenant.onmicrosoft.com**, which is the group's mailbox in Exchange Online.  Hover your mouse over the icon in the **Sync status** column and verify that it indicates **Synced from on-premises**. 
+6. For the **Manufacturing** group, check the value displayed in the **Email** column. Verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), which is the group's mailbox in Exchange Online.  Hover your mouse over the icon in the **Sync status** column and verify that it indicates **Synced from on-premises**. 
 
 7. To the right of the **Manufacturing** group is a vertical ellipsis icon (three periods vertically aligned). Hold your mouse over this icon. Note the message that appears which indicates you can only manage this group in your on-premises environment. 
 
@@ -277,7 +277,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 	Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 	```
 
-12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the password and then select **Sign in**. 
+12. In the **Pick an account** window that appears, select **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter <inject key="AzureAdUserPassword"></inject> and then select **Sign in**. 
 
 13. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
