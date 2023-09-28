@@ -47,7 +47,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 9. Close the **Licenses** tab.
 
-10. In **Type here to search**, type **Windows Powershell ISE**, that appears in the bottom left corner of the taskbar. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
+10. In **Type here to search**, type **Windows Powershell ISE**. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
 
 	```powershell
     Connect-AzureAD
