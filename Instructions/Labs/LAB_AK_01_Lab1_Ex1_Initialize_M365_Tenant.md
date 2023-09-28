@@ -12,28 +12,37 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 - A default tenant admin account in Microsoft 365 (the display name for this user account is ODL user). 
 
 You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Entra ID and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
-
->**Important:** You can find all the users usernames which is required in this lab, inside the Azure Portal. You can log into the portal using ODL credentials, in the **Search resources, services and docs** search for **Users**, select it. As you can see all the users are listed. 
-
->**Note:** Open this page for further use.
  
-## Pre-requisite
+## Task 0- Pre-requisite
+
+1. In the taskbar, double-click on the **Azure Portal**. On the Sign in page, enter the following credentials:-
+
+   - Username:- odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider)
+   - Password:- <inject key="AzureAdUserPassword"></inject>
+
+   >**Note:** If a Action Required popup window appears, click Ask Later.
+   >**Note:** If you see the pop-up Stay Signed in?, click Yes.
+   >**Note:** If a Welcome to Microsoft Azure popup window appears, click **Maybe Later** to skip the tour.
+
+1. In the **Search resources, services and docs** search for **Microsoft Entra ID**, select it. Under Manage section, select **Users**, from here you can search for any users which is required in this lab. if you want to check for the User Prinicpal name you can copy it from here. Keep this page open for further use.
 
 1. In **Type here to search**, type **Hyper-V Manager**, and select it.
 
 2. On the Virtual Machines section, it will show all the virtual machines that are in running state, right click on **LON-CL1** VM, select **Connect**, on the **Connect to LON-CL1**, select **Connect**.
 
-3. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
+   >**Note:** If required, maximize the LON-CL1 VM.
 
-4. Double-click on **Microsoft Edge**, in the search bar use this URL to open [Azure Portal](https://portal.azure.com/#home), in **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
+4. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
 
-5. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium**, and select **Save**.
+5. Double-click on **Microsoft Edge**, in the search bar use this URL to open [Azure Portal](https://portal.azure.com/#home), in **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
 
-6. Repeat the steps 4-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
+6. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium**, and select **Save**.
 
-7. Close the **Licenses** tab.
+7. Repeat the steps 4-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
 
-8. In **Type here to search**, type **Windows Powershell ISE**, that appears in the bottom left corner of the taskbar. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
+8. Close the **Licenses** tab.
+
+9. In **Type here to search**, type **Windows Powershell ISE**, that appears in the bottom left corner of the taskbar. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
 
 	```powershell
     Connect-AzureAD
@@ -44,7 +53,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
 	```
 
-9. Close the **Windows Powershell ISE**. Now, you can start with the Task 1.
+10. Close the **Windows Powershell ISE**. Now, you can start with the Task 1.
 
 ### Task 1- Set up Adatum's Organization Profile
 
