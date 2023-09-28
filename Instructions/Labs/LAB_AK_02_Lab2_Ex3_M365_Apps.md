@@ -200,4 +200,4 @@ In this lab, you have:
 - Verified how the global Office download setting affects installing Microsoft 365 Apps for enterprise.
 - Performed a User-Driven Installation of Microsoft 365 Apps for enterprise 
 
-# You have successfully completed Lab 02, proceed with the next labs.
+## You have successfully completed Lab 02. Proceed to the next exercise.

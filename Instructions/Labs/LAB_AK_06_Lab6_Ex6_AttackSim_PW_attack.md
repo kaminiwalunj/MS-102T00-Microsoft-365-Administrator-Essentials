@@ -164,5 +164,5 @@ In this lab, you have:
 - Reviewed the Drive-by URL attack results.
 - Disabled Multi-factor Authentication for the Global Admin.
 
-# You have successfully completed Lab 06, proceed with the next labs.
+## You have successfully completed Lab 06. Proceed to the next exercise.
  

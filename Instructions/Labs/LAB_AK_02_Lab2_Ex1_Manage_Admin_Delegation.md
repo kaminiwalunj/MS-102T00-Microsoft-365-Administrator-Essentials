@@ -287,5 +287,5 @@ In this lab, you have:
 - Assigned Delegated Administrators with Windows PowerShell.
 - Verified Delegated Administration.
 
-# Proceed to Lab 2 - Exercise 2
+## Proceed to the next exercise.
 

@@ -180,4 +180,4 @@ In this lab, you have:
 - Monitored Service Health and Analyze Reports.
 - Submit a Help Request to Microsoft Support.
 
-# Proceed to Lab 2 - Exercise 3
+## Proceed to the next exercise.

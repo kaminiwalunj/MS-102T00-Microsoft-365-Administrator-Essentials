@@ -48,4 +48,4 @@ In this lab, you have:
 
 - Assigned RBAC Permissions for Alert Notification Testing.
 
-# Proceed to Lab 6 - Exercise 2
+## Proceed to the next exercise.

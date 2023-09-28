@@ -90,4 +90,4 @@ In this lab, you have:
 - Tested the first DLP Policy rule.
 - Tested the second DLP Policy rule.
 
-# You have successfully completed Lab 08, proceed with the next labs.
+## You have successfully completed Lab 08. Proceed to the next exercise.

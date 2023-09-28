@@ -120,5 +120,5 @@ In this lab, you have:
 - Explored how to run the IdFix tool and fix identified issues.
 - Prepared for Directory Synchronization. 
 
-# Proceed to Lab 3 - Exercise 2
+## Proceed to the next exercise.
  

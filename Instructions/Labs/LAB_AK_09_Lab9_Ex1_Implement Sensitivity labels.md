@@ -341,4 +341,4 @@ In this lab, you have:
 - Assigned a Sensitivity Label to a document.
 - Verified your Sensitivity Label policy.
 
-# Congratulations! You have successfully completed Lab 09.
+## Congratulations! You have successfully completed Lab 09.

@@ -139,4 +139,4 @@ In this lab, you have:
 - Configured and launch a Spear Phishing attack.
 - Reviewed the attack simulation results.
 
-# Proceed to Lab 6 - Exercise 6
+## Proceed to the next exercise.

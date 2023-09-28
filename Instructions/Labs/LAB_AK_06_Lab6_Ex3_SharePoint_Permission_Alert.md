@@ -85,5 +85,6 @@ You have now successfully tested the SharePoint alert to monitor site collection
 In this lab, you have:
 
 - Created a SharePoint Permissions Alert.
+- Validated the  SharePoint Permissions Alert.
 
-# Proceed to Lab 6 - Exercise 4
+## Proceed to the next exercise.

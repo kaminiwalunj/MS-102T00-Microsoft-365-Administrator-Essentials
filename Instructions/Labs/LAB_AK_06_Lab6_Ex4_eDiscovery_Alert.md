@@ -107,4 +107,4 @@ In this lab, you have:
 - Reviewed the default eDiscovery Alert.
 - Validated the default eDiscovery Alert.
 
-# Proceed to Lab 6 - Exercise 5
+## Proceed to the next exercise.

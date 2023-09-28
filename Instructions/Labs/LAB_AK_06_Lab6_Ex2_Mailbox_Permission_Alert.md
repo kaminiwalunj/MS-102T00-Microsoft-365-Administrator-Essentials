@@ -104,5 +104,6 @@ You have just successfully tested a mailbox permission alert that sent an alarm 
 In this lab, you have:
 
 - Created a Mailbox Permission Alert.
+- Validated the Mailbox Permission Alert.
 
-# Proceed to Lab 6 - Exercise 3
+## Proceed to the next exercise.

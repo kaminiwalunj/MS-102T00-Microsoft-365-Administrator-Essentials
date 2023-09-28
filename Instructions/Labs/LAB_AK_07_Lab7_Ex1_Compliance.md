@@ -82,4 +82,4 @@ In this lab, you have:
 - Created a security group for Compliance Testing.
 - Configured Mobile Device Management for compliance testing.
 
-# Proceed to Lab 7 - Exercise 2
+## Proceed to the next exercise.

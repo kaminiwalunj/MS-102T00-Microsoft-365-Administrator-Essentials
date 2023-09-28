@@ -357,4 +357,4 @@ In this lab, you have:
 - How to run a PowerShell script to create and publish a sensitivity label.
 
 
-# Proceed to Lab 1 - Exercise 2 
+## Proceed to the next exercise.

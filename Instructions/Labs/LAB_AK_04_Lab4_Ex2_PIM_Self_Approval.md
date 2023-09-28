@@ -187,4 +187,4 @@ In this lab, you have:
 - Self-activated the Helpdesk Admin role.
 - Verified a PIM notification was issued.
 
-# Proceed to Lab 4 - Exercise 3
+## Proceed to the next exercise.
