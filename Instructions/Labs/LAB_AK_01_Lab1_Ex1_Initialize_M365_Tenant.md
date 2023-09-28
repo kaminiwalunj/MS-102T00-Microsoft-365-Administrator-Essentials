@@ -24,6 +24,8 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 1. In the **Search resources, services and docs** search for **Microsoft Entra ID**, select it. Under Manage section, select **Users**, from here you can search for any users which is required in this lab. if you want to check for the User Prinicpal name you can copy it from here. Keep this page open for further use.
 
+   >**Note:** You can also get all the usernames listed on the **Environment Details** page.
+
 1. In **Type here to search**, type **Hyper-V Manager**, and select it.
 
 2. On the Virtual Machines section, it will show all the virtual machines that are in running state, right click on **LON-CL1** VM, select **Connect**, on the **Connect to LON-CL1**, select **Connect**.
