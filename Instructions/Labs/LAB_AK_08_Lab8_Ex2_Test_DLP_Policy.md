@@ -45,9 +45,7 @@ Holly Dickson is now at the point in her pilot project where she wants to test t
 
 	>**Note:** if you haven't recieved the email on Lynne's account, you have wait atleast -->
 
-14. Leave the Outlook tab open in the Edge browser for the next task.
-
-15. Switch back to **LON-CL1**. 
+14. Leave the Outlook tab open in the Edge browser for the next task. 
 
 	
 ### Task 2 – Test the second DLP Policy rule  
