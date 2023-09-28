@@ -32,15 +32,22 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 
 4. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
 
-5. Double-click on **Microsoft Edge**, in the search bar use this URL to open [Azure Portal](https://portal.azure.com/#home), in **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
+5. Double-click on **Microsoft Edge**, in the search bar use this URL to open [Azure Portal](https://portal.azure.com/#home). On the Sign in page, enter the following credentials:-
 
-6. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium**, and select **Save**.
+   - Username:- odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider)
+   - Password:- <inject key="AzureAdUserPassword"></inject>
 
-7. Repeat the steps 4-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
+   >**Note:** If a Action Required popup window appears, click Ask Later. If you see the pop-up Stay Signed in?, click Yes. If a Welcome to Microsoft Azure popup window appears, click **Maybe Later** to skip the tour.
 
-8. Close the **Licenses** tab.
+6. In **search resources, services, and docs**, type and search for **Microsoft Entra ID**, select **Users** from the left-hand navigation pane, under **All users** pane search for **odl_user <inject key="DeploymentID" enableCopy="false"/>**, select the user.
 
-9. In **Type here to search**, type **Windows Powershell ISE**, that appears in the bottom left corner of the taskbar. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
+7. On the left-hand side navigation, under **Manage** section, select **Licenses**, select **+ Assignments**, under **Update license assignments**, tick the check box of **Microsoft 365 Business Premium**, and select **Save**.
+
+8. Repeat the steps 4-5 for the **Alex Wilber, Allan Deyoung, Joni Sherman, Lynne Robbins, Diego Siciliani, Isaiah Langer, Megan Bowen, Nestor Wilke, and Patti Fernandez**.
+
+9. Close the **Licenses** tab.
+
+10. In **Type here to search**, type **Windows Powershell ISE**, that appears in the bottom left corner of the taskbar. In the list of search results, right-click on it and select **Run as administrator**, and run the following commands to assign the usage location to all the users:
 
 	```powershell
     Connect-AzureAD
@@ -51,7 +58,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
     Get-AzureADUser -All $true | Set-AzureADUser -UsageLocation US
 	```
 
-10. Close the **Windows Powershell ISE**. Now, you can start with the Task 1.
+11. Close the **Windows Powershell ISE**. Now, you can start with the Task 1.
 
 ### Task 1- Set up Adatum's Organization Profile
 
