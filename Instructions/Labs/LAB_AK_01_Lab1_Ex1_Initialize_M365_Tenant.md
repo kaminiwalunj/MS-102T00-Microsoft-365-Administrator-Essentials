@@ -20,9 +20,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
    - Username:- odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider)
    - Password:- <inject key="AzureAdUserPassword"></inject>
 
-   >**Note:** If a Action Required popup window appears, click Ask Later.
-   >**Note:** If you see the pop-up Stay Signed in?, click Yes.
-   >**Note:** If a Welcome to Microsoft Azure popup window appears, click **Maybe Later** to skip the tour.
+   >**Note:** If a Action Required popup window appears, click Ask Later. If you see the pop-up Stay Signed in?, click Yes. If a Welcome to Microsoft Azure popup window appears, click **Maybe Later** to skip the tour.
 
 1. In the **Search resources, services and docs** search for **Microsoft Entra ID**, select it. Under Manage section, select **Users**, from here you can search for any users which is required in this lab. if you want to check for the User Prinicpal name you can copy it from here. Keep this page open for further use.
 
