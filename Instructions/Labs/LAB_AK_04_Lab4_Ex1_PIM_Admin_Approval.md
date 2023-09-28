@@ -208,4 +208,4 @@ In this lab, you have:
 - Approved the request for the Global Admin role.
 
 
-# Proceed to Lab 4 - Exercise 2
+## Proceed to the next exercise.

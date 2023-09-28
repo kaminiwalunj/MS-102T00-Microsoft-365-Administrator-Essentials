@@ -119,4 +119,4 @@ In this lab, you have:
 
 - Created a DLP policy with custom settings.
 
-# Proceed to Lab 8 - Exercise 2 
+## Proceed to the next exercise.

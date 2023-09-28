@@ -56,5 +56,5 @@ In this lab, you have:
 
 - Created a Safe Attachment policy and turn on Microsoft Defender for Office 365.
 
-# Proceed to Lab 5 - Exercise 2
+## Proceed to the next exercise.
 

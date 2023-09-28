@@ -2,86 +2,48 @@
 
 ## Lab scenario
 
-In the following lab exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. In this exercise, you will perform several user and group management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Microsoft 365 Global Administrator role. You will create several Microsoft 365 groups and assign existing Microsoft 365 users as members of those groups. You will then delete one of the groups and then use Windows PowerShell to recover the deleted group.
+In the following lab exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. In this exercise, you will perform several user and group management functions within Microsoft 365. You will be assigning the Microsoft 365 Global Administrator role. You will create several Microsoft 365 groups and assign existing Microsoft 365 users as members of those groups. You will then delete one of the groups and then use Windows PowerShell to recover the deleted group.
 
->**Note:** The VM environment provided by your lab hosting provider comes with over 20 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the ODL user account has been created by your lab hosting provider, you will still create Holly Dickson's user account, since having more than one user who's assigned the Microsoft 365 Global Administrator role is a best practice. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
+>**Note:** The VM environment provided by your lab hosting provider comes with over 20 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the ODL user account has been created by your lab hosting provider. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
 
 
-### Task 1 - Create a User Account for Adatum's Microsoft 365 Administrator
+### Task 1 - Manage Roles and Licenses for Adatum Microsoft 365 Users
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab exercise. You should be signed into Microsoft 365 as the **ODL user**. 
 
-2. You should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** and then select **Licenses**. 
+<!-- 2. You should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** and then select **Licenses**.  -->
 
-3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 Business Premium** subscriptions have available licenses. 
+<!-- 3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 Business Premium** subscriptions have available licenses.  -->
 
-	![](../Images/MS-102-image-9.png)
+2. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider.
 
-4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider. Since Christie Cline will be moving to a new role in the company and will no longer be part of the Microsoft 365 pilot project, you will unassign the **Microsoft 365 Business Premium** licenses from her account so that you can reassign them to Holly Dickson's new account.
+3. On the **Active users** page, in the list of users, select **Holly Dickson**.
 
-5. On the **Active users** page, in the list of users, select **Christie Cline** (select Christie's name and not the check box next to her name).
-
-6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses**, select the check boxes next to **Microsoft 365 Business Premium** and **Enterprise Mobility + Security E5** to clear them, and then select **Save Changes**. Once the changes are saved, close the **Christie Cline** pane. 
-
-7. You're now ready to create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 Global Administrator role, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses **Microsoft 365 E5** and **Enterprise Mobility + Security E5**. 
-
-8. In the **Active Users** window, select the **Add a user** option that appears on the menu bar above the list of active users. This starts the **Add a user** wizard.
-
-8. In the **Set up the basics** page of the **Add a user** wizard, enter the following information:
-
-	- First name: **Holly**
-
-	- Last name: **Dickson** 
-
-	- Display name: When you tab into this field, **Holly Dickson** will appear.
-
-	- Username: **Holly** 
-	
-		>**IMPORTANT:** To the right of the **Username** field is the domain field. It will be prefilled with the **yourtenant.onmicrosoft.com** cloud domain (where yourtenant is the tenant prefix provided by your lab hosting provider).
-	
-		After configuring this field, Holly’s username should appear as:
-
-		**Holly@yourtenant.onmicrosoft.com**  (where yourtenant is the tenant prefix provided by your lab hosting provider).
-	
-	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator defined password.
-
-	- In the new **Password** field that appears, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account)
+	- Select **Reset Password**. On the **Reset Password** page. Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator defined password, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. <inject key="AzureAdUserPassword"></inject>)
 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 
-9. Select **Next**. If a **Save password** dialog box appears towards the top of the screen, select **Never**.
+4. Select **Reset Password** button. If a **Save password** dialog box appears towards the top of the screen, select **Never**.
 
-10. In the **Assign product licenses** page, enter the following information: 
-
-	- Select location: **United States**
-
-	- Licenses: Under the **Assign user a product license** option, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes.
-
-11. Select **Next**.
-
-12. In the **Optional settings** page, select the drop-down arrow to the right of **Roles**. 
-
-13. In the **Roles** section, select the **Admin center access** option. By selecting this option, the most commonly used Microsoft 365 administrator roles are enabled below it.  
+5. Now on the **Holly Dickson** page. Select **Manage Roles** under **Roles** section. Select the **Admin center access** option. By selecting this option, the most commonly used Microsoft 365 administrator roles are enabled below it.  
 
 	>**Note:** All the admin roles will be displayed if you select **Show all by category**, which appears after the last common role. For Holly, you don't need to view all the admin roles by category, since Holly will be assigned the Global Administrator role that appears in the list of commonly used roles.
 
-14. Select the **Global Administrator** check box. 
+6. Select the **Global Administrator** check box. 
 
-	>**Note:** Ignore this message. **That being said, the best practice guideline that you should follow is to have from two to four Global Administrators your real-world Microsoft 365 deployments.** 
+7. Select **Save changes**, and navigate back to the Holly Dickson page.
 
-15. Select **Next**.
+8. Select **Licenses and apps**,
 
-16. On the **Review and finish** window, review your selections. If anything must be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
+	- Licenses: Select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes.
 
-17. On the **Holly Dickson added to active users** page, under the **User details** section, select the **Show** option to verify Holly's password is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the ODL user account).  
+9. Select **Save changes**.
 
-	>**Note:** If you accidentally entered a different password, then once you return to the **Active Users** page, you will need to select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to the correct value.
+10. Select **Close.**
 
-18. Select **Close.**
+	>**Note:** If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
 
-19. If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
-
-20. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
+11. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
 
 ### Task 2 – Set up Microsoft 365 User Accounts
 
@@ -99,7 +61,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 4. In the **Sign in** window, enter Holly@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-5. In the **Enter password** window, enter the same provided by your lab hosting provider for the tenant admin account and then select **Sign in**.
+5. In the **Enter password** window, enter <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
 
 6. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
@@ -125,8 +87,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 16. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then under it, select **Active users**.
 
-17. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You must reset the passwords for Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to the same **Microsoft 365 Tenant Password** 
-	- Password:- <inject key="AzureAdUserPassword"></inject>
+17. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You must reset the passwords for Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to the same **Microsoft 365 Tenant Password**.
 
 18. Hover your mouse over **Alex Wilber** and select the key icon that appears.
 
@@ -341,11 +302,11 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 In this lab, you have:
 
-- Created a User Account for Adatum's Microsoft 365 Administrator.
+- Managed Roles and Licenses for Adatum Microsoft 365 Users.
 - Explored how to set up Microsoft 365 User Accounts.
 - Explored how to set up Microsoft 365 Groups .
 - Recovered Groups using PowerShell.
 
 
-# You have successfully completed Lab 01, proceed with the next labs.
+## You have successfully completed Lab 01. Proceed to the next exercise.
 

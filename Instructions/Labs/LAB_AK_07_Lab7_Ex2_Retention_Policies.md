@@ -110,5 +110,5 @@ In this lab, you have:
 - Created an email retention policy for test users.
 - Created an email retention policy for all users.
 
- # Proceed to Lab 7 - Exercise 3
+## Proceed to the next exercise.
  

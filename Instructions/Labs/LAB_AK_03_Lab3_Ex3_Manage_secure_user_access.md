@@ -121,6 +121,6 @@ In this lab, you have:
 - Deployed Azure AD Pass-Through Authentication.
 - Deployed Azure AD Smart Lockout.
 
-# You have successfully completed Lab 03, proceed with the next labs.
+## You have successfully completed Lab 03. Proceed to the next exercise.
 
 

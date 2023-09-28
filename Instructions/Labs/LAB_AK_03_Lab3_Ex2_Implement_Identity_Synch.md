@@ -339,5 +339,5 @@ In this lab, you have:
 - Force a manual synchronization.
 - Validated the Results of Directory Synchronization.
 
-# Proceed to Lab 3 - Exercise 3
+## Proceed to the next exercise.
  

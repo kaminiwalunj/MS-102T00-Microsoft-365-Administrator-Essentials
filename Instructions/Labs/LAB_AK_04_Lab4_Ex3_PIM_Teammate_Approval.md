@@ -229,4 +229,4 @@ In this lab, you have:
 - Approved the request for the Intune Admin role.
 - Verified a PIM notification was issued.
 
-# You have successfully completed Lab 04, proceed with the next labs.
+## You have successfully completed Lab 04. Proceed to the next exercise.
