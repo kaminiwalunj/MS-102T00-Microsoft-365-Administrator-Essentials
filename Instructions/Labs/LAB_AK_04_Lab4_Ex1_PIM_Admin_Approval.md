@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Azure Active Directory. PIM is an Azure AD service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
+As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Azure Active Directory. PIM is an Microsoft Entra service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
 
 One of Adatum's pain points in its existing system is that it has far too many users who have been assigned administrator roles. This has caused concern among management, who recognize this situation as an existential threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, these users have access to secure information and resources that could potentially compromise the organization. 
 
@@ -38,7 +38,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Select **Go to Microsoft Entra ID** under **Microsoft Entra ID (Azure AD)**, it will open the Adatum Corporation page. On the below of the page select **Privileged Identity Management**.
 
-6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Azure AD roles**.
+6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
 7. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
 
@@ -52,7 +52,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 11. The window then displays a group of three settings, each of which has a corresponding check box. Select the **Require Approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
 
-12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Azure AD in the prior lab exercise, scrolling through the user list will be too time consuming. 
+12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Microsoft Entra ID in the prior lab exercise, scrolling through the user list will be too time consuming. 
 
     Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@yourtenant.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
 
@@ -77,7 +77,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. You will begin by creating a new, role-assignable security group called **PIM-Global-Administrators** in Azure AD, and you will assign Patti as a member of the group. In your **Edge** browser, you should still have the **Microsoft Entra admin center** open in a tab that's displaying the **Adatum Corporation | Settings** window from the prior task. In the left-hand navigation pane, under **Identity** select **Groups**, and then select **All groups**.
+2. You will begin by creating a new, role-assignable security group called **PIM-Global-Administrators** in Microsoft Entra ID, and you will assign Patti as a member of the group. In your **Edge** browser, you should still have the **Microsoft Entra admin center** open in a tab that's displaying the **Adatum Corporation | Settings** window from the prior task. In the left-hand navigation pane, under **Identity** select **Groups**, and then select **All groups**.
 
 3. In the **Groups | All groups** window, in the detail pane on the right, select **New group** in the menu bar.
 
@@ -103,7 +103,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the left-hand navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
 
-8. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Azure AD roles**.
+8. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
 9. In the **Adatum Corporation | Quick start** window, the detail pane on the right displays the **Privileged Identity Management** window. This window displays the following sections - Assign, Activate, Approve, and Audit. Under the **Assign** section, select the **Assign Eligibility** button.
 
@@ -140,11 +140,11 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 5. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
 
-6. In the **All services** window, enter **priv** in the **Search** box at the top of the page. In the list of search results, select **Azure AD Privileged Identity Management**.
+6. In the **All services** window, enter **priv** in the **Search** box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
 7. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **My Roles**.
 
-8. In the **My roles | Azure AD roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Patti as a member of the **PIM-Global-Administrators** group, which Holly later assigned as an eligible group for the Global Administrator role. As such, this role appears in the list of **Eligible assignments**. Under the **Action** column for the Global Administrator role, select **Activate**.
+8. In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Patti as a member of the **PIM-Global-Administrators** group, which Holly later assigned as an eligible group for the Global Administrator role. As such, this role appears in the list of **Eligible assignments**. Under the **Action** column for the Global Administrator role, select **Activate**.
 
 9. In the **Activate - Global Administrator** pane, a warning message is displayed at the top of the pane indicating additional verification is required. Select this message to continue.
 
@@ -163,7 +163,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 18. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane, and wait for the Status to get succeeded for all the steps, it will automatically refresh the browser.
 
-19. On the **My roles | Azure AD roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  
+19. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  
 
     >**Note:** If you recall, back in Task 1 Holly set up the Global Administrator role so that activation to a user account will require approval. What Patti just did was request that the Global Admin role be activated for her user account. This will send a request to Holly, who can then either approve or deny Patti's request for role activation. Holly will review and then approve this request in the next task.
 
@@ -172,21 +172,21 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 ### Task 4 -  Approve the request for the Global Admin role
 
-1.  In LON-CL1, hover your mouse over the Edge icon on your taskbar to see the two Edge sessions that you have open - the window on the left is the original Edge browser session in which you are signed into **Microsoft 365** as **Holly Dickson**, and the window on the right is the InPrivate Browser session in which you are signed into **Azure AD** as **Patti Fernandez**. Select the window on the left to go back to the original Edge browser session in which you are signed in as **Holly Dickson**. 
+1.  In LON-CL1, hover your mouse over the Edge icon on your taskbar to see the two Edge sessions that you have open - the window on the left is the original Edge browser session in which you are signed into **Microsoft 365** as **Holly Dickson**, and the window on the right is the InPrivate Browser session in which you are signed into **Microsoft Entra ID** as **Patti Fernandez**. Select the window on the left to go back to the original Edge browser session in which you are signed in as **Holly Dickson**. 
 
-2.  In your browser, the **Global Administrator | Assignments** window should be displayed in the **Microsoft Entra admin center**. In the navigation thread at the top of the page (**Home > Go to Microsoft Entra ID > Privileged Identity Management | Azure AD roles > Adatum Corporation | Roles**), select **Privileged Identity Management | Azure AD roles**.
+2.  In your browser, the **Global Administrator | Assignments** window should be displayed in the **Microsoft Entra admin center**. In the navigation thread at the top of the page (**Home > Go to Microsoft Entra ID > Privileged Identity Management | Microsoft Entra roles > Adatum Corporation | Roles**), select **Privileged Identity Management | Microsoft Entra roles**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under **Tasks**, select **Approve requests**.
 
-4. In the **Approve requests | Azure AD roles** window, in the **Requests for role activations** section, select the check box to the left of the Global Administrator request from Patti Fernandez, and then select the **Approve** button.
+4. In the **Approve requests | Microsoft Entra roles** window, in the **Requests for role activations** section, select the check box to the left of the Global Administrator request from Patti Fernandez, and then select the **Approve** button.
 
 5. In the **Approve Request** pane that appears on the right-side of the screen, enter **PIM testing** in the **Justification** field and then select **Confirm**.
 
 6.  Hover your mouse over the **Edge** icon on the taskbar and select the window on the right to go back to the InPrivate Browser session where Patti is signed in. 
 
-7. In the **My roles | Azure AD roles** window, the **Active assignments** tab is currently selected from the prior task, prior to approving Patti's request. Select **Refresh** on the menu bar.
+7. In the **My roles | Microsoft Entra roles** window, the **Active assignments** tab is currently selected from the prior task, prior to approving Patti's request. Select **Refresh** on the menu bar.
 
-    >**Note:** How the Global Administrator role is now activated for Patti. You have just verified that Patti has been assigned the Global Administrator role using Azure AD Privileged Identity Management.
+    >**Note:** How the Global Administrator role is now activated for Patti. You have just verified that Patti has been assigned the Global Administrator role using Microsoft Entra Privileged Identity Management.
 
 8. Close the InPrivate browser session.
 

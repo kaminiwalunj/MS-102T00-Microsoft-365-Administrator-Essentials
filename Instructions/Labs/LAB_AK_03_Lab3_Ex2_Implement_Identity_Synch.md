@@ -2,11 +2,11 @@
 
 ## Lab scenario
 
-In this exercise, you will use Azure AD Connect to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Azure AD Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
+In this exercise, you will use Microsoft Entra Connect to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Microsoft Entra Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Microsoft Entra Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.   
 
->**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
+>**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Microsoft Entra Connect does not automatically synchronize the changes that you make to the identity objects.
 
-### Task 1: Install Azure AD Connect and Initiate Synchronization
+### Task 1: Install Microsoft Entra Connect and Initiate Synchronization
 
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
@@ -14,7 +14,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**.
 
-4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Azure AD** wizard.
+4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Microsoft Entra ID** wizard.
 
 	![](../Images/MS-102-image-18.png)
 
@@ -24,7 +24,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
 
-8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra ID Connect is the correct choice for Adatum. 
+8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra Connect Sync is the correct choice for Adatum. 
 
 9. Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
 
@@ -36,7 +36,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 	
 	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  
 
-		>**Note:** After selecting this second check box, the recommendation has not changed to **Microsoft Entra Cloud Sync**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
+		>**Note:** After selecting this second check box, the recommendation has not changed to **Microsoft Entra Cloud Sync**. This confirms that Holly's initial thought of selecting Microsoft Entra ID Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
 
 10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra Cloud Sync**. 
 
@@ -46,25 +46,25 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 13. However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AADConnectProvisioningAgentSetup.exe** file, then select the **Open file** link that appears below it. However, if **AADConnectProvisioningAgentSetup.exe** does not appear in the **Downloads** window.
 
-13. Opening the **AADConnectProvisioningAgentSetup.exe** file, select the checkbox of **I agree to the license terms and conditions**, after this select **Install** button to initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect Provisioing Agent** wizard.
+13. Opening the **AADConnectProvisioningAgentSetup.exe** file, select the checkbox of **I agree to the license terms and conditions**, after this select **Install** button to initiates the installation of the Microsoft Entra Connect Tool by starting the **Microsoft Entra Connect Provisioing Agent** wizard.
 
-14. On the **Welcome to Azure AD Connect provisioing agent configuration wizard**, select the **Next**.
+14. On the **Welcome to Microsoft Entra ID Connect provisioing agent configuration wizard**, select the **Next**.
 
-15. On **Select Extension** page, select the **On-premises application provisioing (Azure AD to application)**, and click on **Next**.
+15. On **Select Extension** page, select the **On-premises application provisioing (Microsoft Entra ID to application)**, and click on **Next**.
 
-16. On **Connect Azure AD** page, enter the Holly's account.
+16. On **Connect Microsoft Entra ID** page, enter the Holly's account.
 
 17. On the **Agent configuration** page, after confirming the configurations, select **Confirm**.
 
-	>**Note:** This will take a minutes to complete, after completion, below on the agent configuration page, it will be mentioned as **Your agent installation and configuration is complete. Please complete all your provisioning configurations using Azure AD Portal.**
+	>**Note:** This will take a minutes to complete, after completion, below on the agent configuration page, it will be mentioned as **Your agent installation and configuration is complete. Please complete all your provisioning configurations using Microsoft Entra ID Portal.**
 
-18. Select **Azure AD Portal** which is written on the below of the page of Agent configuration, it will re-direct to the Azure Portal, on the AAD Connect | Get Started page. From the left-hand navigation select **Connect Sync**. On the AAD Connect | Connect Sync page, Select **Download the Azure AD Connect**. On the Azure AD Connect V2 selec **Download** button, it will start downloading the **AzureADConnect.msi**. Once download complete open the **AzureADConnect.msi** by clicking on the **Open file**.
+18. Select **Microsoft Entra ID Portal** which is written on the below of the page of Agent configuration, it will re-direct to the Azure Portal, on the AAD Connect | Get Started page. From the left-hand navigation select **Connect Sync**. On the AAD Connect | Connect Sync page, Select **Download the Microsoft Entra ID Connect**. On the Microsoft Entra ID Connect V2 selec **Download** button, it will start downloading the **AzureADConnect.msi**. Once download complete open the **AzureADConnect.msi** by clicking on the **Open file**.
 
-19. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+19. On the **Welcome to Microsoft Entra ID Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
 20. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
 
-21. On the **Connect to Azure AD** window, enter **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. In the **PASSWORD** field, enter <inject key="AzureAdUserPassword"></inject>, and then select **Next**. 
+21. On the **Connect to Microsoft Entra ID** window, enter **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. In the **PASSWORD** field, enter <inject key="AzureAdUserPassword"></inject>, and then select **Next**. 
 
 	>**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
@@ -72,7 +72,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 	>**Note:** (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-23. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
+23. In the **Microsoft Entra ID sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
 24. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   
 
@@ -80,9 +80,9 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 25. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
 
-26. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. 
+26. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Microsoft Entra ID Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. 
 
-	>**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 32). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. 
+	>**Note:** If you selected **Microsoft Entra ID Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 32). However, if **Microsoft Entra ID Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. 
 
 	>**Note:** The remaining instructions in this step are what you should do if you needed to restart LON-DC1. 
 
@@ -90,7 +90,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 28. Minimize **Server Manager** after it opens, and then open the **Edge** browser and navigate to **htps://portal.office.com**. Log in as **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter <inject key="AzureAdUserPassword"></inject>. 
 
-29. On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
+29. On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Microsoft Entra ID Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
 
 27. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
 
@@ -101,13 +101,13 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 	- In the **Export Statistics** pane on the left, note the number of on-premises users that were added to Azure Active Directory and the number that were updated. 
 	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
 
-		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Azure AD Connect tool. Review the error to see why this account is broken. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. 
+		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Microsoft Entra ID Connect tool. Review the error to see why this account is broken. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. 
 
 		Select the second Data Validation error link and verify this error is for the second user that you purposely did not fix. Follow the same steps as before to review the error for this user.   
 
 	>**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
-30. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+30. Now that you have seen Microsoft Entra ID Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
 31. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
 
@@ -191,26 +191,26 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
   
 5. Leave LON-DC1 open as you will continue using it in the next task. 
 
-	>**Important:** You should perform the next task immediately after completing this one so that Azure AD Connect doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
+	>**Important:** You should perform the next task immediately after completing this one so that Microsoft Entra ID Connect doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
 
 
 ### Task 4 - Force a manual synchronization   
 
->**IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
+>**IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Microsoft Entra ID) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
 
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  
 
-	>**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
+	>**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Entra ID Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
 
 2. At this point, Windows PowerShell should NOT be open. You now want to reopen it. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **power** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**. Maximize the Windows PowerShell window once it opens.
 
-3. In **Windows PowerShell**, run the following command to manually run a sync cycle between Adatum’s on-premises AD and Azure AD. The **Delta** switch is used here so that only the updates are synchronized.   
+3. In **Windows PowerShell**, run the following command to manually run a sync cycle between Adatum’s on-premises AD and Microsoft Entra ID. The **Delta** switch is used here so that only the updates are synchronized.   
 
 	```powershell
 	Start-ADSyncSyncCycle -PolicyType Delta
 	```
 	
-	>**Note:** If for any reason the Domain Controller VM was restarted after the original full synchronization run, the Microsoft Azure AD Sync service may not have restarted. If this occurred, you’ll receive an error when you try to perform the forced sync above. If this occurs, you’ll need to start the Microsoft Azure AD Sync service first and then perform the forced synchronization.
+	>**Note:** If for any reason the Domain Controller VM was restarted after the original full synchronization run, the Microsoft Microsoft Entra ID Sync service may not have restarted. If this occurred, you’ll receive an error when you try to perform the forced sync above. If this occurs, you’ll need to start the Microsoft Microsoft Entra ID Sync service first and then perform the forced synchronization.
 
 	>**Note:** If the Start-ADSyncSyncCycle command is not found, the domain controller will need to be restarted for the PowerShell module to complete its installation.
 	
@@ -221,7 +221,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 ### Task 5 - Validate the Results of Directory Synchronization   
 
->**IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
+>**IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Microsoft Entra ID) PowerShell, you will use Microsoft Graph PowerShell in this task.
 
 1. You should still be logged into LON-DC1 as the local **adatum\administrator** with a password of **Pa55w.rd.**
 
@@ -231,7 +231,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
-4. In the **Active teams and groups** window, the **Teams & Microsoft 365 gropus** tab is displayed by default. Select the **Security groups** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task.
+4. In the **Active teams and groups** window, the **Teams & Microsoft 365 gropus** tab is displayed by default. Select the **Security groups** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Microsoft Entra ID, even when you add members to the group as you did in the earlier task.
 
 5. Verify the **Manufacturing** group appears. This group appears as a mail-enabled security group rather than a standard security group because you added an email address (**manufacturing@adatum.com**) to the on-premises group in the prior task.  
 
@@ -333,7 +333,7 @@ In this exercise, you will use Azure AD Connect to enable synchronization betwee
 
 In this lab, you have:
 
-- Installed Azure AD Connect and Initiate Synchronization.
+- Installed Microsoft Entra ID Connect and Initiate Synchronization.
 - Created Group Accounts to Test Synchronization.
 - Changed Group Membership to Test Synchronization.
 - Force a manual synchronization.
