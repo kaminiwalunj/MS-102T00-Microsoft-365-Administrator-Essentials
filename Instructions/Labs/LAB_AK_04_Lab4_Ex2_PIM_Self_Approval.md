@@ -19,7 +19,11 @@ In addition, Holly doesn't want to be forced to approve the role assignment when
 
 3. In the **Microsoft Entra admin center**, in the left-hand navigation pane, under **Identity**, select **Groups** and then select **All groups**.
 
+    ![](../Images/L4E2T1S3.png)
+
 4. In the **Groups | All groups** window, select **New group** in the menu bar.
+
+    ![](../Images/L4E2T1S4.png)
 
 5. In the **New group** window, enter the following information:
 
@@ -39,32 +43,56 @@ In addition, Holly doesn't want to be forced to approve the role assignment when
 
 6. In the **New group** window, select the **Create** button at the bottom of the page.
 
+     ![](../Images/L4E2T1S6.png)
+
 7. A dialog box appears at the top of the page that says: **Creating a group to which Microsoft Entra roles can be assigned is a setting that cannot be changed later. Are you sure that you want to add this capability?**. Select **Yes**.
+
+     ![](../Images/L4E2T1S7.png)
 
 8. On the **Groups | All groups** window, if the **PIM-Helpdesk-Administrators** group does not appear below the PIM-Global-Administrators group that you created in the prior task, select **Refresh** on the menu bar.
 
+     ![](../Images/L4E2T1S8.png)
+
 9. You must now make the **PIM-Helpdesk-Administrators** group eligible for role assignment. In the left-hand navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
+
+     ![](../Images/L4E2T1S9.png)
 
 10. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
+     ![](../Images/L4E2T1S10.png)
+
 11. In the **Adatum Corporation | Quick start** window, under the **Assign** section, select the **Assign Eligibility** button.
+
+     ![](../Images/L4E2T1S11.png)
 
 12. In the **Adatum Corporation | Roles** window, scroll down through the list of roles and select **Helpdesk Administrator**.
 
+     ![](../Images/L4E2T1S12.png)
+
 13. In the **Helpdesk Administrator | Assignments** window, select **+ Add assignments** on the menu bar. 
+
+     ![](../Images/L4E2T1S13.png)
 
 14. In the **Add assignments** window, the **Membership** tab is displayed by default. Under **Select member(s)**, select **No member selected**.
 
 15. In the **Select a member** pane that appears on the right, enter **PIM** in the **Search** field. This will display the list of eligible users and groups whose name starts with **PIM**. Select the **PIM-Helpdesk-Administrators** group that appears, and then select the **Select** button.
 
+     ![](../Images/L4E2T1S15.png)
+
 16. In the **Add assignments** window, select **Next >** (this does the same thing as selecting the **Setting** tab). 
+
+     ![](../Images/L4E2T1S16.png)
 
 17. In the **Add assignments** window, under the **Setting** tab, verify the **Assignment type** option is set to **Eligible**. Also verify the **Permanently eligible** check box is selected (if not, then do so now), and then select **Assign**. 
 
+     ![](../Images/L4E2T1S17.png)
+
 18. In the **Helpdesk Administrator | Assignments** window, note that the **PIM-Helpdesk-Administrators** group is an eligible assignment to the Helpdesk Administrator role. Because **PIM-Helpdesk-Administrators** is a group, it means that all members of this group (which consists of Alex Wilber and Joni Sherman) are now eligible to be assigned the Helpdesk Administrator role.
 
-    >**Note:** Lab testing has shown that it can sometimes take up to 30 minutes for new assignments to appear under the **Eligible assignments** tab. If **PIM-Helpdesk-Administrators** doesn't appear immediately, wait a few minutes and then select the **Refresh** option on the menu bar. Continue to select the **Refresh** option every few minutes until **PIM-Helpdesk-Administrators** appears in the list of **Eligible assignments**.
+     ![](../Images/L4E2T1S18.png)
 
+    >**Note:** Lab testing has shown that it can sometimes take up to 30 minutes for new assignments to appear under the **Eligible assignments** tab. If **PIM-Helpdesk-Administrators** doesn't appear immediately, wait a few minutes and then select the **Refresh** option on the menu bar. Continue to select the **Refresh** option every few minutes until **PIM-Helpdesk-Administrators** appears in the list of **Eligible assignments**.
+   
 19. Leave all browser tabs open for the next task.
 
 
