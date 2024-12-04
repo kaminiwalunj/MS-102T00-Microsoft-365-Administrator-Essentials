@@ -95,17 +95,19 @@ As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by
 
 14. Select **Save** on the menu bar at the top of the page.
 
-15. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, click on **View account**, select **Password** from the left-hand navigation pane and in the menu that appears select **Change password**.
+15. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, click on **View account**, select **Password** from the left-hand navigation pane.
 
-16. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password. Enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
+16. A new tab will open displaying the **Change your password** window. In the **Current password** field, enter Holly's existing password. Enter **Never4get!!** in the **New password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
 
-17. In your browser, close the **Change password** tab. 
+	![](../Images/invalidpassword.png)
+
+17. In your browser, close the **Change  your password** tab. 
 
 18. You should now test the lockout threshold functionality. In the **Authentication methods - Azure Active Directory admin center** tab, select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**.  
 
 19. Once you are signed out as Holly, the **Pick an account** window will appear in the **Sign in to Microsoft Azure** tab. As a best practice when signing out from a Microsoft online service as one user and signing back in as another, close all your browser tabs except for the **Sign out** or **Sign in** tab. In this case, close the other tabs now and leave the **Sign in** tab open. In the **Pick an account** window, select **Use another account**. 
 
-20. In the **Sign in** window, enter **Laura**'s username, and then select **Next**. 
+20. In the **Sign in** window, enter **Laura@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** username, and then select **Next**. 
 
 21. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. Repeat this step 2 more times. Since you set the **Lockout threshold** to **3**, your account is temporarily locked to prevent unauthorized use. Try again later, and if you still have trouble, contact your admin.
 
