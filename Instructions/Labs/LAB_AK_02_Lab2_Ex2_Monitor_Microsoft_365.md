@@ -107,7 +107,7 @@ In this exercise you will be introduced to some troubleshooting tools in Microso
 
 ### Task 2 - Monitor Service Health and Analyze Reports 
 
-1. On the LON-CL1 VM, select the **User Details Panel - Microsoft 365 admin center** tab within your Edge browser. This tab contains the Microsoft 365 admin center. 
+1. On the LON-CL1 VM, go to the **Microsoft 365 admin center** tab within your Edge browser. 
 
 2. In the **Microsoft 365 admin center** navigation pane, select **Show all**,  select **Health** and then select **Service health**. 
 
@@ -115,7 +115,7 @@ In this exercise you will be introduced to some troubleshooting tools in Microso
 
 4. In the **Issue history** tab on the **Service health** window, the default option is to display a list of items from the past 7 days (this filter option appears to the right of the **Search** field). In the list of service health incidents, select the **Title** for any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
 
-5. In the **Microsoft 365 admin center**, in the navigation pane, select **Reports**, and then select **Usage**. 
+5. In the **Microsoft 365 admin center**, in the left navigation pane, select **Reports**, and then select **Usage**. 
 
 6. On the **Usage** page, scroll down and locate the **Active users - Microsoft 365 Services** chart. 
 
