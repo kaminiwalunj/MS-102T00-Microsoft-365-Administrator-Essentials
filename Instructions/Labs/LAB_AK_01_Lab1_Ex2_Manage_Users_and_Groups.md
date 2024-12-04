@@ -55,7 +55,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 1. In the **Pick an account** window, select **Use another account**. 
 
-1. In the **Sign in** window, enter Holly@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider). Select **Next**.
+1. In the **Sign in** window, enter Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
 1. In the **Enter password** window, enter <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
 
@@ -257,7 +257,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 	```powershell
 	Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
 	```
-4. A **Sign in** window will appear requesting your credentials. Sign in using Holly@yourtenant.onmicrosoft.com (where yourtenant is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+4. A **Sign in** window will appear requesting your credentials. Sign in using Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
 	- Password:- <inject key="AzureAdUserPassword"></inject>
 
 5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.

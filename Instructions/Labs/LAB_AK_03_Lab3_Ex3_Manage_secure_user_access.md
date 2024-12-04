@@ -8,13 +8,13 @@ As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by
 
 1.  You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
 
-2. On LON-DC1, select the **Start** button on the taskbar, and then in the **Start** menu, select the **All Apps** icon to display the list of all installed applications. Select the **Microsoft Entra Connect** program group and then select **Microsoft Entra Connect**. This will initiate the **Microsoft Microsoft Entra Connect** wizard.
+2. On LON-DC1, select the **Start** button on the taskbar, and then in the **Start** menu, select the **All Apps** icon to display the list of all installed applications. Select the **Azure AD Connect** program group and then select **Azure AD Connect**. This will initiate the **Welcome to Microsoft Entra Connect Sync** wizard.
 
 3. In the **Welcome to Microsoft Entra Connect** window, you will receive a page indicating the synchronization service scheduler is suspended until this setup wizard is closed. This is because if you start the Microsoft Entra Connect installation wizard (which you did in an earlier task), then the scheduler is temporarily suspended. Select **Configure.**
 
 4. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-5. On the **Connect to Microsoft Entra** page, sign into Microsoft Entra ID. The **USERNAME** field is already filled with **Holly@yourtenant.onmicrosoft.com**. In the **PASSWORD** field, enter the password, and then select **Next**.
+5. On the **Connect to Microsoft Entra** page, sign into Microsoft Entra ID. The **USERNAME** field is already filled with **Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com**. In the **PASSWORD** field, enter the <inject key="AzureAdUserPassword"></inject>, and then select **Next**.
 
 6. On the **User sign-in** page, under **Select the Sign On method**, select **Pass-through authentication** and then select **Next**. 
 
@@ -37,6 +37,8 @@ As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by
 18. On the **Microsoft Entra Connect | Connect Sync** page, in the detail pane on the right, under the **USER SIGN IN** section, verify that the status of **Pass-through authentication** is **Enabled**, and then select **Pass-through authentication**. 
 
 19. On the **Passthrough Authentication** page, review the list of servers on which your pass-through authentication agents are installed. This should display **LON-DC1.Adatum.com**.
+
+	![](../Images/londc1.png)
 
 20. Select the **X** in the upper-right corner of the **Passthrough Authentication** page to close it, and then do the same to close the **Microsoft Entra Connect | Connect Sync** page and the **Adatum Corporation | Overview** page. You should now be back to the **Microsoft Entra admin center**.
 

@@ -10,93 +10,123 @@ In this exercise, you will use Microsoft Entra Connect to enable synchronization
 
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
-2. After finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. If not then enter the URL **https://admin.microsoft.com/** and sign-in with the Holly's account.
+1. After finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. If not then enter the URL **https://admin.microsoft.com/** and sign-in with the Holly's account.
 
-3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**.
+1. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**.
 
-4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Microsoft Entra ID** wizard.
+1. In the **Active users** window, select the **ellipsis (1)** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization (2)**. This initiates the **Add or sync users to Microsoft Entra ID** wizard.
 
-	![](../Images/MS-102-image-18.png)
+	![](../Images/directory.png)
 
-5. In the **Add or sync users to Microsoft Entra ID** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
+1. In the **Add or sync users to Microsoft Entra ID** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
 
-6. On the **Select a migration option** page, read the explanation of each option so that you understand the migration options that are available. Select the **Continuous sync** option and then select **Next**.
+1. On the **Select a migration option** page, read the explanation of each option so that you understand the migration options that are available. Select the **Continuous sync** option and then select **Next**.
 
-7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
+1. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
 
-8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra Connect Sync is the correct choice for Adatum. 
+1. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra Connect Sync is the correct choice for Adatum. 
 
-9. Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
+1. Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
 
-9. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends (Note how the recommendation changes after selecting each additional requirement): 
+1. By selecting the **Help me decide** option, the wizard displays a list of predefined requirements that can impact which synchronization tool an organization should use. In the list of requirements that appears, select the following three Adatum requirements to see which sync tool the system recommends (Note how the recommendation either remains the same or changes after selecting each additional requirement): <br/>
 
-	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords for synced users (Password hash sync and Password writeback).**  
+	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).** 
 
-		>**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Microsoft Entra Cloud Sync**. 
+		>**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. For this one requirement, the system recommends using **Microsoft Entra Cloud Sync**. <br/>
 	
-	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  
+	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-		>**Note:** After selecting this second check box, the recommendation has not changed to **Microsoft Entra Cloud Sync**. This confirms that Holly's initial thought of selecting Microsoft Entra ID Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
+		>**Note:** After selecting this second check box, the recommendation is still **Microsoft Entra Cloud Sync** based on these first two requirements. 
 
-10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra Cloud Sync**. 
+	- Select **I have devices on-premises that I need to access Microsoft Entra ID Hybrid Join.**
 
-11. On the **Sync your users** page, select the **Download the Microsoft Entra Cloud Sync provisioning agent** box. This will download a file. 
+		>**Note:** After selecting this third check box, the recommendation changes to **Microsoft Entra Connect Sync**. 
 
-12. If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AADConnectProvisioningAgentSetup.exe** file once it's finished downloading. 
+1. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
-13. However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AADConnectProvisioningAgentSetup.exe** file, then select the **Open file** link that appears below it. However, if **AADConnectProvisioningAgentSetup.exe** does not appear in the **Downloads** window.
+1. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
-13. Opening the **AADConnectProvisioningAgentSetup.exe** file, select the checkbox of **I agree to the license terms and conditions**, after this select **Install** button to initiates the installation of the Microsoft Entra Connect Tool by starting the **Microsoft Entra Connect Provisioing Agent** wizard.
+1. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Entra Connect** should appear.
 
-14. On the **Welcome to Microsoft Entra ID Connect provisioing agent configuration wizard**, select the **Next**.
+	- If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
 
-15. On **Select Extension** page, select the **On-premises application provisioing (Microsoft Entra ID to application)**, and click on **Next**.
+	- However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
 
-16. On **Connect Microsoft Entra ID** page, enter the Holly's account.
+1. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect** wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar.
 
-17. On the **Agent configuration** page, after confirming the configurations, select **Confirm**.
+1. Once download complete open the **AzureADConnect.msi** by clicking on the **Open file**.
 
-	>**Note:** This will take a minutes to complete, after completion, below on the agent configuration page, it will be mentioned as **Your agent installation and configuration is complete. Please complete all your provisioning configurations using Microsoft Entra ID Portal.**
+	>**Note:** If the file fails to open and it says that TLS 1.2 needs to be enabled, run this command in PowerShell:
 
-18. Select **Microsoft Entra ID Portal** which is written on the below of the page of Agent configuration, it will re-direct to the Azure Portal, on the AAD Connect | Get Started page. From the left-hand navigation select **Connect Sync**. On the AAD Connect | Connect Sync page, Select **Download the Microsoft Entra ID Connect**. On the Microsoft Entra ID Connect V2 selec **Download** button, it will start downloading the **AzureADConnect.msi**. Once download complete open the **AzureADConnect.msi** by clicking on the **Open file**.
+	```
+	If (-Not (Test-Path 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319'))
+	{
+		New-Item 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319' -Force | Out-Null
+	}
+	New-ItemProperty -Path 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319' -Name 'SystemDefaultTlsVersions' -Value '1' -PropertyType 'DWord' -Force | Out-Null
+	New-ItemProperty -Path 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Value '1' -PropertyType 'DWord' -Force | Out-Null
 
-19. On the **Welcome to Microsoft Entra ID Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+	If (-Not (Test-Path 'HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319'))
+	{
+		New-Item 'HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319' -Force | Out-Null
+	}
+	New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319' -Name 'SystemDefaultTlsVersions' -Value '1' -PropertyType 'DWord' -Force | Out-Null
+	New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Value '1' -PropertyType 'DWord' -Force | Out-Null
 
-20. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
+	If (-Not (Test-Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server'))
+	{
+		New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server' -Force | Out-Null
+	}
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server' -Name 'Enabled' -Value '1' -PropertyType 'DWord' -Force | Out-Null
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server' -Name 'DisabledByDefault' -Value '0' -PropertyType 'DWord' -Force | Out-Null
 
-21. On the **Connect to Microsoft Entra ID** window, enter **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. In the **PASSWORD** field, enter <inject key="AzureAdUserPassword"></inject>, and then select **Next**. 
+	If (-Not (Test-Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client'))
+	{
+		New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client' -Force | Out-Null
+	}
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client' -Name 'Enabled' -Value '1' -PropertyType 'DWord' -Force | Out-Null
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client' -Name 'DisabledByDefault' -Value '0' -PropertyType 'DWord' -Force | Out-Null
+
+	Write-Host 'TLS 1.2 has been enabled. You must restart the Windows Server for the changes to take affect.' -ForegroundColor Cyan
+	```
+
+1. On the **Welcome to Microsoft Entra ID Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+
+1. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
+
+1. On the **Connect to Microsoft Entra ID** window, enter **Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. In the **PASSWORD** field, enter <inject key="AzureAdUserPassword"></inject>, and then select **Next**. 
 
 	>**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
-22. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.  
+1. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.  
 
 	>**Note:** (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-23. In the **Microsoft Entra ID sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
+1. In the **Microsoft Entra ID sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
-24. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   
+1. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   
 
 	>**IMPORTANT:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
-25. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
+1. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
 
-26. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Microsoft Entra ID Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. 
+1. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Microsoft Entra ID Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. 
 
 	>**Note:** If you selected **Microsoft Entra ID Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 32). However, if **Microsoft Entra ID Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. 
 
 	>**Note:** The remaining instructions in this step are what you should do if you needed to restart LON-DC1. 
 
-27. If you restarted LON-DC1, then after it restarts, follow the instructions from your lab hosting provider to navigate back to hyper-v manager and connect to **LON-DC1** VM. Once connected this will display the log on screen for LON-DC1. Log in as **Adatum\Administrator** with a password of **Pa55w.rd**. 
+1. If you restarted LON-DC1, then after it restarts, follow the instructions from your lab hosting provider to navigate back to hyper-v manager and connect to **LON-DC1** VM. Once connected this will display the log on screen for LON-DC1. Log in as **Adatum\Administrator** with a password of **Pa55w.rd**. 
 
-28. Minimize **Server Manager** after it opens, and then open the **Edge** browser and navigate to **htps://portal.office.com**. Log in as **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter <inject key="AzureAdUserPassword"></inject>. 
+1. Minimize **Server Manager** after it opens, and then open the **Edge** browser and navigate to **htps://portal.office.com**. Log in as **Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter <inject key="AzureAdUserPassword"></inject>. 
 
-29. On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Microsoft Entra ID Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
+1. On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Microsoft Entra ID Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
 
-27. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
+1. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
 
-28. Wait for the **Export** profile to complete for **yourtenant.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select any of the these **yourtenant.onmicrosoft.com - AAD** row.  
+1. Wait for the **Export** profile to complete for **otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select any of the these **otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com - AAD** row.  
 
-29. In the bottom portion of the screen, a detail pane appears showing the detailed information for this selected operation. 
+1. In the bottom portion of the screen, a detail pane appears showing the detailed information for this selected operation. 
 
 	- In the **Export Statistics** pane on the left, note the number of on-premises users that were added to Azure Active Directory and the number that were updated. 
 	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
@@ -107,11 +137,11 @@ In this exercise, you will use Microsoft Entra Connect to enable synchronization
 
 	>**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
-30. Now that you have seen Microsoft Entra ID Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+1. Now that you have seen Microsoft Entra ID Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
-31. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
+1. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
 
-32. Leave LON-DC1 open as it will be used in the next exercise.
+1. Leave LON-DC1 open as it will be used in the next exercise.
 
 
 ### Task 2 - Create Group Accounts to Test Synchronization   
@@ -227,7 +257,7 @@ In this exercise, you will use Microsoft Entra Connect to enable synchronization
 
 2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Home | Microsoft 365** page and the **Active users - Microsoft 365 admin center**, then proceed to the next step. 
 
-3. Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter <inject key="AzureAdUserPassword"></inject>, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
+3. Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter <inject key="AzureAdUserPassword"></inject>, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
@@ -237,7 +267,7 @@ In this exercise, you will use Microsoft Entra Connect to enable synchronization
 
 	>**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
-6. For the **Manufacturing** group, check the value displayed in the **Email** column. Verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider), which is the group's mailbox in Exchange Online.  Hover your mouse over the icon in the **Sync status** column and verify that it indicates **Synced from on-premises**. 
+6. For the **Manufacturing** group, check the value displayed in the **Email** column. Verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider), which is the group's mailbox in Exchange Online.  Hover your mouse over the icon in the **Sync status** column and verify that it indicates **Synced from on-premises**. 
 
 7. To the right of the **Manufacturing** group is a vertical ellipsis icon (three periods vertically aligned). Hold your mouse over this icon. Note the message that appears which indicates you can only manage this group in your on-premises environment. 
 
@@ -246,6 +276,10 @@ In this exercise, you will use Microsoft Entra Connect to enable synchronization
 9. You should begin by installing Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those two sub-modules and none of the other 30+ sub-modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   
 
 	a. Type the following command and press Enter (If you receive a message asking whether you want to install this module from an untrusted repository, enter **A** for **Yes to All**; do the same for the next command as well):  
+
+	```powershell
+	Install-Module -Name Microsoft.Graph
+	```
 
 	```powershell
 	Install-Module Microsoft.Graph.Groups -Scope CurrentUser 
@@ -277,7 +311,7 @@ In this exercise, you will use Microsoft Entra Connect to enable synchronization
 	Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 	```
 
-12. In the **Pick an account** window that appears, select **Holly@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter <inject key="AzureAdUserPassword"></inject> and then select **Sign in**. 
+12. In the **Pick an account** window that appears, select **Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter <inject key="AzureAdUserPassword"></inject> and then select **Sign in**. 
 
 13. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
@@ -326,6 +360,8 @@ In this exercise, you will use Microsoft Entra Connect to enable synchronization
 	- Charlie Miller
 
 	- Dawn Williamson
+
+		![](../Images/groupmember.png)
 
 19. You have now validated that your test groups and user accounts were synchronized properly. Once you have completed the validation steps, close your PowerShell window. 
 

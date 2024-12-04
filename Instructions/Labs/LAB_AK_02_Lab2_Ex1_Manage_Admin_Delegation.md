@@ -54,7 +54,7 @@ In this exercise, you will continue in your role as Holly Dickson, Adatum's new 
 	Connect-MgGraph -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
 	```
 
-1. In the **Pick an account** window that appears, select Holly Dickson's account, i.e. Holly@yourtenant.onmicrosoft.com, For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+1. In the **Pick an account** window that appears, select Holly Dickson's account, i.e. Holly@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com, For the password, sign-in with the same **Microsoft 365 Tenant Password** 
 	
 	- Password:- <inject key="AzureAdUserPassword"></inject>
 
@@ -179,7 +179,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **joni.sherman@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **joni.sherman@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
 	- Password:- <inject key="AzureAdUserPassword"></inject>
 
 13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
@@ -192,7 +192,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 17. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner), and in the **Joni Sherman** window that appears, select **Sign out.** 
 
-18. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **lynne.robbins@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+18. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **lynne.robbins@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
 	- Password:- <inject key="AzureAdUserPassword"></inject>
 
 19. If a **Welcome to Microsoft 365** dialog box appears, select the forward arrow (>) two times and then select the check mark to close the window.
@@ -259,7 +259,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 43. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **Alex.wilber@yourtenant.onmicrosoft.com** (where yourtenant is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
+44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **Alex.wilber@otuwamoc<inject key="DeploymentID" enableCopy="false"/>.onmicrosoft.com** (where otuwamoc<inject key="DeploymentID" enableCopy="false"/> is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** 
 	- Password:- <inject key="AzureAdUserPassword"></inject>
 
 45. The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. 

@@ -24,7 +24,7 @@ During this exercise you will set up and manage Microsoft Entra Connect. You wil
 	
 	>**Important:** Wait until the script has finished before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
 
-	- **Klemen Sic**. Update the UserPrincipalName for Klemen to include an extra "@" character. 
+	<!-- - **Klemen Sic**. Update the UserPrincipalName for Klemen to include an extra "@" character.  -->
 
 4. Minimize your Windows PowerShell window.
 
@@ -82,7 +82,9 @@ During this exercise you will set up and manage Microsoft Entra Connect. You wil
 
 2. You want to begin by adding several trusted sites for Microsoft Edge. If you're familiar doing this with Internet Explorer (IE), the process is basically the same for Edge; however, the location of the **Security** settings is different. With IE, you added trusted sites through IE's Internet Options; for Edge, you will add trusted sites through the Windows Control Panel. 
 
-3. Select the magnifying glass icon on the taskbar and then enter **control** in the Search box. In the list of search results, select **Control Panel**.
+3. Select the magnifying glass icon on the taskbar and then enter **control (1)** in the Search box. In the list of search results, select **Control Panel (2)**.
+
+	![](../Images/controlpanel.png)
 
 4. In the **Control Panel**, select **Network and Internet**.
 
