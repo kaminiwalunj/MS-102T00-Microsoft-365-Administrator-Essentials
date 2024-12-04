@@ -56,6 +56,8 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
     Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@yourtenant.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
 
+    ![](../Images/new-ms102-lab4-ex1-task1-1.png)
+
 13. In the **Edit role setting - Global Administrator** window, select the **Notification** tab at the top of the page.
 
 14. On the **Notification** tab, note the three activities that can trigger a notification being sent: **Send notifications when...**    
@@ -67,6 +69,8 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
     For each of these three activities, an alert can be sent (depending on the activity, it will either be a Role assignment alert or a Role activation alert). The default value for each of these alerts is **Admin**, which refers to the Global Administrators and any Privileged Role Administrators. Besides sending this alert notification email to these admins, Holly wants the alert for each activity sent to the ODL user account. 
 
     In the **Additional recipients** field for each of the three alerts (the **Role assignment alert** for the first two activities and the **Role activation alert** for the final activity), enter the ODL user's email ID of **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**.
+
+	![](../Images/new-ms102-lab4-ex1-task1-2.png)
 
 15. At the bottom of the **Edit role setting - Global Administrator** window, select **Update**.
 
@@ -96,6 +100,8 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
     - Owners - Select **No owners selected**. In the **Add owners** pane, enter **Holly** in the **Search** field and select the **Holly@yourtenant.onmicrosoft.com** user account
 
     - Members - Select **No members selected**. In the **Add members** pane, enter **Patti** in the **Search** field and select Patti Fernandez's user account and select **Select** option.
+
+	    ![](../Images/new-ms102-lab4-ex1-task1-4.png)
 
 5. Select the **Create** button at the bottom of the page.
 
@@ -157,15 +163,19 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
     2. Sign in with your email ID.
     3. On the Authenticator page select **+** icon, select **Work or school account**, and on the **Add work or school account** pop-up select **Scan QR code**, now proceed with the step-11.
 
-16. Once verification is complete and you receive a message indicating Great job! You have successfully set up your security info. Choose "Done" to continue signing in, select **Done**.
+12. In the Phone authentication page, Select **Your country** and provide your **Phone number**. Select **Receive a code** and click **Next**.
 
-17. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane, and wait for the Status to get succeeded for all the steps, it will automatically refresh the browser.
+13. Provide the code received on your phone number and select **Next**. Once verification completed select **Next** and then **Done**.
 
-18. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  
+14. Once verification is complete and you receive a message indicating Great job! You have successfully set up your security info. Choose "Done" to continue signing in, select **Done**.
+
+15. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane, and wait for the Status to get succeeded for all the steps, it will automatically refresh the browser.
+
+16. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  
 
     >**Note:** If you recall, back in Task 1 Holly set up the Global Administrator role so that activation to a user account will require approval. What Patti just did was request that the Global Admin role be activated for her user account. This will send a request to Holly, who can then either approve or deny Patti's request for role activation. Holly will review and then approve this request in the next task.
 
-19. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
+17. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
 
 ### Task 4 -  Approve the request for the Global Admin role
 
