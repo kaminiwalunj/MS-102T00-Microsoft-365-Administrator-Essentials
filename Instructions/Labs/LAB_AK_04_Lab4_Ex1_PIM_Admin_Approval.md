@@ -28,7 +28,7 @@ Because the username and password for this first Global admin account are typica
 
 
 1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  
-Switch back to **LON-CL1** (by navigating back to the hyper-v manager). 
+Switch back to **LON-CL1**. 
 
 2. On **LON-CL1**, you should still be logged into the machine as the domain **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 

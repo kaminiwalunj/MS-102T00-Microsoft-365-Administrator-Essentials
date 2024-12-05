@@ -13,7 +13,7 @@ Because we want you to gain experience creating and publishing a label and label
 
 ### Task 1 – Install the Azure Information Protection Unified Labeling client
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. You should still be logged into LON-CL1 and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
 2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018**. This will start the download for the AIP Unified label client.
 
