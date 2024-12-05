@@ -70,6 +70,10 @@ In addition, Holly doesn't want to be forced to approve the role assignment when
 
 ### Task 2 - Configure the Helpdesk Administrator role for self-activation
 
+Next, Holly wants to configure the Helpdesk administrator role settings and notification settings in Microsoft Entra ID. Privileged Identity Management (PIM) lets you know when important events occur in your Microsoft Entra ID organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails can also include links to relevant tasks, such activating or renewing a role. In this task, Holly wants to update the notifications to ensure that self-approvals are tracked in real-time in a proactive manner.
+
+In the prior lab exercise involving the Global administrator role, Holly updated the role so that she had to approve any activation requests for the role. However, for the Helpdesk admin role, Holly is less concerned about eligible users abusing the role permissions given the more limited scope of the role as compared to the Global Admin role. Holly trusts that Alex and Joni won't activate the role unless they're required to do so to respond to support requests. Therefore, Holly will only require that Alex and Joni provide justification whenever they must activate the role. Holly wants the role to be active for Alex and Joni for 15 days. This way, they won't be waiting for Holly to approve their activation requests, and they can simply provide justification and get started whenever they must take on this role.
+
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson from the prior task.
 
 2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the left-hand navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
@@ -90,7 +94,7 @@ In addition, Holly doesn't want to be forced to approve the role assignment when
 
 8. Below the activation slider, set the **On activation, require** setting to **None**.
 
-    >**Note:** In the prior lab exercise, Holly required that Patti Fernandez sign in using Azure MFA when she requested activation of the Global admin role. In doing so, Holly verified the Azure MFA sign-in worked. However, for the purpose of the pilot project, Holly will not require verification using multi-factor authentication when activating the Helpdesk administrator role (and since you already tested this MFA feature in the prior lab exercise, there's no reason to take time in class to do it again). 
+    >**Note:** In the prior lab exercise, Holly required that Patti Fernandez sign in using Microsoft Entra MFA when she requested activation of the Global admin role. In doing so, Holly verified the Microsoft Enrtra MFA sign-in worked. However, for the purpose of the pilot project, Holly will not require verification using multi-factor authentication when activating the Helpdesk administrator role (and since you already tested this MFA feature in the prior lab exercise, there's no reason to take time in class to do it again). 
 
 9. The screen then displays a group of three settings, each with a check box. Verify that all three check boxes are blank. If any check box is selected by default, then un-check (clear) it now. 
 
@@ -123,11 +127,13 @@ In addition, Holly doesn't want to be forced to approve the role assignment when
 
 ### Task 3 - Self-activate the Helpdesk Admin role
 
+At this point in Holly's pilot project, the PIM-Helpdesk-Administrators group has been made eligible for the Helpdesk administrator role. The members of the group (Alex Wilber and Joni Sherman) can now be assigned the Helpdesk Administrator role using Microsoft Entra Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Alex Wilber, who will submit a request to self-approve assigning the Helpdesk Administrator role to his user account.
+
 1. In LON-CL1, right-click on the **Edge** icon on the taskbar and in the menu that appears, select **New InPrivate window**. 
 
 2. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
 
-3. You're now going to log into Azure as Alex Wilber. In the **Sign in** window, enter **alex wilber**'s account and then select **Next**. In the **Enter password** window, enter the password and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+3. You're now going to log into Azure as Alex Wilber. In the **Sign in** window, enter **alex wilber's** account and then select **Next**. In the **Enter password** window, enter the password and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
 4. In the **Welcome to Microsoft Azure** dialog box that appears, select **Maybe later** to skip the tour.
 
@@ -155,6 +161,8 @@ As Alex Wilber, you have now self-approved the Helpdesk Administrator role. This
 
 
 ### Task 4 -  Verify a PIM notification was issued
+
+When you earlier configured the Helpdesk Administrator role, you set up the notification feature so that Holly would be notified any time an eligible user activated the role. Since Alex Wilber just self-activated the role, Holly should receive a notification of this activity. This task will verify that Holly received a notification.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson. In your Edge browser, select the **Home | Microsoft 365** tab.
 
