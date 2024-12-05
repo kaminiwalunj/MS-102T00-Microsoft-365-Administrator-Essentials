@@ -8,6 +8,8 @@ In this exercise you will test a default Microsoft 365 alert policy that notifie
 
 ### Task 1 – Review the default eDiscovery Alert 
 
+In this task, you will verify whether a default Microsoft 365 alert is triggered when somebody in your tenant creates an eDiscovery search or exports data from an existing search. Since Holly Dickson is assigned the Global Administrator role, she is automatically a member of the Tenant Admins and will be one of the recipients of this alert.
+
 1. You should still be in **LON-CL2** after completing the prior lab exercise. You should now switch back to **LON-CL1**.
 
 2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
