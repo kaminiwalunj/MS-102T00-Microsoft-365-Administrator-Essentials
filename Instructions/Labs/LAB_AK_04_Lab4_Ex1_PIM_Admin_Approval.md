@@ -2,11 +2,11 @@
 
 ## Lab scenario
 
-As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Azure Active Directory. PIM is an Microsoft Entra service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
+As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Microsoft Entra ID (formerly Azure AD). PIM is an Microsoft Entra service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
 
 One of Adatum's pain points in its existing system is that it has far too many users who have been assigned administrator roles. This has caused concern among management, who recognize this situation as an existential threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, these users have access to secure information and resources that could potentially compromise the organization. 
 
-Because there's a need to reduce the number of users with permanent administrator roles and yet still provide admin privileges to selected users when business justification warrants it, Holly has been tasked with implementing Azure Active Directory's Privileged Identity Management service. By implementing PIM, Adatum can reduce the number of users with admin roles and yet still be able to assign users with admin rights on an as-needed basis whenever necessary.
+Because there's a need to reduce the number of users with permanent administrator roles and yet still provide admin privileges to selected users when business justification warrants it, Holly has been tasked with implementing Microsoft Entra Privileged Identity Management service. By implementing PIM, Adatum can reduce the number of users with admin roles and yet still be able to assign users with admin rights on an as-needed basis whenever necessary.
 
 In this lab, you will perform the basic steps involved in implementing PIM for a given admin role:
 
@@ -21,7 +21,7 @@ In this exercise, you will perform these tasks for the Global administrator role
 
 >**BEST PRACTICE REMINDER:** As a best practice in your real-world deployment, you should always write down the first Global admin account’s credentials (in this lab, it's the ODL user account). You should store away this account for security reasons. This first Global admin account should be a non-personalized identity that owns the highest privileges possible in a tenant. It should **NOT** be MFA activated because it is not personalized. 
 
-Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few non-personalized Global admins as possible. For those personal Global administrators that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson, Patti Fernandez, etc.), and they should each have Azure Active Directory Multi-Factor Authentication (MFA) enforced. That being said, you will not turn on MFA for Holly's account because time is limited in this training course, and we don't want to take up lab time by forcing you to log in using a second authentication method every time Holly logs in.
+Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few non-personalized Global admins as possible. For those personal Global administrators that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson, Patti Fernandez, etc.), and they should each have Microsoft Entra ID Multi-Factor Authentication (MFA) enforced. That being said, you will not turn on MFA for Holly's account because time is limited in this training course, and we don't want to take up lab time by forcing you to log in using a second authentication method every time Holly logs in.
 
 
 ### Task 1 - Configure the Global Administrator role to require approval
@@ -30,13 +30,13 @@ Because the username and password for this first Global admin account are typica
 1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  
 Switch back to **LON-CL1** (by navigating back to the hyper-v manager). 
 
-2. On **LON-CL1**, you should still be logged into the machine as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+2. On **LON-CL1**, you should still be logged into the machine as the domain **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, select **show all**, select **All Admin centers**, and select **Microsoft Entra**.
+3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, select **show all**, scroll down and select **All Admin centers** from the Admin centers section, and select **Microsoft Entra**.
 
-    >**Note:** If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the password. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
+    >**Note:** If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick an account** window, select Holly's account, and in the **Enter password** window, enter the password. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
-5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Select **Go to Microsoft Entra ID** under **Microsoft Entra ID (Azure AD)**, it will open the Adatum Corporation page. On the below of the page select **Privileged Identity Management**.
+5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Select **Go to Microsoft Entra ID** under **Microsoft Entra ID (Azure AD)**, it will open the Adatum Corporation page. On the below of the page select **Privileged Identity Management** under **Identity governance**.
 
 6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -52,9 +52,11 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 11. The window then displays a group of three settings, each of which has a corresponding check box. Select the **Require Approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
 
-12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Microsoft Entra ID in the prior lab exercise, scrolling through the user list will be too time consuming. 
+12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select **No approver selected (+)** option. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Microsoft Entra ID in the prior lab exercise, scrolling through the user list will be too time consuming. 
 
     Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@yourtenant.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
+
+    ![](../Images/new-ms102-lab4-ex1-task1-1.png)
 
 13. In the **Edit role setting - Global Administrator** window, select the **Notification** tab at the top of the page.
 
@@ -67,6 +69,8 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
     For each of these three activities, an alert can be sent (depending on the activity, it will either be a Role assignment alert or a Role activation alert). The default value for each of these alerts is **Admin**, which refers to the Global Administrators and any Privileged Role Administrators. Besides sending this alert notification email to these admins, Holly wants the alert for each activity sent to the ODL user account. 
 
     In the **Additional recipients** field for each of the three alerts (the **Role assignment alert** for the first two activities and the **Role activation alert** for the final activity), enter the ODL user's email ID of **odl_user_<inject key="DeploymentID" enableCopy="false"/>@yourtenant.onmicrosoft.com**.
+
+	![](../Images/new-ms102-lab4-ex1-task1-2.png)
 
 15. At the bottom of the **Edit role setting - Global Administrator** window, select **Update**.
 
@@ -95,7 +99,9 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
     - Owners - Select **No owners selected**. In the **Add owners** pane, enter **Holly** in the **Search** field and select the **Holly@yourtenant.onmicrosoft.com** user account
 
-    - Members - Select **No members selected**. In the **Add members** pane, enter **Patti** in the **Search** field and select Patti Fernandez's user account
+    - Members - Select **No members selected**. In the **Add members** pane, enter **Patti** in the **Search** field and select Patti Fernandez's user account and select **Select** option.
+
+	    ![](../Images/new-ms102-lab4-ex1-task1-4.png)
 
 5. Select the **Create** button at the bottom of the page.
 
@@ -128,7 +134,7 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 ### Task 3 - Submit a request for the Global Admin role
 
->**NOTE:** The activation request process is set up to require multifactor authentication (MFA). If you do not have a phone to complete this process, notify your instructor. You may be able to partner with another student to watch them complete the remaining two tasks.
+>**NOTE:** The activation request process is set up to require multifactor authentication (MFA). If you do not have a  to complete this process, notify your instructor. You may be able to partner with another student to watch them complete the remaining two tasks.
 
 1.  In LON-CL1, right-click on the **Edge** icon on the taskbar and in the menu that appears, select **New InPrivate window**. 
 
@@ -136,11 +142,11 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 
 3. You're now going to log into Azure as Patti Fernandez. In the **Sign in** window, enter **patti**'s username and then select **Next**. In the **Enter password** window, enter the password and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-4. In the **Welcome to Microsoft Azure** dialog box that appears, select **Maybe later** to skip the tour.
+4. In the **Welcome to Microsoft Azure** dialog box that appears, select **Cancel** to skip the tour.
 
 5. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
 
-6. In the **All services** window, enter **priv** in the **Search** box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
+6. In the **All services** window, enter **Microsoft Entra Privileged Identity Management** in the **Search** box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
 7. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **My Roles**.
 
@@ -157,18 +163,19 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
     2. Sign in with your email ID.
     3. On the Authenticator page select **+** icon, select **Work or school account**, and on the **Add work or school account** pop-up select **Scan QR code**, now proceed with the step-11.
 
-16. Once verification is complete and you receive a message indicating Great job! You have successfully set up your security info. Choose "Done" to continue signing in, select **Done**.
+12. In the Phone authentication page, Select **Your country** and provide your **Phone number**. Select **Receive a code** and click **Next**.
 
-17. It will again ask you to verify through autenticator app. Enter the code which displays on the screem on your Authenticator app . 
+13. Provide the code received on your phone number and select **Next**. Once verification completed select **Next** and then **Done**.
 
-18. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane, and wait for the Status to get succeeded for all the steps, it will automatically refresh the browser.
+14. Once verification is complete and you receive a message indicating Great job! You have successfully set up your security info. Choose "Done" to continue signing in, select **Done**.
 
-19. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  
+15. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane, and wait for the Status to get succeeded for all the steps, it will automatically refresh the browser.
+
+16. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  
 
     >**Note:** If you recall, back in Task 1 Holly set up the Global Administrator role so that activation to a user account will require approval. What Patti just did was request that the Global Admin role be activated for her user account. This will send a request to Holly, who can then either approve or deny Patti's request for role activation. Holly will review and then approve this request in the next task.
 
-20. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
-
+17. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
 
 ### Task 4 -  Approve the request for the Global Admin role
 
