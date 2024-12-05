@@ -8,11 +8,11 @@ In this exercise you will configure and test an alert that will notify Lynne Rob
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson. 
 
-2. **Microsoft 365 Defender** should still be open in your Edge browser from the prior task. Select the **Microsoft 365 Defender** tab now. In the left-hand navigation pane, under the **Email & collaboration** section, select **Policies & rules**. 
+2. **Microsoft Defender** portal should still be open in your Edge browser from the prior task. Select the **Microsoft Defender** tab now. In the left-hand navigation pane, under the **Email & collaboration** section, select **Policies & rules**. 
 
 3. On the **Policies & rules** window, select **Alert policy**. If a dialog box appears indicating the alert policy portal has been updated, select the **Dismiss** button.
 
-4. In the **Alert Policy** window, note the message at the top of the page indicating the fact that mail flow alerts have moved to the Exchange admin center. Mail flow alerts can no longer be maintained in the Microsoft 365 Defender security portal. Since you will be creating a mailbox permission alert and not a mail flow alert, you can continue on with this task in the Microsoft 365 Defender portal. In the **Alert Policy** window, review the list of preconfigured alert policies that are available in Microsoft 365. Select **+ New Alert Policy** on the menu bar. This initiates the **New Alert Policy** wizard.
+4. In the **Alert Policy** window, note the message at the top of the page indicating the fact that mail flow alerts have moved to the Exchange admin center. Mail flow alerts can no longer be maintained in the Microsoft Defender security portal. Since you will be creating a mailbox permission alert and not a mail flow alert, you can continue on with this task in the Microsoft Defender portal. In the **Alert Policy** window, review the list of preconfigured alert policies that are available in Microsoft 365. Select **+ New Alert Policy** on the menu bar. This initiates the **New Alert Policy** wizard.
 
 5. On the **Name your alert, categorize it, and choose a severity** page, enter the following information:
 
@@ -28,7 +28,7 @@ In this exercise you will configure and test an alert that will notify Lynne Rob
 
 7. On the **Choose an activity, conditions and when to trigger the alert** page, enter the following information:
 
-	- Activity is: select the drop-down arrow in the field, enter **mail** in the **Select an activity** field, and select **Granted mailbox permission** from the list of activities containing **mail**
+	- Activity is: Select in the field, which displays a long list of activities. To filter the list to mail-related activities only, enter **mail** in the field and then select **Granted mailbox permission** from the list of activities containing **mail**.
 
 	- How do you want the alert to be triggered?: **Every time an activity matches the rule**
 
@@ -46,11 +46,11 @@ In this exercise you will configure and test an alert that will notify Lynne Rob
 
 12. On the **New Alert Policy** window, select **Done**.
 
-13. Verify your new alert policy appears in the list on the **Alert policy** page, its **Type** is set to **Custom**, and its **Status** in **On**.
+13. Verify your new alert policy appears in the list on the **Alert policy** page, its **Type** is set to **Custom**, and its **Status** in **On** (depending on the size of your monitor, you may have to scroll to the right to view the Status column).
 
 14. Leave the Alert policy tab in your Edge browser open for the next task.
 
-You have now created an activity alert in Microsoft 365 Defender that is triggered when FullAccess permissions are granted to any mailboxes.
+You have now created an activity alert in Microsoft Defender XDR that is triggered when FullAccess permissions are granted to any mailboxes.
 
 
 ### Task 2 – Validate the Mailbox Permission Alert
