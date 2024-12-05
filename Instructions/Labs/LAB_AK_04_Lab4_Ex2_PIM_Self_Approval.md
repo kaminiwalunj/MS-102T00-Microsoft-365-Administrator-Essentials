@@ -13,7 +13,7 @@ In addition, Holly doesn't want to be forced to approve the role assignment when
 
 ### Task 1 - Create an eligible group for the Helpdesk Admin role
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+1. You should still be logged into LON-CL1 and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 2. In your Edge browser, select the tab containing the **Microsoft Entra admin center**, which should still be open from the prior lab exercise. 
 
