@@ -65,9 +65,15 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 4. In the **Manage Mailboxes** window, select **Alex Wilber** from the list of mailboxes (select Alex's name; do not select the check box to the left of his name).
 
-5. In the **Alex Wilber** pane that appears, the **General** tab is displayed by default. Select the **Delegation** tab.
+   >**Note:** If user **Alex Wilber** is not present under **Manage Mailboxes** then we need to assign Exchange Online (Plan 1) license. To assign the license please follow the below steps.
+   
+   i. Go to **Microsoft 365 admin center** tab, from the left pane select **Users** then **Active users**. Select **Alex Wilber** from the list.
 
-6. On the **Delegation** tab, there are three mailbox permissions that can be updated: **Send as**, **Send on behalf**, and **Read and manage (Full Access)**. You want to add each of these permissions for Alex's mailbox to **Joni Sherman**. For each permission, perform the following steps to add Joni to that permission:
+   ii. Select **Licenses and apps**, then **Exchange Online (Plan 1)** and click on **Save changes**.
+
+6. In the **Alex Wilber** pane that appears, the **General** tab is displayed by default. Select the **Delegation** tab.
+
+7. On the **Delegation** tab, there are three mailbox permissions that can be updated: **Send as**, **Send on behalf**, and **Read and manage (Full Access)**. You want to add each of these permissions for Alex's mailbox to **Joni Sherman**. For each permission, perform the following steps to add Joni to that permission:
 
 	- Select the **Edit** button for the permission. 
 	- On the **Manage mailbox delegation** pane, select **+ Add members**.
@@ -76,25 +82,25 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 	- Once the mailbox permission is added to Alex's mailbox, select the back arrow at the top of the pane. 
 	- This returns you to the **Delegation** tab on the **Alex Wilber** pane, which displays the three permissions. Repeat these steps for each of the two remaining permissions. 
 
-7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. 
+8. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. 
 
-8. Since **Holly Dickson** has changed the mailbox permissions for Alex Wilber by giving Joni Sherman full access permissions to his mailbox, an alert email should automatically be sent to Lynne Robbins’ Inbox that notifies her of this event. You will verify this email was sent by checking Lynne's Inbox on LON-CL2. Switch to **LON-CL2**. 
+9. Since **Holly Dickson** has changed the mailbox permissions for Alex Wilber by giving Joni Sherman full access permissions to his mailbox, an alert email should automatically be sent to Lynne Robbins’ Inbox that notifies her of this event. You will verify this email was sent by checking Lynne's Inbox on LON-CL2. Switch to **LON-CL2**. 
 
-9. On **LON-CL2**, you should be signed into the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
+10. On **LON-CL2**, you should be signed into the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-10. In the **Pick an account** window, if Lynne Robbins account **lynne**'s account appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **lynne**'s enter the username. Then enter the Password.
+11. In the **Pick an account** window, if Lynne Robbins account **lynne**'s account appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **lynne**'s enter the username. Then enter the Password.
 
-11. Lynne Robbins **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change.
+12. Lynne Robbins **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change.
 
 	>**WARNING:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. You may need to refresh Outlook one or more times until you receive the email.
 
-12. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab.
+13. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab.
 
-13. The **Microsoft 365 Defender** portal displays the **Alerts** window, and it automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
+14. The **Microsoft 365 Defender** portal displays the **Alerts** window, and it automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
 
 	Scroll down through the **Mailbox permission change** pane and review all the information for this activity. When you are done, select **Close** to close the pane.
 
-14. In your Edge browser, close the **View Alerts - Microsoft 365 security** tab. Leave Lynne's **Outlook** tab open, as you will use that in the next lab exercise.
+15. In your Edge browser, close the **View Alerts - Microsoft 365 security** tab. Leave Lynne's **Outlook** tab open, as you will use that in the next lab exercise.
 
 
 You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox. 
