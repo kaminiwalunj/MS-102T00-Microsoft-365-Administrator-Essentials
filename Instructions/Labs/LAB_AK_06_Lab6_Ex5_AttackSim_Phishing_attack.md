@@ -11,34 +11,63 @@ Holly Dickson is concerned that some users at Adatum may require education about
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.  
 
-2. To enable MFA for Holly Dickson's user account, select the **Microsoft 365 admin center** tab in your browser, and then in the left hand-navigation pane, select **Users** and then select **Active users**.
+1. To enable MFA for Holly Dickson's user account, select the **Microsoft 365 admin center** tab in your browser, and then in the left hand-navigation pane, select **Users** and then select **Active users**.
 
-3. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**. If this option does not appear on the menu bar, select the **ellipsis (More actions)** icon, and in the drop-down menu that appears, select  **Multi-factor authentication**.
+1. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**. If this option does not appear on the menu bar, select the **ellipsis (More actions)** icon, and in the drop-down menu that appears, select  **Multi-factor authentication**.
 
-4. A **Configure multifactor authentication (MFA)** window appears in a new Edge browser tab. Below the paragraph of text at the top of the page is an Information box that displays the message **Not what you're looking for? To configure MFA on an individual per-users level, select Legacy per-user MFA.** Select the **Legacy per-user MFA** link in this message. On the **multi-factor authentication** page that appears, the **users** tab at the top of the page is displayed by default. Note the MFA status for all existing user accounts is **Disabled**. Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Enable**.
+	![](../Images/mfa.png)
+
+1. A **Configure multifactor authentication (MFA)** window appears in a new Edge browser tab. Below the paragraph of text at the top of the page is an Information box that displays the message **Not what you're looking for? To configure MFA on an individual per-users level, select Legacy per-user MFA.** Select the **Legacy per-user MFA** link in this message. 
+
+	![](../Images/mfa1.png)
+
+1. On the **multi-factor authentication** page that appears, the **users** tab at the top of the page is displayed by default. Note the MFA status for all existing user accounts is **Disabled**. 
+
+	![](../Images/mfa2.png)
+
+1. Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Enable MFA**.
 
 	>**Tip:** There are so many users, select the view dropdown, select **Global administrators**, now you can see **Holly Dickson** account.
 
-5. On the **About enabling multi-factor auth** dialog box that appears, select the **enable multi-factor auth** button. 
+1. On the **Enable multifactor authentication** dialog box that appears, select the **Enable** button. 
 
-6. When the **Updates successful** dialog box appears, select **close**. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Enabled**. Close the **Multi-factor authentication** tab in your Edge browser. This should return you to the **Microsoft 365 admin center** tab.
+1. When the **Updates successful** dialog box appears, select **close**. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Enabled**. Close the **Multi-factor authentication** tab in your Edge browser. This should return you to the **Microsoft 365 admin center** tab.
 
-7. You must now sign out of Microsoft 365 as Holly, close your browser session (to clear cache), open a new session, and then log back in as Holly using MFA. The first time you sign back in after having MFA enabled for your user account, you will be asked for the authentication information needed for MFA, such as your phone number and authentication options. You will then be texted a verification code to validate the authentication process works. You will perform these steps in the remaining portion of this task. You must begin by signing out of Microsoft 365 as Holly, so select the **HD** user icon in the upper right corner of the browser and in the **Holly Dickson** window that appears, select **Sign out**. 
+1. You must now sign out of Microsoft 365 as Holly, close your browser session (to clear cache), open a new session, and then log back in as Holly using MFA. The first time you sign back in after having MFA enabled for your user account, you will be asked for the authentication information needed for MFA, such as your phone number and authentication options. You will then be texted a verification code to validate the authentication process works. You will perform these steps in the remaining portion of this task. You must begin by signing out of Microsoft 365 as Holly, so select the **HD** user icon in the upper right corner of the browser and in the **Holly Dickson** window that appears, select **Sign out**. 
 
-8. Once you are signed out, close all the browser tabs. This will close your Edge browser.
+1. Once you are signed out, close all the browser tabs. This will close your Edge browser.
 
-9. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+1. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 
-10. In the **Pick an account** window, select **Holly**'s account and then select **Next**. In the **Enter password** window, enter password and select **Sign in**.
+1. In the **Pick an account** window, select **Holly**'s account and then select **Next**. In the **Enter password** window, enter password and select **Sign in**.
 
-11. Because MFA is enabled for Holly, a **More information required** window appears. Select **Next**.
+1. Because MFA is enabled for Holly, a **Action Required** window appears. Select **Next**.
 
-12. On the **Microsoft Authenticator** page, you have to install the Microsoft Authenticator app in your phone. Select **Next**, on the **Start by getting the app** page. On **Set up your account** page, select **Next**. On **Scan the QR code**, first scan the code from your phone using Authenticator app, after scanning select **Next**, on the **Scan the QR code** page. On **Let's try it out** page, enter the code in your phone, after entering the code as you can see the **Notification approved** message, select **Next**. Select **Done** on **Success!
-Great job! You have successfully set up your security info.** 
+	![](../Images/actionrequired.png)
 
-	>**Note:** It will again ask you for the authentication. Authenticate it again using Authenticator app.
+1. On the **Microsoft Authenticator** page, you have to install the Microsoft Authenticator app in your phone. Select **Next**, on the **Start by getting the app** page. On **Set up your account** page, select **Next**. 
 
-18. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
+	![](../Images/mfa3.png)
+
+1. On **Set up your account** page, select **Next**.
+
+1. On **Scan the QR code**, first scan the code from your phone using Authenticator app, after scanning select **Next**, on the **Scan the QR code** page. On **Let's try it out** page, enter the code in your phone, after entering the code as you can see the **Notification approved** message, select **Next**.
+
+	![](../Images/mfa4.png)
+
+1. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (use your country specific formatting). Verify the **Receive a code** option is selected and then select **Next**.
+
+1. Retrieve the verification code from the text message that is sent to your phone.
+
+1. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the Phone window displays a message indicating your phone was registered successfully, select **Next**.
+
+1. Once it shows the **Verification complete. Your phone has been registered.**, select **Next**.
+
+	![](../Images/mfa5.png)
+
+1. On the **Success!** page, select **Done**.
+
+1. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 
 19. On the **Microsoft Office Home** tab, select the **Admin** icon that appears in the column of app icons on the left-side of the screen. This opens the **Microsoft 365 admin center** in a new browser tab. This will prepare you for the next lab exercise when you disable MFA for Holly Dickson after completing the Attack simulation training.
 
@@ -49,9 +78,7 @@ Great job! You have successfully set up your security info.**
 
 ### Task 2: Configure and launch a Spear Phishing attack
 
-1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
-
-2. You should still have the **Microsoft 365 Defender** portal open in your **Edge** browser from the prior task. If not, enter **https://security.microsoft.com** in the address bar, and then if you receive the dialog box asking for a second form of authentication, proceed through the verification process. If not, sign-in using Holly's user id and password.
+1. On LON-CL1, in your Edge browser, open your **Edge** browser from the prior task. Enter **https://security.microsoft.com** in the address bar, and then if you receive the dialog box asking for a second form of authentication, proceed through the verification process. If not, sign-in using Holly's user id and password.
 
 3. In the **Microsoft 365 Defender** portal, under the **Email & collaboration** section in the left-hand navigation pane, select **Attack simulation training**. If a **Welcome to Attack simulation training** window appears, select **Close**.
 
