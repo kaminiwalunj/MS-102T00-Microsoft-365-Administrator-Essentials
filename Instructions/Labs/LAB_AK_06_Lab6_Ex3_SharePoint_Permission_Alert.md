@@ -77,6 +77,8 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 1. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercise in this lab.
 You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites. 
 
+- You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites. 
+
 ## Review
 
 In this lab, you have:
