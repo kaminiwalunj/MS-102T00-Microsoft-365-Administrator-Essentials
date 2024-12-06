@@ -28,9 +28,9 @@ Because the username and password for this first Global admin account are typica
 
 
 1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  
-Switch back to **LON-CL1** (by navigating back to the hyper-v manager). 
+Switch back to **LON-CL1**. 
 
-2. On **LON-CL1**, you should still be logged into the machine as the domain **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+2. On **LON-CL1**, you should still be logged into the machine and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, select **show all**, scroll down and select **All Admin centers** from the Admin centers section, and select **Microsoft Entra**.
 
@@ -198,12 +198,6 @@ Switch back to **LON-CL1** (by navigating back to the hyper-v manager).
 8. Close the InPrivate browser session.
 
 9. In your Edge browser, leave all the tabs open for the next lab.
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 

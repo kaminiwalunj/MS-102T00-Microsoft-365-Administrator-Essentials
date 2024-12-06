@@ -16,7 +16,7 @@ In an attempt to decrease overhead but still maintain a secure way of managing a
 
 For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wilber and Joni Sherman to be eligible for the Intune admin role. To simplify future role assignments, Holly wants to create a security group, assign Alex and Joni to the group, and then assign the group to the Intune admin role - just as she previously did in the prior lab exercise for the Helpdesk administrator role.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+1. You should still be logged into LON-CL1 and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 2. In your Edge browser, select the tab containing the **Microsoft Entra admin center**, which should still be open from the prior lab exercise. 
 
@@ -228,10 +228,11 @@ When you earlier configured the Intune Administrator role, you set up the notifi
 9. In your Edge browser session, close all the tabs except for the **Home | Microsoft 365** tab and the tab containing the **Microsoft 365 admin center**. Leave these two tabs open for the next lab.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="1160834f-caae-424b-ae36-1ba794c58601" />
 
 ## Review
 

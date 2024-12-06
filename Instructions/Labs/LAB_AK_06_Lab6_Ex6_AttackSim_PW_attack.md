@@ -120,7 +120,7 @@ Holly Dickson is concerned that some of the users at Adatum may require training
 
 12. Once Lynne is signed out, close the Edge browser.
 
-13. Switch back to **LON-CL1**, by navigating back to the hyper-v manager, and right click on the LON-CL1 and connect to **LON-CL1** VM.
+13. Switch back to **LON-CL1**.
 
 14. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **Custom payload** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **Custom payload** simulation should now appear. Select the **Custom payload** simulation to view the diagnostic results that were captured for this simulation.
 
