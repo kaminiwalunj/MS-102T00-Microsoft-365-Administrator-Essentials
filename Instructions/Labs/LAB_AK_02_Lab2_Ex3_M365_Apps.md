@@ -94,7 +94,7 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 **License Note:** If you recall from the earlier lab exercise when you created Holly Dickson's Microsoft 365 account, there were no available Microsoft 365 Business Premium or Enterprise Mobility + Security E5 licenses available. As such, you had to first unassign one of each license from an existing user so that you could assign them to Holly. The same situation exists here with Laura. You must first unassign one of each license from an existing user so that you can assign them to Laura.
 	
-1. Switch back to **LON-CL1**(by going on to the hyper-v manager). In your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson, Adatum’s Microsoft 365 Administrator.
+1. Switch back to **LON-CL1**. In your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson, Adatum’s Microsoft 365 Administrator.
 
 2. On **LON-CL1**, Holly wants to turn off the global Office download setting. To do so, select the **Microsoft 365 admin center** tab in your browser, and then if necessary, select **...Show all** in the navigation pane. Select **Settings**, and then within the Settings group, select **Org Settings**. 
 
