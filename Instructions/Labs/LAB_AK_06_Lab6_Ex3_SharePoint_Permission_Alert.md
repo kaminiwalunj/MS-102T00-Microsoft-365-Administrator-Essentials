@@ -70,14 +70,21 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 1. Once the email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab.
 
-1. The **Microsoft 365 Defender** portal displays the **Alerts** window, and it automatically opens the **Site collection admin permissions** pane for this alert activity that triggered the email notification to Lynne.
-	
-	> Scroll down through the **Site collection admin permissions** pane and review all the information for this alert activity. When you are done, select **Close** to close the pane.
+	>**Note:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. Do not proceed until the email has arrived. If you are unable to login to outlook, then we need to assign assign Microsoft 365 Business Premium license. To assign the license please follow the below steps.
 
-1. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercise in this lab.
-You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites. 
+   i. Go to **Microsoft 365 admin center** tab, from the left pane select **Users** then **Active users**. Select **Lynne Robbins** from the list.
+ 
+   ii. Select **Licenses and apps**, then **Microsoft 365 Business Premium** and click on **Save changes**.
 
-- You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites. 
+8. Once the email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab.
+
+9. The **Microsoft 365 Defender** portal displays the **Alerts** window, and it automatically opens the **Site collection admin permissions** pane for this alert activity that triggered the email notification to Lynne. <br/>
+
+	Scroll down through the **Site collection admin permissions** pane and review all the information for this alert activity. When you are done, select **Close** to close the pane.
+
+10. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercise in this lab.
+
+You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites.  
 
 ## Review
 
