@@ -10,7 +10,7 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 
 You are logged into the LON-CL1. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Entra ID and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell.
 
-    >**Important:** LON-CL1 is your Jump-VM.
+    >**Important:** **LON-CL1** is your Jump-VM.
  
 ## Task 0- Pre-requisite
 
