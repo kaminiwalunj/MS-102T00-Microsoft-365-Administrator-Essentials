@@ -6,12 +6,11 @@ Adatum Corporation is a subsidiary of Contoso Electronics. Adatum runs its legac
 
 As Adatum's Microsoft 365 administrator, you have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this exercise, you will set up Adatum's Microsoft 365 trial tenant.
 
-In your lab environment, your lab hosting provider has already obtained a Microsoft 365 trial tenant for you. Your lab provider has also created two admin accounts that you will use in your VM lab environment: 
+In your lab environment, your lab hosting provider has already obtained a Microsoft 365 trial tenant for you. 
 
-- A local administrator account for Adatum's on-premises environment (Adatum\Administrator).
-- A default tenant admin account in Microsoft 365 (the display name for this user account is ODL user). 
+You are logged into the LON-CL1. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Entra ID and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell.
 
-You will log into the LON-CL1 using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (ODL user). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Entra ID and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell.
+    >**Important:** **LON-CL1** is your Jump-VM.
  
 ## Task 0- Pre-requisite
 
